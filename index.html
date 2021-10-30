@@ -9,6 +9,7 @@
 <!-- JavaScript -->
 <!-- Easier carousel recommended by Professor Ali Qadeer @ https://flickity.metafizzy.co -->
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
     crossorigin="anonymous">
@@ -27,7 +28,7 @@
       <a href="#home">HOME</a>
       <a href="#profile">PROFILE</a>
       <a href="#news">NEWS</a>
-      <a href="#works">WORKS</a>
+      <a href="works.html">WORKS</a>
       <a href="#recruit">RECRUIT</a>
       <a href="#webshop">WEBSHOP</a>
       <a href="#community">COMMUNITY</a>
@@ -41,7 +42,7 @@
 <!--Remove YouTube logo on video @ https://developers.google.com/youtube/player_parameters -->
 <!-- Easier carousel recommended by Professor Ali Qadeer @ https://flickity.metafizzy.co -->
     <div class="main-carousel"
-      data-flickity='{ "wrapAround": true}'>
+      data-flickity='{"wrapAround": true}'>
 <!-- Demon Slayer Hikonami Chronicles -->
       <div class="carousel-cell">
         <img src="https://pbs.twimg.com/media/E5BqU3cVIAIvO66?format=jpg&name=large"
@@ -68,6 +69,11 @@
           clipboard-write; encrypted-media; gyroscope; picture-in-picture">
         </iframe>
       </div>
+<!-- Fate Heaven's Feel Trilogy -->
+      <div class="carousel-cell">
+        <img src="https://pbs.twimg.com/media/El3SEqCWMAAlVpG?format=jpg&name=large"
+        alt="Fate Heaven's Feel Trilogy">
+      </div>
 <!-- Fate Heaven's Feel III. Spring Song TRAILER from YOUTUBE -->
       <div class="carousel-cell">
         <iframe width="1366" height="768"
@@ -79,31 +85,36 @@
     </div>
 
 
-    <div class="promotional-links">
+    <div class="promotional-links" id="promotional-links">
       <a href="#demonslayer-mugen">DEMON SLAYER MUGEN TRAIN</a>
       <a href="#demonslayer-s2">DEMON SLAYER SEASON 2</a>
       <a href="#fsn-hf-3">FATE/STAY NIGHT: HEAVENS FEEL III.</a>
     </div>
 
 
+
 <!-- LARGE POSTERS -->
 <!-- Adding Images @ https://www.w3schools.com/html/html_images.asp -->
 <!-- Demon Slayer Mugen Train LARGE POSTER -->
-    <img src="https://pbs.twimg.com/media/FAI67muXIAEPrLZ?format=jpg&name=4096x4096"
-    alt="Demon Slayer Mugen Train Movie Poster">
-
+    <div class="large-mugen-poster">
+      <img src="https://pbs.twimg.com/media/FAI67muXIAEPrLZ?format=jpg&name=4096x4096"
+      alt="Demon Slayer Mugen Train Movie Poster" width="900" height="auto">
+    </div>
 <!-- Demon Slayer Season 2: Entertainment Arc LARGE POSTER -->
-    <img src="https://pbs.twimg.com/media/FAI7EuZUcAYM5nC?format=jpg&name=4096x4096"
-    alt="Demon Slayer Season 2: Entertainment Arc">
-
-<!-- Fate Heaven's Feel III. Spring Song LARGE POSTER -->
-    <img src="https://pbs.twimg.com/media/E6hE0N2XIAA1oUu?format=jpg&name=large"
-    alt="Fate Heaven's Feel III. Spring Song Movie Poster">
+    <div class="large-demon-season2-poster">
+      <img src="https://pbs.twimg.com/media/FAI7EuZUcAYM5nC?format=jpg&name=4096x4096"
+      alt="Demon Slayer Season 2: Entertainment Arc" width="900" height="auto">
+    </div>
+<!-- Fate/Stay Night [Heaven's Feel] III. Spring Song LARGE POSTER -->
+    <div class="large-fate-poster">
+      <img src="https://pbs.twimg.com/media/E6hE0N2XIAA1oUu?format=jpg&name=large"
+      alt="Fate/Stay Night [Heaven's Feel] III. Spring Song Movie Poster" width="900" height="auto">
+    </div>
 
 
 
 <!-- Bottom Info -->
-    <div class="bottom-info">
+    <div class="bottom-info" id="bottom-info">
       <a href="#site-policy">SITE POLICY</a>
       <a href="#about-copyright">ABOUT COPYRIGHT OF THE WORK</a>
       <a href="#all-rights">2012-2019 UFOTABLE INC. ALL RIGHTS RESERVED.</a>

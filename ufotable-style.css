@@ -1,5 +1,16 @@
-#navigation-bar {
+/* NEED TO FIX OVERLAP OF NAV BAR WHEN SHRUNK */
+/* THE ENTIRE NAV BAR */
+#top-navigation-bar {
+  background: red;
+  padding: 15px;
+}
 
+/* STICKY NAVBAR @ https://www.w3schools.com/howto/howto_css_sticky_element.asp */
+.navigation-bar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 /* ADD A BREAK POINT */
@@ -8,12 +19,20 @@
 /* RESPONSIVE TOP NAVIGATION BAR */
 /* MAKE IT STICKY */
 /* ADD TRANSPARENT BLACK BACKGROUND */
+/* THE INDIVIDUAL TEXT ON NAV BAR */
 a {
+  background: blue;
   font-size: 20px;
   font-family: Helvetica, sans-serif;
   color: #ffffff;
   text-decoration: none;
-  padding-left: 50px;
+  padding: 15px;
+}
+
+/* CHANGE COLOUR ON HOVER @ https://www.w3schools.com/howto/howto_js_navbar_sticky.asp */
+a:hover {
+  color: #000000;
+  background: #ffffff;
 }
 
 /* RESPONSIVE IMAGES */
@@ -30,7 +49,7 @@ iframe {
 /* DEMO 08 - RESPONSIVE WEB DESIGN ON CANVAS */
 /* centering the website and adding auto adjusting margins */
 body {
-  max-width: 1366px; /* SHOULD ADJUST THIS FOR NAV BAR */
+  max-width: 1400px; /* SHOULD ADJUST THIS FOR NAV BAR */
   margin: auto;
 }
 
@@ -38,11 +57,11 @@ body {
   color: #ffffff;
 }
 
-.main-carousel{
+.main-carousel {
   background: #000000;
 }
 
-.carousel-cell{
+.carousel-cell {
   width: 100%;
   height: auto;
   margin: auto;
