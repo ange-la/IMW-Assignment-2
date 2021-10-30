@@ -1,0 +1,52 @@
+#navigation-bar {
+
+}
+
+/* ADD A BREAK POINT */
+
+
+/* RESPONSIVE TOP NAVIGATION BAR */
+/* MAKE IT STICKY */
+/* ADD TRANSPARENT BLACK BACKGROUND */
+a {
+  font-size: 20px;
+  font-family: Helvetica, sans-serif;
+  color: #ffffff;
+  text-decoration: none;
+  padding-left: 50px;
+}
+
+/* RESPONSIVE IMAGES */
+img {
+  max-width: 100%;
+  height: auto;
+}
+/* RESPONSIVE VIDEOS */
+iframe {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* DEMO 08 - RESPONSIVE WEB DESIGN ON CANVAS */
+/* centering the website and adding auto adjusting margins */
+body {
+  max-width: 1366px; /* SHOULD ADJUST THIS FOR NAV BAR */
+  margin: auto;
+}
+
+.bottom-info {
+  color: #ffffff;
+}
+
+.main-carousel{
+  background: #000000;
+}
+
+.carousel-cell{
+  width: 100%;
+  height: auto;
+  margin: auto;
+  background: black;
+  border-radius: 5px;
+  counter-increment: carousel-cell;
+}
