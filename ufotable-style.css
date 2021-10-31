@@ -17,7 +17,6 @@
 
 
 /* RESPONSIVE TOP NAVIGATION BAR */
-/* MAKE IT STICKY */
 /* ADD TRANSPARENT BLACK BACKGROUND */
 /* THE INDIVIDUAL TEXT ON NAV BAR */
 a {
@@ -33,6 +32,11 @@ a {
 a:hover {
   color: #000000;
   background: #ffffff;
+}
+
+/* info like FAQ, return to the top, site policy, etc */
+.bottom-info {
+  color: #ffffff;
 }
 
 /* RESPONSIVE IMAGES */
@@ -53,10 +57,48 @@ body {
   margin: auto;
 }
 
-.bottom-info {
+h1 {
+  font-size: 20px;
+  font-family: Helvetica, sans-serif;
   color: #ffffff;
+  text-decoration: none;
 }
 
+/* WORKS.HTML PAGE */
+/* flexbox axes for images in row or column @ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox */
+.row-1-theatrical {
+  display: flex;
+  flex-direction: row;
+  padding: 40px;
+}
+
+.row-2-theatrical {
+  display: flex;
+  flex-direction: row;
+  padding: 40px;
+}
+
+.row-3-theatrical {
+  display: flex;
+  flex-direction: row;
+  padding: 40px;
+}
+
+.row-4-theatrical {
+  display: flex;
+  flex-direction: row;
+  padding: 40px;
+}
+
+.row-5-theatrical {
+  display: flex;
+  flex-direction: row;
+  padding: 40px;
+}
+
+
+
+/* Promotional carosel @ https://flickity.metafizzy.co */
 .main-carousel {
   background: #000000;
 }
