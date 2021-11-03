@@ -1,3 +1,4 @@
+/* ALL PAGES */
 /* NEED TO FIX OVERLAP OF NAV BAR WHEN SHRUNK */
 /* THE ENTIRE NAV BAR */
 #top-navigation-bar {
@@ -44,6 +45,15 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+.television-images {
+  float: left;
+}
+
+.theatrical-images {
+  float: left;
+}
+
 /* RESPONSIVE VIDEOS */
 iframe {
   max-width: 100%;
@@ -55,6 +65,7 @@ iframe {
 body {
   max-width: 1400px; /* SHOULD ADJUST THIS FOR NAV BAR */
   margin: auto;
+  background-color: #000000;
 }
 
 h1 {
@@ -64,41 +75,11 @@ h1 {
   text-decoration: none;
 }
 
-/* WORKS.HTML PAGE */
-/* flexbox axes for images in row or column @ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox */
-.row-1-theatrical {
-  display: flex;
-  flex-direction: row;
-  padding: 40px;
-}
-
-.row-2-theatrical {
-  display: flex;
-  flex-direction: row;
-  padding: 40px;
-}
-
-.row-3-theatrical {
-  display: flex;
-  flex-direction: row;
-  padding: 40px;
-}
-
-.row-4-theatrical {
-  display: flex;
-  flex-direction: row;
-  padding: 40px;
-}
-
-.row-5-theatrical {
-  display: flex;
-  flex-direction: row;
-  padding: 40px;
-}
 
 
 
-/* Promotional carosel @ https://flickity.metafizzy.co */
+/* INDEX.HTML PAGE */
+/* Promotional carosel on index.html @ https://flickity.metafizzy.co */
 .main-carousel {
   background: #000000;
 }
@@ -110,4 +91,35 @@ h1 {
   background: black;
   border-radius: 5px;
   counter-increment: carousel-cell;
+}
+
+/* Large posters on index.html */
+/* Align Demon Slayer Season 2 poster to right */
+.large-demon-season2-poster {
+  float: right;
+}
+
+/* BLURRED Posters @ https://www.w3schools.com/howto/howto_css_blurred_background.asp */
+/* reflect the posters @ https://www.w3schools.com/howto/howto_css_flip_image.asp */
+.large-posters {
+  z-index: 5;
+}
+
+.blurred-posters {
+  filter: blur(11px);
+  -webkit-filter: blur(11 px);
+  opacity: 70%;
+  transform: scaleX(-1);
+  float;
+}
+
+/* (float:right) bc image is reversed on x axis in .blurred-posters */
+.blurred-demon-season2-poster {
+  float: right;
+}
+
+/* Bottom LOGOS */
+.bottom-logos {
+  display: flex;
+  flex-direction: row;
 }
