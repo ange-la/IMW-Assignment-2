@@ -3,6 +3,7 @@
   <head>
     <title>Ufotable Home Page</title>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- CSS -->
     <link rel="stylesheet" href="ufotable-style.css">
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
@@ -17,29 +18,46 @@
     <script src="interaction.js"></script>
   </head>
 
-
-
-<!--Background colour of entire page https://www.w3schools.com/cssref/pr_background-color.asp  -->
-  <body style="background-color:#000000;">
+  <body>
 
 <!--Navigation Bar @ https://www.w3schools.com/howto/howto_js_topnav_responsive.asp -->
+<!-- CSS Lists @ https://www.w3schools.com/css/css_list.asp -->
     <div class="navigation-bar" id="top-navigation-bar">
-      <a href="#ufotable-logo">TEMPORARY<a>   <!--NEED TO ADD SVG OF LOGO -->
-      <a href="#home">HOME</a>
-      <a href="#profile">PROFILE</a>
-      <a href="#news">NEWS</a>
-      <a href="#works">WORKS
-        <a href="theatrical.html">THEATRICAL</a>
-        <a href="television.html">TELEVISION</a>
-        <a href="other-works.html">OTHER</a>
-      </a>
-      <a href="#recruit">RECRUIT</a>
-      <a href="#webshop">WEBSHOP</a>
-      <a href="#community">COMMUNITY</a>
-      <a href="twitter">T</a>   <!--NEED TO ADD SVG OF TWITTER -->
-      <a href="#instagram">I</a>   <!--NEED TO ADD SVG OF INSTAGRAM -->
-      <a href="#english">ENG</a>
+      <ul id="navigation">
+        <li><a href="#ufotable-logo">
+          <img src="file:///Users/angelalam/Documents/OCAD%20U/Fifth%20Fall%202021/Interactive%20Media%20–%20Web/IM-Web%20–%20A2/IMW-Assignment-2/IMW-A2-Logos/ufotable-white-logo.png"
+          alt="White Ufotable Logo" width="180" height="auto">
+        </a></li>
+        <li><a href="#home">HOME</a></li>
+        <li><a href="#profile">PROFILE</a></li>
+        <li><a href="#news">NEWS</a></li>
+<!-- Help creating dropdown navigation @ https://www.w3schools.com/html/tryit.asp?filename=tryhtml_lists_menu -->
+        <ul class="dropdown">
+          <li><a href="#dropdown-projects">PROJECTS</a><li>
+          <li><a href="theatrical.html" id="theatrical-drop">THEATRICAL</a></li>
+          <li><a href="television.html" id="television-drop">TELEVISION</a></li>
+          <li><a href="other-projects.html" id="other-drop">OTHER</a></li>
+        </ul>
+        <li><a href="#recruitment">RECRUITMENT</a></li>
+        <li><a href="#webshop">WEBSHOP</a></li>
+        <li><a href="#community">COMMUNITY</a></li>
+<!-- LINK TO UFOTABLE'S OFFICAL TWITTER PAGE -->
+<!-- OPEN TWITTER ON NEW TAB @ https://css-tricks.com/snippets/html/open-link-in-a-new-window/ -->
+        <li><a href="https://twitter.com/ufotable?lang=en" target="_blank">
+          <img src="file:///Users/angelalam/Documents/OCAD%20U/Fifth%20Fall%202021/Interactive%20Media%20–%20Web/IM-Web%20–%20A2/IMW-Assignment-2/IMW-A2-Logos/twitter-logo-white.svg"
+           alt="White Twitter Logo" width="30" height="auto">
+        </a></li>
+<!-- LINK TO UFOTABLE'S OFFICIAL INSTAGRAM PAGE -->
+<!-- OPEN INSTAGRAM ON NEW TAB @ https://css-tricks.com/snippets/html/open-link-in-a-new-window/ -->
+        <li><a href="https://www.instagram.com/ufotable_inc/" target="_blank">
+          <img src="file:///Users/angelalam/Documents/OCAD%20U/Fifth%20Fall%202021/Interactive%20Media%20–%20Web/IM-Web%20–%20A2/IMW-Assignment-2/IMW-A2-Logos/instagram-logo-white.png"
+          alt="White Instagram Logo" width="30" height="auto">
+        </a></li>
+        <li><a href="#english">ENG</a></li>
+      </ul>
     </div>
+
+
 
 <!-- NEED TO UNMUTE THE VIDEOS AT END "&MUTE=1" -->
 <!--Embedding YouTube videos @ https://www.w3schools.com/html/html_youtube.asp -->
@@ -89,10 +107,13 @@
     </div>
 
 
+<!-- Links to help navigate faster down the website -->
     <div class="promotional-links" id="promotional-links">
-      <a href="#demonslayer-mugen">DEMON SLAYER MUGEN TRAIN</a>
-      <a href="#demonslayer-s2">DEMON SLAYER SEASON 2</a>
-      <a href="#fsn-hf-3">FATE/STAY NIGHT: HEAVENS FEEL III.</a>
+      <a href="#mugen-train">DEMON SLAYER MUGEN TRAIN</a>
+      <a href="#ds-season2">DEMON SLAYER SEASON 2</a>
+
+      <!-- FIX THIS -->
+      <a href="#fate-heaven-feel">FATE/STAY NIGHT [HEAVENS FEEL] III.</a>
     </div>
 
 
@@ -101,21 +122,41 @@
 <!-- Adding Images @ https://www.w3schools.com/html/html_images.asp -->
     <div class="large-posters">
       <!-- Demon Slayer Mugen Train LARGE POSTER -->
-      <div class="large-mugen-poster">
+      <div class="large-mugen-poster" id="mugen-train">
         <img src="https://pbs.twimg.com/media/FAI67muXIAEPrLZ?format=jpg&name=4096x4096"
         alt="Demon Slayer Mugen Train Movie Poster" width="900" height="auto">
       </div>
       <!-- Demon Slayer Season 2: Entertainment Arc LARGE POSTER -->
-      <div class="large-demon-season2-poster">
+      <div class="large-demon-season2-poster" id="ds-season2">
         <img src="https://pbs.twimg.com/media/FAI7EuZUcAYM5nC?format=jpg&name=4096x4096"
         alt="Demon Slayer Season 2: Entertainment Arc" width="900" height="auto">
       </div>
       <!-- Fate/Stay Night [Heaven's Feel] III. Spring Song LARGE POSTER -->
-      <div class="large-fate-poster">
+      <div class="large-fate-poster" id="fate-heaven-feel">
         <img src="https://pbs.twimg.com/media/E6hE0N2XIAA1oUu?format=jpg&name=large"
         alt="Fate/Stay Night [Heaven's Feel] III. Spring Song Movie Poster" width="900" height="auto">
       </div>
     </div>
+
+
+
+<!-- ADDING GIFS??? -->
+    <div class="gifs">
+      <div class="ds-water-gif">
+        <img src="https://static.wikia.nocookie.net/demon-fall/images/d/de/Tanjiro.gif/revision/latest?cb=20210804013023"
+        alt="Demon Slayer Tanjiro Water Breathing Gif" width="900" height="auto">
+      </div>
+      <div class="ds-fire-gif">
+        <img src="https://static.wikia.nocookie.net/kimetsu-no-yaiba-fanon/images/a/a9/39714E85-B667-4AAA-9D21-0C169CD17183.gif/revision/latest?cb=20200809145956"
+        alt="Demon Slayer Tanjiro vs. Rui Fire Breathing Gif" width="900" height="auto">
+      </div>
+      <div class="saber-gif">
+        <img src="https://64.media.tumblr.com/7ffd9be865a1685b33089609b2bcf7b6/83b81043c8ded7c7-08/s640x960/11f11525e0cf3320680797d02f033ce5a61e37f5.gifv"
+        alt="Fate/Stay Night [Heaven's Feel] Saber Alter Gif" width="900" height="auto">
+      </div>
+    </div>
+
+
 
 <!-- creating blurred images @ https://www.w3schools.com/howto/howto_css_blurred_background.asp -->
     <div class="blurred-posters">
@@ -145,29 +186,34 @@
 
 <!-- ADD THESE TO THE OTHER PAGES TOO -->
 <!-- Bottom Page Logos -->
-    <div class="bottom-logos">
+    <div class="bottom-logos" id="bottom-logos">
       <!-- Ufotable Dining LOGO -->
       <div class="ufotable-dining-logo">
         <img src="http://www.ufotable.com/dining/img/toplogo.png"
-        alt="Ufotable Dining Logo">
+        alt="Ufotable Dining Logo" width="500" height="auto">
       </div>
       <!-- Ufotable Cafe LOGO -->
-
-
-      <!-- Ufotable Cinema -->
-
-
+      <div class="ufotable-cafe-logo">
+        <img src="file:///Users/angelalam/Documents/OCAD%20U/Fifth%20Fall%202021/Interactive%20Media%20–%20Web/IM-Web%20–%20A2/IMW-Assignment-2/IMW-A2-Logos/ufotable-cafe-logo.png"
+        alt="Ufotable Cafe Logo" width="400" height="auto">
+      </div>
+      <!-- Ufotable Cinema LOGO -->
+      <div class="ufotable-cinema-logo">
+        <img src="file:///Users/angelalam/Documents/OCAD%20U/Fifth%20Fall%202021/Interactive%20Media%20–%20Web/IM-Web%20–%20A2/IMW-Assignment-2/IMW-A2-Logos/cinema_logo-invert.png"
+        alt="Ufotable Cinema Logo" width="200" height="auto">
+      </div>
     </div>
 
 
 <!-- ADD THESE TO THE OTHER PAGES TOO -->
 <!-- Bottom Info -->
-    <div class="bottom-info" id="bottom-info">
+    <footer>
       <a href="#site-policy">SITE POLICY</a>
       <a href="#about-copyright">ABOUT COPYRIGHT OF THE WORK</a>
       <a href="#all-rights">2012-2019 UFOTABLE INC. ALL RIGHTS RESERVED.</a>
       <a href="#FAQ">FREQUENTLY ASKED QUESTIONS</a>
-      <a href="return">RETURN TO THE TOP</a>  <!-- ADD A LINK FOR THIS TO RETURN TO TOP -->
-    </div>
+      <a href="#">RETURN TO THE TOP</a>
+    </footer>
+
   </body>
 </html>

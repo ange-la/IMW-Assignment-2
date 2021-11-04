@@ -8,3 +8,9 @@ $('.main-carousel').flickity({
   cellAlign: 'left',
   contain: true
 });
+
+document.getElementById("myBtn").onclick = function() {myFunction()};
+
+function showOnlick(){
+  document.getElementById("myDropdown").classList.toggle("show");
+}

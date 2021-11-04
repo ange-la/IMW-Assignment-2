@@ -1,29 +1,84 @@
 /* ALL PAGES */
-/* NEED TO FIX OVERLAP OF NAV BAR WHEN SHRUNK */
-/* THE ENTIRE NAV BAR */
-#top-navigation-bar {
-  background: red;
-  padding: 15px;
+
+/* Smooth Scrolling when clicked @ https://www.w3schools.com/howto/howto_css_smooth_scroll.asp#section2 */
+/* THIS DOESN'T WORK ON GOOGLE CHROME */
+html {
+  scroll-behavior: smooth;
 }
 
+
+
+
+/* NEED TO FIX OVERLAP OF NAV BAR WHEN SHRUNK */
+/* THE ENTIRE NAV BAR */
 /* STICKY NAVBAR @ https://www.w3schools.com/howto/howto_css_sticky_element.asp */
-.navigation-bar {
+#top-navigation-bar {
+  background: blue;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 15px;
   position: -webkit-sticky;
   position: sticky;
-  top: 0;
   z-index: 10;
+  display: inline-block;
+}
+
+/* Center the links @ https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook/Center_an_element */
+#promotional-links {
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Bottom LOGOS */
+/* Center the images @ https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook/Center_an_element */
+#bottom-logos {
+  padding: 10px;
+  display: flex;
+  float: left;
+  justify-content: center;
+}
+
+/* CSS Lists @ https://www.w3schools.com/css/css_list.asp */
+/* Help creating dropdown navigation @ https://www.w3schools.com/html/tryit.asp?filename=tryhtml_lists_menu */
+ul {
+  list-style-type: none;
+  margin: auto;
+  padding: 0;
+  float: left;
+  position: -webkit-sticky;
+  position: sticky;
+}
+
+li {
+  list-style-type: none;
+  margin: auto;
+  padding: 0;
+  float: left;
+  position: -webkit-sticky;
+  position: sticky;
+}
+
+/* Center the links @ https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook/Center_an_element */
+footer {
+  padding: 50px;
+  display: flex;
+  float: left;
+  justify-content: center;
+  font-size: 10px;
 }
 
 /* ADD A BREAK POINT */
+@media (max-width: 800px) {
 
+}
 
 /* RESPONSIVE TOP NAVIGATION BAR */
 /* ADD TRANSPARENT BLACK BACKGROUND */
 /* THE INDIVIDUAL TEXT ON NAV BAR */
 a {
-  background: blue;
   font-size: 20px;
-  font-family: Helvetica, sans-serif;
+  font-family: Tahoma, sans-serif;
   color: #ffffff;
   text-decoration: none;
   padding: 15px;
@@ -54,6 +109,10 @@ img {
   float: left;
 }
 
+.bottom-logos {
+  display: inline-block;
+}
+
 /* RESPONSIVE VIDEOS */
 iframe {
   max-width: 100%;
@@ -70,9 +129,12 @@ body {
 
 h1 {
   font-size: 20px;
-  font-family: Helvetica, sans-serif;
+  font-family: Tahoma, sans-serif;
   color: #ffffff;
   text-decoration: none;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
 }
 
 
@@ -99,12 +161,12 @@ h1 {
   float: right;
 }
 
-/* BLURRED Posters @ https://www.w3schools.com/howto/howto_css_blurred_background.asp */
-/* reflect the posters @ https://www.w3schools.com/howto/howto_css_flip_image.asp */
 .large-posters {
   z-index: 5;
 }
 
+/* BLURRED Posters @ https://www.w3schools.com/howto/howto_css_blurred_background.asp */
+/* reflect the posters @ https://www.w3schools.com/howto/howto_css_flip_image.asp */
 .blurred-posters {
   filter: blur(11px);
   -webkit-filter: blur(11 px);
@@ -116,10 +178,4 @@ h1 {
 /* (float:right) bc image is reversed on x axis in .blurred-posters */
 .blurred-demon-season2-poster {
   float: right;
-}
-
-/* Bottom LOGOS */
-.bottom-logos {
-  display: flex;
-  flex-direction: row;
 }
