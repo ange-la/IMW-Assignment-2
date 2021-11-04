@@ -20,23 +20,43 @@
   <body>
 
 <!--Navigation Bar @ https://www.w3schools.com/howto/howto_js_topnav_responsive.asp -->
+<!-- CSS Lists @ https://www.w3schools.com/css/css_list.asp -->
     <div class="navigation-bar" id="top-navigation-bar">
-      <a href="#ufotable-logo">TEMPORARY<a>   <!--NEED TO ADD SVG OF LOGO -->
-      <a href="index.html">HOME</a>
-      <a href="#profile">PROFILE</a>
-      <a href="#news">NEWS</a>
-      <a href="#works">WORKS
-        <a href="theatrical.html">THEATRICAL</a>
-        <a href="television.html">TELEVISION</a>
-        <a href="other-works.html">OTHER</a>
-      </a>
-      <a href="#recruit">RECRUIT</a>
-      <a href="#webshop">WEBSHOP</a>
-      <a href="#community">COMMUNITY</a>
-      <a href="twitter">T</a>   <!--NEED TO ADD SVG OF TWITTER -->
-      <a href="#instagram">I</a>   <!--NEED TO ADD SVG OF INSTAGRAM -->
-      <a href="#english">ENG</a>
+      <ul id="navigation">
+        <li><a href="index.html">
+          <img src="file:///Users/angelalam/Documents/OCAD%20U/Fifth%20Fall%202021/Interactive%20Media%20–%20Web/IM-Web%20–%20A2/IMW-Assignment-2/IMW-A2-Logos/ufotable-white-logo.png"
+          alt="White Ufotable Logo" width="180" height="auto">
+        </a></li>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="#profile">PROFILE</a></li>
+        <li><a href="#news">NEWS</a></li>
+<!-- Help creating dropdown navigation @ https://www.w3schools.com/html/tryit.asp?filename=tryhtml_lists_menu -->
+        <li class="dropdown">
+          <li><a href="#dropdown-projects">PROJECTS</a><li>
+          <li><a href="theatrical.html" id="theatrical-drop">THEATRICAL</a></li>
+          <li><a href="television.html" id="television-drop">TELEVISION</a></li>
+          <li><a href="other-projects.html" id="other-drop">OTHER</a></li>
+        </li>
+        <li><a href="#recruitment">RECRUITMENT</a></li>
+        <li><a href="#webshop">WEBSHOP</a></li>
+        <li><a href="#community">COMMUNITY</a></li>
+<!-- LINK TO UFOTABLE'S OFFICAL TWITTER PAGE -->
+<!-- OPEN TWITTER ON NEW TAB @ https://css-tricks.com/snippets/html/open-link-in-a-new-window/ -->
+        <li><a href="https://twitter.com/ufotable?lang=en" target="_blank">
+          <img src="file:///Users/angelalam/Documents/OCAD%20U/Fifth%20Fall%202021/Interactive%20Media%20–%20Web/IM-Web%20–%20A2/IMW-Assignment-2/IMW-A2-Logos/twitter-logo-white.svg"
+           alt="White Twitter Logo" width="30" height="auto">
+        </a></li>
+<!-- LINK TO UFOTABLE'S OFFICIAL INSTAGRAM PAGE -->
+<!-- OPEN INSTAGRAM ON NEW TAB @ https://css-tricks.com/snippets/html/open-link-in-a-new-window/ -->
+        <li><a href="https://www.instagram.com/ufotable_inc/" target="_blank">
+          <img src="file:///Users/angelalam/Documents/OCAD%20U/Fifth%20Fall%202021/Interactive%20Media%20–%20Web/IM-Web%20–%20A2/IMW-Assignment-2/IMW-A2-Logos/instagram-logo-white.png"
+          alt="White Instagram Logo" width="30" height="auto">
+        </a></li>
+        <li><a href="#english">ENG</a></li>
+      </ul>
     </div>
+
+
 
     <h1>THEATRICAL ANIMATION</h1>
 
@@ -136,12 +156,13 @@
 
 
 <!-- Bottom Info -->
-    <div class="bottom-info" id="bottom-info">
-      <a href="#site-policy">SITE POLICY</a>
-      <a href="#about-copyright">ABOUT COPYRIGHT OF THE WORK</a>
-      <a href="#all-rights">2012-2019 UFOTABLE INC. ALL RIGHTS RESERVED.</a>
-      <a href="#FAQ">FREQUENTLY ASKED QUESTIONS</a>
-      <a href="return">RETURN TO THE TOP</a>  <!-- ADD A LINK FOR THIS TO RETURN TO TOP -->
-    </div>
+    <footer>
+      <a id="footer-font" href="#site-policy" >SITE POLICY</a>
+      <a id="footer-font" href="#about-copyright">ABOUT COPYRIGHT OF THE WORK</a>
+      <a id="footer-font" href="#all-rights">2012-2019 UFOTABLE INC. ALL RIGHTS RESERVED.</a>
+      <a id="footer-font" href="#FAQ">FREQUENTLY ASKED QUESTIONS</a>
+      <a id="footer-font" href="#">RETURN TO THE TOP</a>
+    </footer>
+
   </body>
 </html>

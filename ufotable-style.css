@@ -8,7 +8,6 @@ html {
 
 
 
-
 /* NEED TO FIX OVERLAP OF NAV BAR WHEN SHRUNK */
 /* THE ENTIRE NAV BAR */
 /* STICKY NAVBAR @ https://www.w3schools.com/howto/howto_css_sticky_element.asp */
@@ -16,11 +15,12 @@ html {
   background: blue;
   color: #ffffff;
   text-decoration: none;
-  padding: 15px;
+  padding: 12px 10px;
   position: -webkit-sticky;
   position: sticky;
   z-index: 10;
   display: inline-block;
+  overflow: hidden
 }
 
 /* Center the links @ https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook/Center_an_element */
@@ -45,9 +45,6 @@ ul {
   list-style-type: none;
   margin: auto;
   padding: 0;
-  float: left;
-  position: -webkit-sticky;
-  position: sticky;
 }
 
 li {
@@ -55,17 +52,22 @@ li {
   margin: auto;
   padding: 0;
   float: left;
-  position: -webkit-sticky;
-  position: sticky;
 }
 
 /* Center the links @ https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook/Center_an_element */
 footer {
-  padding: 50px;
+  padding: 10px;
   display: flex;
   float: left;
   justify-content: center;
-  font-size: 10px;
+}
+
+#footer-font {
+  font-size: 16px;
+  padding: 40px;
+  display: flex;
+  float: left;
+  justify-content: center;
 }
 
 /* ADD A BREAK POINT */
@@ -86,8 +88,7 @@ a {
 
 /* CHANGE COLOUR ON HOVER @ https://www.w3schools.com/howto/howto_js_navbar_sticky.asp */
 a:hover {
-  color: #000000;
-  background: #ffffff;
+  text-decoration: underline;
 }
 
 /* info like FAQ, return to the top, site policy, etc */
@@ -132,9 +133,18 @@ h1 {
   font-family: Tahoma, sans-serif;
   color: #ffffff;
   text-decoration: none;
-  display: flex;
-  justify-content: center;
-  padding: 20px;
+}
+
+h2 {
+  color: #ffffff;
+  text-decoration: none;
+  font-family: Tahoma, sans-serif;
+}
+
+p {
+  color: #ffffff;
+  text-decoration: none;
+  font-family: Tahoma, sans-serif;
 }
 
 
@@ -157,8 +167,16 @@ h1 {
 
 /* Large posters on index.html */
 /* Align Demon Slayer Season 2 poster to right */
+.large-mugen-poster {
+  float: left;
+}
+
 .large-demon-season2-poster {
   float: right;
+}
+
+.large-fate-poster {
+  float: left;
 }
 
 .large-posters {
