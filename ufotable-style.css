@@ -11,7 +11,7 @@ html {
 /* NEED TO FIX OVERLAP OF NAV BAR WHEN SHRUNK */
 /* THE ENTIRE NAV BAR */
 /* STICKY NAVBAR @ https://www.w3schools.com/howto/howto_css_sticky_element.asp */
-#top-navigation-bar {
+#top- {
   background: blue;
   color: #ffffff;
   text-decoration: none;
@@ -30,18 +30,35 @@ html {
   justify-content: center;
 }
 
+
+
 /* Bottom LOGOS */
 /* Center the images @ https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook/Center_an_element */
+/* FLEX-WRAP for responsive layout @ https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap */
 #bottom-logos {
   padding: 10px;
   display: flex;
-  float: left;
   justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
 }
+
+.ufotable-dining-logo {
+  padding: 20px;
+}
+
+.ufotable-cafe-logo {
+  padding: 20px;
+}
+
+.ufotable-cinema-logo {
+  padding: 20px;
+}
+
 
 /* CSS Lists @ https://www.w3schools.com/css/css_list.asp */
 /* Help creating dropdown navigation @ https://www.w3schools.com/html/tryit.asp?filename=tryhtml_lists_menu */
-ul {
+/* ul {
   list-style-type: none;
   margin: auto;
   padding: 0;
@@ -52,7 +69,7 @@ li {
   margin: auto;
   padding: 0;
   float: left;
-}
+} */
 
 /* Center the links @ https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook/Center_an_element */
 footer {
@@ -83,7 +100,7 @@ a {
   font-family: Tahoma, sans-serif;
   color: #ffffff;
   text-decoration: none;
-  padding: 15px;
+  padding: 20px;
 }
 
 /* CHANGE COLOUR ON HOVER @ https://www.w3schools.com/howto/howto_js_navbar_sticky.asp */
@@ -102,17 +119,46 @@ img {
   height: auto;
 }
 
+
+.container-year {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  justify-content: center;
+}
+
+
+
+/* TELEVISION.HTML */
+/* Responsive layout with Flex-wrap: wrap; @ https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap */
+.television-posters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: right;
+}
+
 .television-images {
-  float: left;
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+
+
+
+
+/* THEATRICAL.HTML */
+/* Responsive layout with Flex-wrap: wrap; @ https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap */
+.theatrical-posters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: right;
 }
 
 .theatrical-images {
-  float: left;
+  padding-left: 20px;
+  padding-bottom: 20px;
 }
 
-.bottom-logos {
-  display: inline-block;
-}
+
 
 /* RESPONSIVE VIDEOS */
 iframe {
@@ -196,4 +242,55 @@ p {
 /* (float:right) bc image is reversed on x axis in .blurred-posters */
 .blurred-demon-season2-poster {
   float: right;
+}
+
+
+
+
+
+
+
+
+
+/* TEST */
+
+/* NAVIGATION BAR */
+/* <nav> @ https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav */
+/* Dropdown Navigation Bar @ https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp */
+ul {
+  list-style-type: none;
+}
+
+li {
+  display: inline-block;
+  float: left;
+}
+
+.navigation-bar {
+  display: inline-block;
+}
+
+.navigation-bar {
+  background: blue;
+  overflow: hidden;
+}
+
+.navigation-bar a {
+  padding-top: 10px
+}
+
+.dropdown-project {
+  float: left;
+  overflow: hidden;
+  padding: 0;
+}
+
+.dropdown-content {
+  display: none;
+  padding: 0;
+}
+
+.dropdown-project:hover .dropdown-content {
+  display: flex;
+  flex-direction: column;
 }
