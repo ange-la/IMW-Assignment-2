@@ -8,28 +8,13 @@ html {
 
 
 
-/* NEED TO FIX OVERLAP OF NAV BAR WHEN SHRUNK */
-/* THE ENTIRE NAV BAR */
-/* STICKY NAVBAR @ https://www.w3schools.com/howto/howto_css_sticky_element.asp */
-#top- {
-  background: blue;
-  color: #ffffff;
-  text-decoration: none;
-  padding: 12px 10px;
-  position: -webkit-sticky;
-  position: sticky;
-  z-index: 10;
-  display: inline-block;
-  overflow: hidden
-}
-
 /* Center the links @ https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook/Center_an_element */
+/* using display:flex; so text doesn't get distorted when screen shrunk */
 #promotional-links {
   padding: 50px;
   display: flex;
   justify-content: center;
 }
-
 
 
 /* Bottom LOGOS */
@@ -56,20 +41,6 @@ html {
 }
 
 
-/* CSS Lists @ https://www.w3schools.com/css/css_list.asp */
-/* Help creating dropdown navigation @ https://www.w3schools.com/html/tryit.asp?filename=tryhtml_lists_menu */
-/* ul {
-  list-style-type: none;
-  margin: auto;
-  padding: 0;
-}
-
-li {
-  list-style-type: none;
-  margin: auto;
-  padding: 0;
-  float: left;
-} */
 
 /* Center the links @ https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook/Center_an_element */
 footer {
@@ -97,16 +68,17 @@ footer {
 /* THE INDIVIDUAL TEXT ON NAV BAR */
 a {
   font-size: 20px;
-  font-family: Tahoma, sans-serif;
+  font-family: Lucida, sans-serif;
   color: #ffffff;
   text-decoration: none;
-  padding: 20px;
+  padding: 15px;
 }
 
 /* CHANGE COLOUR ON HOVER @ https://www.w3schools.com/howto/howto_js_navbar_sticky.asp */
 a:hover {
-  text-decoration: underline;
+  text-decoration: solid underline #ffffff 3px;
 }
+
 
 /* info like FAQ, return to the top, site policy, etc */
 .bottom-info {
@@ -176,7 +148,7 @@ body {
 
 h1 {
   font-size: 20px;
-  font-family: Tahoma, sans-serif;
+  font-family: Lucida, sans-serif;
   color: #ffffff;
   text-decoration: none;
 }
@@ -184,13 +156,13 @@ h1 {
 h2 {
   color: #ffffff;
   text-decoration: none;
-  font-family: Tahoma, sans-serif;
+  font-family: Lucida, sans-serif;
 }
 
 p {
   color: #ffffff;
   text-decoration: none;
-  font-family: Tahoma, sans-serif;
+  font-family: Lucida, sans-serif;
 }
 
 
@@ -252,7 +224,9 @@ p {
 
 
 
-/* TEST */
+/* TEST DON'T DELETE THIS*/
+
+/* FIX THE NAV BAR bc it keeps extending when hovering PROJECTS */
 
 /* NAVIGATION BAR */
 /* <nav> @ https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav */
@@ -266,13 +240,16 @@ li {
   float: left;
 }
 
+/* IMPORTANT: need to put top:0; to get position:sticky; to work */
+/* making a transparent nav background @ https://developer.mozilla.org/en-US/docs/Learn/CSS/Howto/Make_box_transparent */
 .navigation-bar {
   display: inline-block;
-}
-
-.navigation-bar {
-  background: blue;
+  background: rgba(0,0,0,0.9);
   overflow: hidden;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 .navigation-bar a {
@@ -283,6 +260,7 @@ li {
   float: left;
   overflow: hidden;
   padding: 0;
+  /*border: 1px solid red;*/
 }
 
 .dropdown-content {
