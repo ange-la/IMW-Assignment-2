@@ -225,12 +225,39 @@ p {
 
 
 /* TEST DON'T DELETE THIS*/
-
 /* FIX THE NAV BAR bc it keeps extending when hovering PROJECTS */
+/*.navigation-bar {
+  display: inline-block;
+  background: rgba(0,0,0,0.9);
+  overflow: hidden;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+} */
+/*
+.navigation-bar a {
+  padding-top: 10px
+} */
+
+/*
+.dropdown-content {
+  display: none;
+  padding: 0;
+  background: #000000;
+  color: #ffffff;
+} */
+
+
+
+
+
 
 /* NAVIGATION BAR */
 /* <nav> @ https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav */
 /* Dropdown Navigation Bar @ https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp */
+/* IMPORTANT: need to put top:0; to get position:sticky; to work */
+/* making a transparent nav background @ https://developer.mozilla.org/en-US/docs/Learn/CSS/Howto/Make_box_transparent */
 ul {
   list-style-type: none;
 }
@@ -240,31 +267,62 @@ li {
   float: left;
 }
 
-/* IMPORTANT: need to put top:0; to get position:sticky; to work */
-/* making a transparent nav background @ https://developer.mozilla.org/en-US/docs/Learn/CSS/Howto/Make_box_transparent */
-.navigation-bar {
-  display: inline-block;
-  background: rgba(0,0,0,0.9);
-  overflow: hidden;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  z-index: 10;
+button {
+  font-size: 16px;
+  font-family: Lucida, sans-serif;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 14px;
+  background: none;
+  border: none;
 }
 
-.navigation-bar a {
-  padding-top: 10px
+button:hover {
+  background-color: red;
+}
+
+/* Navbar container */
+/* dropdown is hidden when position: sticky; */
+.navbar {
+  overflow: hidden; /*< removing this breaks the website */
+  background-color: rgba(0,0,0,0.9);
+  font-family: Lucida, sans-serif;
+  top: 0;
+  /*position: -webkit-sticky;
+  position: sticky; */
+  z-index: 100;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #000000;
+  color: #ffffff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
 }
 
 .dropdown-project {
   float: left;
   overflow: hidden;
-  padding: 0;
-  /*border: 1px solid red;*/
-}
-
-.dropdown-content {
-  display: none;
   padding: 0;
 }
 
