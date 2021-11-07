@@ -20,3 +20,18 @@ function myFunction() {
 
 
 /* ADD SOUND ON CLICK FOR HOME PAGE POSTERS */
+/* https://stackoverflow.com/questions/18826147/javascript-audio-play-on-click */
+function demonTwo () {
+        var audio = document.getElementById("demon-sound1");
+        audio.play();
+      }
+
+function demonMugen() {
+        var audio = document.getElementById("demon-sound2");
+        audio.play();
+      }
+
+function fateSound() {
+        var audio = document.getElementById("fate-sound");
+        audio.play();
+      }
