@@ -90,23 +90,6 @@
 
 
 
-<!-- SWITCH THESE TO THE PROMOTIONAL BUTTONS -->
-<!-- https://stackoverflow.com/questions/18826147/javascript-audio-play-on-click -->
-<!-- SOUND Demon Slayer Season 2 -->
-    <input type="button" value="DEMON SLAYER SEASON 2" onclick="demonTwo()">
-    <audio id="demon-sound1" src="file:///Users/angelalam/Documents/OCAD%20U/Fifth%20Fall%202021/Interactive%20Media%20%E2%80%93%20Web/IM-Web%20%E2%80%93%20A2/IMW-Assignment-2/IMW-A2-Sound/demon-slayer-season-2-snippet.mp3" type=audio/mpeg></audio>
-
-<!-- SOUND Demon Slayer Mugen Train -->
-    <input type="button" value="DEMON SLAYER MUGEN TRAIN" onclick="demonMugen()">
-    <audio id="demon-sound2" src="file:///Users/angelalam/Documents/OCAD%20U/Fifth%20Fall%202021/Interactive%20Media%20%E2%80%93%20Web/IM-Web%20%E2%80%93%20A2/IMW-Assignment-2/IMW-A2-Sound/demon-slayer-beginning-ost.mp3" type=audio/mpeg></audio>
-
-<!-- SOUND Fate Heaven's Feel III. [Spring Song] -->
-    <input type="button" value="FATE/STAY NIGHT [HEAVEN'S FEEL] III." onclick="fateSound()">
-    <audio id="fate-sound" src="file:///Users/angelalam/Documents/OCAD%20U/Fifth%20Fall%202021/Interactive%20Media%20%E2%80%93%20Web/IM-Web%20%E2%80%93%20A2/IMW-Assignment-2/IMW-A2-Sound/fate-heavens-feel-snippet.mp3" type=audio/mpeg></audio>
-
-
-
-
 <!-- NEED TO UNMUTE THE VIDEOS AT END "&MUTE=1" -->
 <!--Embedding YouTube videos @ https://www.w3schools.com/html/html_youtube.asp -->
 <!--Remove YouTube logo on video @ https://developers.google.com/youtube/player_parameters -->
@@ -157,10 +140,18 @@
 
 
 <!-- Links to help navigate faster down the website -->
+<!-- https://stackoverflow.com/questions/18826147/javascript-audio-play-on-click -->
     <div class="promotional-links" id="promotional-links">
-      <a href="#ds-season2" onclick="playAudio('file:///Users/angelalam/Documents/OCAD%20U/Fifth%20Fall%202021/Interactive%20Media%20%E2%80%93%20Web/IM-Web%20%E2%80%93%20A2/IMW-Assignment-2/IMW-A2-Sound/demon-slayer-season-2-snippet.mp3')" type=audio/mpeg><b>DEMON SLAYER SEASON 2</b></a>
-      <a href="#mugen-train"><b>DEMON SLAYER MUGEN TRAIN</b></a>
-      <a href="#fate-hf"><b>FATE/STAY NIGHT [HEAVENS FEEL] III.</b></a>
+<!-- SOUND Demon Slayer Season 2 -->
+      <button onclick="demonTwo()"><a href="#ds-season2"><b>DEMON SLAYER SEASON 2</b></a></button>
+      <audio id="demon-sound1" src="file:///Users/angelalam/Documents/OCAD%20U/Fifth%20Fall%202021/Interactive%20Media%20%E2%80%93%20Web/IM-Web%20%E2%80%93%20A2/IMW-Assignment-2/IMW-A2-Sound/demon-slayer-season-2-snippet.mp3" type=audio/mpeg></audio>
+<!-- SOUND Demon Slayer Mugen Train -->
+      <button onclick="demonMugen()"><a href="#mugen-train"><b>DEMON SLAYER MUGEN TRAIN</b></a></button>
+      <audio id="demon-sound2" src="file:///Users/angelalam/Documents/OCAD%20U/Fifth%20Fall%202021/Interactive%20Media%20%E2%80%93%20Web/IM-Web%20%E2%80%93%20A2/IMW-Assignment-2/IMW-A2-Sound/demon-slayer-beginning-ost.mp3" type=audio/mpeg></audio>
+<!-- SOUND Fate Heaven's Feel III. [Spring Song] -->
+      <button onclick="fateSound()"><a href="#fate-hf"><b>FATE/STAY NIGHT [HEAVENS FEEL] III.</b></a></button>
+      <audio id="fate-sound" src="file:///Users/angelalam/Documents/OCAD%20U/Fifth%20Fall%202021/Interactive%20Media%20%E2%80%93%20Web/IM-Web%20%E2%80%93%20A2/IMW-Assignment-2/IMW-A2-Sound/fate-heavens-feel-snippet.mp3" type=audio/mpeg></audio>
+<!-- Link to Information -->
       <a href="#information"><b>INFORMATION</b></a>
     </div>
 
@@ -185,7 +176,7 @@
       <div class="large-fate-poster">
         <img src="https://pbs.twimg.com/media/E6hE0N2XIAA1oUu?format=jpg&name=large"
         id="fate-hf" alt="Fate/Stay Night [Heaven's Feel] III. Spring Song Movie Poster" width="900" height="auto">
-        <div class="fate=text"><strong>2020<br><br>FATE HEAVEN'S FEEL III. [SPRING SONG]</strong></div>
+        <div class="fate=text"><strong>2020<br><br>FATE/STAY NIGHT [HEAVEN'S FEEL] III. SPRING SONG</strong></div>
       </div>
     </div>
 
