@@ -64,324 +64,134 @@
 
     <h1 id="theatrical-heading">THEATRICAL ANIMATION</h1>
 
-<!-- MOVE THESE TO THEATRICAL.HTML AND WORK ON TELEVISION.HTML WHEN DONE -->
+
+
 <!-- Filter @ https://www.w3schools.com/howto/howto_js_filter_elements.asp -->
     <div id="myBtnContainer">
-  <!--REMOVE THIS BC I WANT 'ALL' TO BE DISPLAYED DIFFERENTLY  <button class="btn active" onclick="filterSelection('all')">SHOW ALL</button>-->
-      <button class="btn" onclick="filterSelection('everything')">SHOW ALL</button>
-      <button class="btn" onclick="filterSelection('year')">YEAR</button>
-      <button class="btn" onclick="filterSelection('title')">TITLE</button>
+      <b id="filterby-theatrical">FILTER BY:</b>
+      <button class="btn active" id="show-all-btn" onclick="filterSelection('all')">SHOW ALL</button>
+
+<!-- Filter by YEAR -->
+      <div class="sort-year"><button id="year">YEAR</button>
+        <div class="year-dropdown">
+          <button class="btn" onclick="filterSelection('2020')">2020</button>
+          <button class="btn" onclick="filterSelection('2019')">2019</button>
+          <button class="btn" onclick="filterSelection('2017')">2017</button>
+          <button class="btn" onclick="filterSelection('2014')">2014</button>
+          <button class="btn" onclick="filterSelection('2013')">2013</button>
+          <button class="btn" onclick="filterSelection('2011')">2011</button>
+          <button class="btn" onclick="filterSelection('2010')">2010</button>
+          <button class="btn" onclick="filterSelection('2009')">2009</button>
+          <button class="btn" onclick="filterSelection('2008')">2008</button>
+          <button class="btn" onclick="filterSelection('2007')">2007</button>
+        </div>
+      </div>
+<!-- Filter by Title -->
+      <div class="sort-title"><button id="title">TITLE</button>
+        <div class="title-dropdown">
+          <button class="btn" onclick="filterSelection('demon')">DEMON SLAYER: KIMETSU NO YAIBA</button>
+          <button class="btn" onclick="filterSelection('fate')">FATE/STAY NIGHT [HEAVEN'S FEEL]</button>
+          <button class="btn" onclick="filterSelection('zestiria')">TALES OF ZESTIRIA</button>
+          <button class="btn" onclick="filterSelection('magical')">MAGICAL SISTERS YOYO AND NENE</button>
+          <button class="btn" onclick="filterSelection('sakura')">SAKURA NO ONDO</button>
+          <button class="btn" onclick="filterSelection('garden')">THE GARDEN OF SINNERS</button>
+        </div>
+      </div>
     </div>
 
 
 
-<!-- SHOW ALL -->
-    <div class="theatrical-everything">
+<!-- SHOW ALL, Year,-->
+    <div class="theatrical-all">
 <!-- Demon Slayer Mugen Train -->
-      <div class="filterDiv everything">
+      <div class="filterDiv all 2020 demon">
         <img id="crop" src="https://pbs.twimg.com/media/FAI67muXIAEPrLZ?format=jpg&name=4096x4096"
         alt="Demon Slayer Mugen Train" width="280" height="auto">
       </div>
 <!-- Fate/Stay Night [Heaven's Feel] III. Spring Song Movie Poster -->
-      <div class="filterDiv everything">
+      <div class="filterDiv all 2020 fate">
         <img id="crop" src="https://pbs.twimg.com/media/E6hE0N2XIAA1oUu?format=jpg&name=large"
         alt="Fate/Stay Night [Heaven's Feel] III. Spring Song" width="280" height="auto">
       </div>
 <!-- Fate/Stay Night [Heaven's Feel] II. Lost Butterfly Movie Poster -->
-      <div class="filterDiv everything">
+      <div class="filterDiv all 2019 fate">
         <img id="crop" src="https://pbs.twimg.com/media/E2ll1m1XIAAAEat?format=jpg&name=medium"
         alt="Fate/Stay Night [Heaven's Feel] II. Lost Butterfly" width="280" height="auto">
       </div>
 <!-- Fate/Stay Night [Heaven's Feel] I. Presage Flower Movie Poster -->
-      <div class="filterDiv everything">
+      <div class="filterDiv all 2017 fate">
         <img id="crop" src="https://pbs.twimg.com/media/E2ll1p1XEAkKGNT?format=jpg&name=4096x4096"
         alt="Fate/Stay Night [Heaven's Feel] I. Presage Flower" width="280" height="auto">
       </div>
 <!-- Tales of the Zestiria: Dawn of the Shepherd -->
-      <div class="filterDiv everything">
+      <div class="filterDiv all 2014 zestiria">
         <img id="crop" src="https://m.media-amazon.com/images/M/MV5BZDQwNmY2MGItNzk4NS00Mzc5LWE1M2ItODIyYzBlZjk1YmM2XkEyXkFqcGdeQXVyNDgyODgxNjE@._V1_.jpg"
         alt="Tales of the Zestiria: Dawn of the Shepherd" width="280" height="auto">
       </div>
 <!-- The Garden of Sinners Future Gospel -->
-      <div class="filterDiv everything">
+      <div class="filterDiv all 2013 garden">
         <img id="crop" src="https://i.pinimg.com/474x/b4/03/59/b40359973a611fbb4b0e98efb4815090.jpg"
         alt="The Garden of Sinners Future Gospel" width="280" height="auto">
       </div>
 <!-- The Garden of Sinners Extra Chorus -->
-      <div class="filterDiv everything">
+      <div class="filterDiv all 2011 garden">
         <img id="crop" src="https://i.pinimg.com/474x/d9/dd/78/d9dd789e5bd19e4d513b45fd4279e0f5.jpg"
         alt="The Garden of Sinners Extra Chorus" width="280" height="auto">
       </div>
 <!-- Magical Sisters Yoyo and Nene -->
-      <div class="filterDiv everything">
+      <div class="filterDiv all 2010 magical">
         <img id="crop" src="https://www.themoviedb.org/t/p/original/9w24MqPE0Sp6aQVl3djMCpi1CjH.jpg"
         alt="Magical Sisters Yoyo and Nene" width="280" height="auto">
       </div>
 <!-- Sakura No Ondo -->
-      <div class="filterDiv everything">
+      <div class="filterDiv all 2009 sakura">
         <img id="crop" src="https://cdn.myanimelist.net/images/anime/12/43415l.jpg"
         alt="Sakura No Ondo" width="280" height="auto">
       </div>
 <!-- The Garden of Sinners Final Chapter -->
-      <div class="filterDiv everything">
+      <div class="filterDiv all 2008 garden">
         <img id="crop" src="https://i.pinimg.com/474x/51/11/1e/51111e31a3bb869aeaf892451349aee3.jpg"
         alt="The Garden of Sinners Final Chapter" width="280" height="auto">
       </div>
 <!-- The Garden of Sinners Chapter 7: A Study in Murder Part 2 -->
-      <div class="filterDiv everything">
+      <div class="filterDiv all 2008 garden">
         <img id="crop" src="https://i.pinimg.com/474x/d0/2a/3b/d02a3bce2d988aea47cac2d4e291ca90.jpg"
         alt="The Garden of Sinners Chapter 7: A Study in Murder Part 2" width="280" height="auto">
       </div>
 <!-- The Garden of Sinners Chapter 6: Oblivion Recording -->
-      <div class="filterDiv everything">
+      <div class="filterDiv all 2008 garden">
         <img id="crop" src="https://i.pinimg.com/474x/79/59/24/7959247b2ec73c507ce7866f0cccdb5b.jpg"
         alt="The Garden of Sinners Chapter 6: Oblivion Recording" width="280" height="auto">
       </div>
 <!-- The Garden of Sinners Chapter 5: Paradox Spiral -->
-      <div class="filterDiv everything">
+      <div class="filterDiv all 2008 garden">
         <img id="crop" src="https://i.pinimg.com/474x/68/09/fe/6809fe09bcba928099df4e38bcc03d79.jpg"
         alt="The Garden of Sinners Chapter 5: Paradox Spiral" width="280" height="auto">
       </div>
 <!-- The Garden of Sinners Chapter 4: The Garden of Sinners -->
-      <div class="filterDiv everything">
+      <div class="filterDiv all 2008 garden">
         <img id="crop" src="https://i.pinimg.com/474x/28/99/d6/2899d6210a2108aa46021016ce32fe63.jpg"
         alt="The Garden of Sinners Chapter 4: The Garden of Sinners" width="280" height="auto">
       </div>
 <!-- The Garden of Sinners Chapter 3: Remaining Sense of Pain -->
-      <div class="filterDiv everything">
+      <div class="filterDiv all 2008 garden">
         <img id="crop" src="https://i.pinimg.com/474x/a9/c4/b7/a9c4b71a7b0f3fc62259f3f6a1d84bfb.jpg"
         alt="The Garden of Sinners Chapter 3: Remaining Sense of Pain" width="280" height="auto">
       </div>
 <!-- The Garden of Sinners Chapter 2: A Study in Murder Part 1 -->
-      <div class="filterDiv everything">
+      <div class="filterDiv all 2007 garden">
         <img id="crop" src="https://i.pinimg.com/474x/b0/57/3a/b0573a12ab958efcc6d6f27c45bde34c.jpg"
         alt="The Garden of Sinners Chapter 2: A Study in Murder Part 1" width="280" height="auto">
       </div>
 <!-- The Garden of Sinners Chapter 1: Overlooking View -->
-      <div class="filterDiv everything">
+      <div class="filterDiv all 2007 garden">
         <img id="crop" src="https://i.pinimg.com/474x/1c/d0/2a/1cd02a427f4cc5ea67627085133a15bd.jpg"
         alt="The Garden of Sinners Chapter 1: Overlooking View" width="280" height="auto">
       </div>
     </div>
 
 
-
-<!-- BY YEAR -->
-    <div class="theatrical-year">
-<!-- 2020 -->
-      <div class="filterDiv year"><b id="filter">2020</b></div>
-      <div class="filter-box">
-        <div class="filterDiv year">
-          <img id="crop" src="https://pbs.twimg.com/media/FAI67muXIAEPrLZ?format=jpg&name=4096x4096"
-          alt="Demon Slayer Mugen Train" width="280" height="auto">
-        </div>
-        <div class="filterDiv year">
-          <img id="crop" src="https://pbs.twimg.com/media/E6hE0N2XIAA1oUu?format=jpg&name=large"
-          alt="Fate/Stay Night [Heaven's Feel] III. Spring Song" width="280" height="auto">
-        </div>
-      </div>
-<!-- 2019 -->
-      <div class="filterDiv year"><b id="filter">2019</b></div>
-      <div class="filter-box">
-        <div class="filterDiv year">
-          <img id="crop" src="https://pbs.twimg.com/media/E2ll1m1XIAAAEat?format=jpg&name=medium"
-          alt="Fate/Stay Night [Heaven's Feel] II. Lost Butterfly" width="280" height="auto">
-        </div>
-      </div>
-<!-- 2017 -->
-      <div class="filterDiv year"><b id="filter">2017</b></div>
-      <div class="filter-box">
-        <div class="filterDiv year">
-          <img id="crop" src="https://pbs.twimg.com/media/E2ll1p1XEAkKGNT?format=jpg&name=4096x4096"
-          alt="Fate/Stay Night [Heaven's Feel] I. Presage Flower" width="280" height="auto">
-        </div>
-      </div>
-<!-- 2014 -->
-      <div class="filterDiv year"><b id="filter">2014</b></div>
-      <div class="filter-box">
-        <div class="filterDiv year">
-          <img id="crop" src="https://m.media-amazon.com/images/M/MV5BZDQwNmY2MGItNzk4NS00Mzc5LWE1M2ItODIyYzBlZjk1YmM2XkEyXkFqcGdeQXVyNDgyODgxNjE@._V1_.jpg"
-          alt="Tales of the Zestiria: Dawn of the Shepherd" width="280" height="auto">
-        </div>
-      </div>
-<!-- 2013 -->
-      <div class="filterDiv year"><b id="filter">2013</b></div>
-      <div class="filter-box">
-        <div class="filterDiv year">
-          <img id="crop" src="https://www.themoviedb.org/t/p/original/9w24MqPE0Sp6aQVl3djMCpi1CjH.jpg"
-          alt="Magical Sisters Yoyo and Nene" width="280" height="auto">
-        </div>
-        <div class="filterDiv year">
-          <img id="crop" src="https://i.pinimg.com/474x/b4/03/59/b40359973a611fbb4b0e98efb4815090.jpg"
-          alt="The Garden of Sinners Future Gospel" width="280" height="auto">
-        </div>
-        <div class="filterDiv year">
-          <img id="crop" src="https://i.pinimg.com/474x/d9/dd/78/d9dd789e5bd19e4d513b45fd4279e0f5.jpg"
-          alt="The Garden of Sinners Extra Chorus" width="280" height="auto">
-        </div>
-      </div>
-<!-- 2011 -->
-      <div class="filterDiv year"><b id="filter">2011</b></div>
-      <div class="filter-box">
-        <div class="filterDiv year">
-          <img id="crop" src="https://cdn.myanimelist.net/images/anime/12/43415l.jpg"
-          alt="Sakura No Ondo" width="280" height="auto">
-        </div>
-      </div>
-<!-- 2010 -->
-      <div class="filterDiv year"><b id="filter">2010</b></div>
-      <div class="filter-box">
-        <div class="filterDiv year">
-          <img id="crop" src="https://i.pinimg.com/474x/51/11/1e/51111e31a3bb869aeaf892451349aee3.jpg"
-          alt="The Garden of Sinners Final Chapter" width="280" height="auto">
-        </div>
-      </div>
-<!-- 2009 -->
-      <div class="filterDiv year"><b id="filter">2009</b></div>
-      <div class="filter-box">
-        <div class="filterDiv year">
-          <img id="crop" src="https://i.pinimg.com/474x/d0/2a/3b/d02a3bce2d988aea47cac2d4e291ca90.jpg"
-          alt="The Garden of Sinners Chapter 7: A Study in Murder Part 2" width="280" height="auto">
-        </div>
-      </div>
-<!-- 2008 -->
-      <div class="filterDiv year"><b id="filter">2008</b></div>
-      <div class="filter-box">
-        <div class="filterDiv year">
-          <img id="crop" src="https://i.pinimg.com/474x/79/59/24/7959247b2ec73c507ce7866f0cccdb5b.jpg"
-          alt="The Garden of Sinners Chapter 6: Oblivion Recording" width="280" height="auto">
-        </div>
-        <div class="filterDiv year">
-          <img id="crop" src="https://i.pinimg.com/474x/68/09/fe/6809fe09bcba928099df4e38bcc03d79.jpg"
-          alt="The Garden of Sinners Chapter 5: Paradox Spiral" width="280" height="auto">
-        </div>
-        <div class="filterDiv year">
-          <img id="crop" src="https://i.pinimg.com/474x/28/99/d6/2899d6210a2108aa46021016ce32fe63.jpg"
-          alt="The Garden of Sinners Chapter 4: The Garden of Sinners" width="280" height="auto">
-        </div>
-        <div class="filterDiv year">
-          <img id="crop" src="https://i.pinimg.com/474x/a9/c4/b7/a9c4b71a7b0f3fc62259f3f6a1d84bfb.jpg"
-          alt="The Garden of Sinners Chapter 3: Remaining Sense of Pain" width="280" height="auto">
-        </div>
-      </div>
-<!-- 2007 -->
-      <div class="filterDiv year"><b id="filter">2007</b></div>
-      <div class="filter-box">
-        <div class="filterDiv year">
-          <img id="crop" src="https://i.pinimg.com/474x/b0/57/3a/b0573a12ab958efcc6d6f27c45bde34c.jpg"
-          alt="The Garden of Sinners Chapter 2: A Study in Murder Part 1" width="280" height="auto">
-        </div>
-        <div class="filterDiv year">
-          <img id="crop" src="https://i.pinimg.com/474x/1c/d0/2a/1cd02a427f4cc5ea67627085133a15bd.jpg"
-          alt="The Garden of Sinners Chapter 1: Overlooking View" width="280" height="auto">
-        </div>
-      </div>
-    </div>
-
-
-
-<!-- BY SERIES -->
-    <div class="theatrical-title">
-<!-- Demon Slayer -->
-      <div class="filterDiv title"><b id="filter">DEMON SLAYER</b></div>
-      <div class="filter-box">
-        <div class="filterDiv title">
-          <img id="crop" src="https://pbs.twimg.com/media/FAI67muXIAEPrLZ?format=jpg&name=4096x4096"
-          alt="Demon Slayer Mugen Train" width="280" height="auto">
-        </div>
-      </div>
-<!-- Fate Series -->
-      <div class="filterDiv title"><b id="filter">FATE/STAY NIGHT [HEAVEN'S FEEL]</b></div>
-      <div class="filter-box">
-        <div class="filterDiv title">
-          <img id="crop" src="https://pbs.twimg.com/media/E2ll1p1XEAkKGNT?format=jpg&name=4096x4096"
-          alt="Fate/Stay Night [Heaven's Feel] I. Presage Flower" width="280" height="auto">
-        </div>
-        <div class="filterDiv title">
-          <img id="crop" src="https://pbs.twimg.com/media/E2ll1m1XIAAAEat?format=jpg&name=medium"
-          alt="Fate/Stay Night [Heaven's Feel] II. Lost Butterfly" width="280" height="auto">
-        </div>
-        <div class="filterDiv title">
-          <img id="crop" src="https://pbs.twimg.com/media/E6hE0N2XIAA1oUu?format=jpg&name=large"
-          alt="Fate/Stay Night [Heaven's Feel] III. Spring Song" width="280" height="auto">
-        </div>
-      </div>
-<!-- Tales of Zestiria -->
-      <div class="filterDiv title"><b id="filter">TALES OF ZESTIRIA</b></div>
-      <div class="filter-box">
-        <div class="filterDiv title">
-          <img id="crop" src="https://m.media-amazon.com/images/M/MV5BZDQwNmY2MGItNzk4NS00Mzc5LWE1M2ItODIyYzBlZjk1YmM2XkEyXkFqcGdeQXVyNDgyODgxNjE@._V1_.jpg"
-          alt="Tales of the Zestiria: Dawn of the Shepherd" width="280" height="auto">
-        </div>
-      </div>
-<!-- Sakura No Ondo -->
-      <div class="filterDiv title"><b id="filter">SAKURA NO ONDO</b></div>
-      <div class="filter-box">
-        <div class="filterDiv title">
-          <img id="crop" src="https://cdn.myanimelist.net/images/anime/12/43415l.jpg"
-          alt="Sakura No Ondo" width="280" height="auto">
-        </div>
-      </div>
-<!-- Magical Sisters Yoyo and Nene -->
-      <div class="filterDiv title"><b id="filter">MAGICAL SISTERS YOYO AND NENE</b></div>
-      <div class="filter-box">
-        <div class="filterDiv title">
-          <img id="crop" src="https://www.themoviedb.org/t/p/original/9w24MqPE0Sp6aQVl3djMCpi1CjH.jpg"
-          alt="Magical Sisters Yoyo and Nene" width="280" height="auto">
-        </div>
-      </div>
-<!-- The Garden of Sinners -->
-      <div class="filterDiv title"><b id="filter">THE GARDEN OF SINNERS</b></div>
-      <div class="filter-box">
-        <div class="filterDiv title">
-          <img id="crop" src="https://i.pinimg.com/474x/1c/d0/2a/1cd02a427f4cc5ea67627085133a15bd.jpg"
-          alt="The Garden of Sinners Chapter 1: Overlooking View" width="280" height="auto">
-        </div>
-        <div class="filterDiv title">
-          <img id="crop" src="https://i.pinimg.com/474x/b0/57/3a/b0573a12ab958efcc6d6f27c45bde34c.jpg"
-          alt="The Garden of Sinners Chapter 2: A Study in Murder Part 1" width="280" height="auto">
-        </div>
-        <div class="filterDiv title">
-          <img id="crop" src="https://i.pinimg.com/474x/a9/c4/b7/a9c4b71a7b0f3fc62259f3f6a1d84bfb.jpg"
-          alt="The Garden of Sinners Chapter 3: Remaining Sense of Pain" width="280" height="auto">
-        </div>
-        <div class="filterDiv title">
-          <img id="crop" src="https://i.pinimg.com/474x/28/99/d6/2899d6210a2108aa46021016ce32fe63.jpg"
-          alt="The Garden of Sinners Chapter 4: The Garden of Sinners" width="280" height="auto">
-        </div>
-        <div class="filterDiv title">
-          <img id="crop" src="https://i.pinimg.com/474x/68/09/fe/6809fe09bcba928099df4e38bcc03d79.jpg"
-          alt="The Garden of Sinners Chapter 5: Paradox Spiral" width="280" height="auto">
-        </div>
-        <div class="filterDiv title">
-          <img id="crop" src="https://i.pinimg.com/474x/79/59/24/7959247b2ec73c507ce7866f0cccdb5b.jpg"
-          alt="The Garden of Sinners Chapter 6: Oblivion Recording" width="280" height="auto">
-        </div>
-        <div class="filterDiv title">
-          <img id="crop" src="https://i.pinimg.com/474x/d0/2a/3b/d02a3bce2d988aea47cac2d4e291ca90.jpg"
-          alt="The Garden of Sinners Chapter 7: A Study in Murder Part 2" width="280" height="auto">
-        </div>
-        <div class="filterDiv title">
-          <img id="crop" src="https://i.pinimg.com/474x/51/11/1e/51111e31a3bb869aeaf892451349aee3.jpg"
-          alt="The Garden of Sinners Final Chapter" width="280" height="auto">
-        </div>
-        <div class="filterDiv title">
-          <img id="crop" src="https://i.pinimg.com/474x/d9/dd/78/d9dd789e5bd19e4d513b45fd4279e0f5.jpg"
-          alt="The Garden of Sinners Extra Chorus" width="280" height="auto">
-        </div>
-        <div class="filterDiv title">
-          <img id="crop" src="https://i.pinimg.com/474x/b4/03/59/b40359973a611fbb4b0e98efb4815090.jpg"
-          alt="The Garden of Sinners Future Gospel" width="280" height="auto">
-        </div>
-      </div>
-    </div>
-
-
-
-
-
-
-
+<!-- REPLACE THIS -->
 <!-- Logos take users to an external link when they click on the logo -->
 <!-- Bottom Page Logos using FLEX-WRAP: WRAP;-->
     <div class="bottom-logos" id="bottom-logos">
@@ -403,7 +213,7 @@
     </div>
 
 
-
+<!-- REPLACE THIS -->
 <!-- Bottom Info -->
     <footer>
       <a id="footer-font" href="#site-policy" >SITE POLICY</a>

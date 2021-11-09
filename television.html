@@ -20,7 +20,7 @@
   <body>
 
 
-
+<!-- REPLACE THIS -->
 <!--Navigation Bar @ https://www.w3schools.com/howto/howto_js_topnav_responsive.asp -->
 <!-- CSS Lists @ https://www.w3schools.com/css/css_list.asp -->
 <nav class="navbar">
@@ -62,92 +62,142 @@
 
 
 
-    <h1>TELEVISION ANIMATION</h1>
+    <h1 id="television-heading">TELEVISION ANIMATION</h1>
 
-<!-- REARRANGE OR LABEL BY YEAR??? ??????????????????????? -->
-<!-- THEATRICAL ANIMATION -->
-<!-- Adding Images @ https://www.w3schools.com/html/html_images.asp -->
-<!-- Responsive Layout using FLEX-WRAP: WRAP; -->
-    <div class="television-posters">
-      <!-- Demon Slayer Season 2 -->
-      <div class="television-images">
+
+
+<!-- Filter @ https://www.w3schools.com/howto/howto_js_filter_elements.asp -->
+    <div id="myBtnContainer">
+      <b id="filterby-television">FILTER BY:</b>
+      <button class="btn active" id="show-all-btn" onclick="filterSelection('all')">SHOW ALL</button>
+
+<!-- Filter by YEAR -->
+      <div class="sort-year"><button id="year">YEAR</button>
+        <div class="year-dropdown">
+          <button class="btn" onclick="filterSelection('2021')">2021</button>
+          <button class="btn" onclick="filterSelection('2019')">2019</button>
+          <button class="btn" onclick="filterSelection('2018')">2018</button>
+          <button class="btn" onclick="filterSelection('2017')">2017</button>
+          <button class="btn" onclick="filterSelection('2016')">2016</button>
+          <button class="btn" onclick="filterSelection('2015')">2015</button>
+          <button class="btn" onclick="filterSelection('2014')">2014</button>
+          <button class="btn" onclick="filterSelection('2013')">2013</button>
+          <button class="btn" onclick="filterSelection('2012')">2012</button>
+          <button class="btn" onclick="filterSelection('2011')">2011</button>
+          <button class="btn" onclick="filterSelection('2007')">2007</button>
+          <button class="btn" onclick="filterSelection('2006')">2006</button>
+          <button class="btn" onclick="filterSelection('2005')">2005</button>
+        </div>
+      </div>
+<!-- Filter by Title -->
+      <div class="sort-title"><button id="title">TITLE</button>
+        <div class="title-dropdown">
+          <button class="btn" onclick="filterSelection('demon')">DEMON SLAYER: KIMETSU NO YAIBA</button>
+          <button class="btn" onclick="filterSelection('fate')">FATE SERIES</button>
+          <button class="btn" onclick="filterSelection('katsugeki')">KATSUGEKI/TOUKEN RANBU</button>
+          <button class="btn" onclick="filterSelection('zestiria')">TALES OF ZESTIRIA THE X</button>
+          <button class="btn" onclick="filterSelection('eater')">GOD EATER</button>
+          <button class="btn" onclick="filterSelection('garden')">THE GARDEN OF SINNERS</button>
+          <button class="btn" onclick="filterSelection('gakuen')">GAKUEN UTOPIA MANABI STRAIGHT!</button>
+          <button class="btn" onclick="filterSelection('coyote')">COYOTE RAGTIME SHOW</button>
+          <button class="btn" onclick="filterSelection('futakoi')">FUTAKOI ALTERNATIVE</button>
+        </div>
+      </div>
+    </div>
+
+
+
+<!-- SHOW ALL, Year,-->
+    <div class="television-all">
+<!-- Demon Slayer Season 2 -->
+      <div class="filterDiv all 2021 demon">
         <img id="crop" src="https://pbs.twimg.com/media/FAI7EuZUcAYM5nC?format=jpg&name=4096x4096"
         alt="Demon Slayer Season 2" width="300" height="auto">
       </div>
-      <!-- Demon Slayer Season 1 -->
-      <div class="television-images">
+<!-- Demon Slayer Mugen Train TV Edition -->
+      <div class="filterDiv all 2021 demon">
+        <img id="crop" src="https://pbs.twimg.com/media/E0TrhPPXEAEihNa?format=jpg&name=4096x4096"
+        alt="Demon Slayer Season 2" width="300" height="auto">
+      </div>
+<!-- Demon Slayer Season 1 -->
+      <div class="filterDiv all 2019 demon">
         <img id="crop" src="https://img1.ak.crunchyroll.com/i/spire3/f1fe5c7a43cb2f38f4152a58f89479821554508873_full.jpg"
         alt="Demon Slayer Season 1" width="300" height="auto">
       </div>
-      <!-- Today's MENU for the EMIYA Family -->
-      <div class="television-images">
+<!-- Today's MENU for the EMIYA Family -->
+      <div class="filterDiv all 2018 fate">
         <img id="crop" src="https://img1.ak.crunchyroll.com/i/spire3/54255df186d579c2dfff7c25db0c49da1516840634_full.jpg"
         alt="Today's MENU for the EMIYA Family" width="300" height="auto">
       </div>
-      <!-- Tales of Zestiria the X Season 2 -->
-      <div class="television-images">
-        <img id="crop" src="https://i.pinimg.com/474x/d0/c6/b5/d0c6b531ad85a950197f5fbfcc579dc8.jpg"
-        alt="Tales of Zestiria the X Season 2" width="300" height="auto">
-      </div>
-      <!-- Tales of Zestiria the X Season 1 -->
-      <div class="television-images">
-        <img id="crop" src="https://i.pinimg.com/474x/23/48/31/2348316be0b97cdd96d92f8595b58b29.jpg"
-        alt="Tales of Zestiria the X Season 1" width="300" height="auto">
-      </div>
-      <!-- Katsugeki Touken Ranbu -->
-      <div class="television-images">
+<!-- Katsugeki/Touken Ranbu -->
+      <div class="filterDiv all 2017 katsugeki">
         <img id="crop" src="https://img1.ak.crunchyroll.com/i/spire1/0eceb5e875bf8a87799d16abe43ed1701500429555_full.jpg"
-        alt="Katsugeki Touken Ranbu" width="300" height="auto">
+        alt="Katsugeki/Touken Ranbu" width="300" height="auto">
       </div>
-      <!-- Fate/Grand Order x Himuro's World -->
-      <div class="television-images">
+<!-- Fate/Grand Order x Himuro's World -->
+      <div class="filterDiv all 2017 fate">
         <img id="crop" src="https://cdn.myanimelist.net/images/anime/1421/105975.jpg"
         alt="Fate/Grand Order x Himuro's World" width="300" height="auto">
       </div>
-      <!-- Fate/Stay Night Unlimited Blade Works Season 2-->
-      <div class="television-images">
-        <img id="crop" src="https://img1.ak.crunchyroll.com/i/spire2/fd6f801d77097e20eb5ffb9232de14d01430173031_full.jpg"
-        alt="Fate/Stay Night Unlimited Blade Works Season 2" width="300" height="auto">
+<!-- Tales of the Zestiria the X Season 2 -->
+      <div class="filterDiv all 2017 zestiria">
+        <img id="crop" src="https://i.pinimg.com/474x/d0/c6/b5/d0c6b531ad85a950197f5fbfcc579dc8.jpg"
+        alt="Tales of Zestiria the X Season 2" width="300" height="auto">
       </div>
-      <!-- Fate/Stay Night Unlimited Blade Works Season 1 -->
-      <div class="television-images">
-        <img id="crop" src="https://external-preview.redd.it/giG47pvNovDC8ECA-BEuzHpXHHAgANDwl2FT0UrLL2A.jpg?auto=webp&s=230316ff01ef1eef74ddec3a25463f9b41d6eabf"
-        alt="Fate/Stay Night Unlimited Blade Works Season 1" width="300" height="auto">
+<!-- Tales of Zestiria the X Season 1 -->
+      <div class="filterDiv all 2016 zestiria">
+        <img id="crop" src="https://i.pinimg.com/474x/23/48/31/2348316be0b97cdd96d92f8595b58b29.jpg"
+        alt="Tales of Zestiria the X Season 1" width="300" height="auto">
       </div>
-      <!-- God Eater -->
-      <div class="television-images">
+<!-- God Eater -->
+      <div class="filterDiv all 2015 eater">
         <img id="crop" src="https://img1.ak.crunchyroll.com/i/spire4/fd241d37083abbc9adb3ad008167ba9b1438800120_full.jpg"
         alt="God Eater" width="300" height="auto">
       </div>
-      <!-- Fate/Zero Season 2 -->
-      <div class="television-images">
+<!-- Fate/Stay Night Unlimited Blade Works Season 2 -->
+      <div class="filterDiv all 2015 fate">
+        <img id="crop" src="https://img1.ak.crunchyroll.com/i/spire2/fd6f801d77097e20eb5ffb9232de14d01430173031_full.jpg"
+        alt="Fate/Stay Night Unlimited Blade Works Season 2" width="300" height="auto">
+      </div>
+<!-- Fate/Stay Night Unlimited Blade Works Season 1 -->
+      <div class="filterDiv all 2014 fate">
+        <img id="crop" src="https://external-preview.redd.it/giG47pvNovDC8ECA-BEuzHpXHHAgANDwl2FT0UrLL2A.jpg?auto=webp&s=230316ff01ef1eef74ddec3a25463f9b41d6eabf"
+        alt="Fate/Stay Night Unlimited Blade Works Season 1" width="300" height="auto">
+      </div>
+<!-- The Garden of Sinners TV Edition -->
+      <div class="filterDiv all 2013 garden">
+        <img id="crop" src="https://i.pinimg.com/474x/51/11/1e/51111e31a3bb869aeaf892451349aee3.jpg"
+        alt="The Garden of Sinners Final Chapter" width="280" height="auto">
+      </div>
+<!-- Fate/Zero Season 2 -->
+      <div class="filterDiv all 2012 fate">
         <img id="crop" src="https://i.pinimg.com/474x/35/c9/5b/35c95baf670c47fd3554abdf15a5e0c0.jpg"
         alt="Fate/Zero Season 2" width="300" height="auto">
       </div>
-      <!-- Fate/Zero Season 1 -->
-      <div class="television-images">
+<!-- Fate/Zero Season 1 -->
+      <div class="filterDiv all 2011 fate">
         <img id="crop" src="https://i.pinimg.com/474x/39/26/49/3926495c686d4304f70f790ad23d56c7.jpg"
         alt="Fate/Zero Season 1" width="300" height="auto">
       </div>
-      <!-- Gakuen Utopia Manabi Straight! -->
-      <div class="television-images">
+<!-- Gakuen Utopia Manabi Straight! -->
+      <div class="filterDiv all 2007 gakuen">
         <img id="crop" src="https://pics.filmaffinity.com/Gakuen_Utopia_Manabi_Straight_TV_Series-175679173-large.jpg"
         alt="Gakuen Utopia Manabi Straight!" width="300" height="auto">
       </div>
-      <!-- Coyote Ragtime Show -->
-      <div class="television-images">
+<!-- Coyote Ragtime Show -->
+      <div class="filterDiv all 2006 coyote">
         <img id="crop" src="https://m.media-amazon.com/images/M/MV5BMjAzNGRlZDEtYzNjZS00NDc2LThhYWQtYWY1NWY1NDU2OTg3XkEyXkFqcGdeQXVyMjc4OTQ1OTA@._V1_FMjpg_UX1000_.jpg"
         alt="Coyote Ragtime Show" width="300" height="auto">
       </div>
-      <!-- Futakoi Alternative -->
-      <div class="television-images">
+<!-- Futakoi Alternative -->
+      <div class="filterDiv all 2005 futakoi">
         <img id="crop" src="https://upload.wikimedia.org/wikipedia/en/thumb/6/6c/Futakoi_Alt.jpg/220px-Futakoi_Alt.jpg"
         alt="Futakoi Alternative" width="300" height="auto">
       </div>
     </div>
 
 
-
+<!-- REPLACE THIS -->
 <!-- Logos take users to an external link when they click on the logo -->
 <!-- Bottom Page Logos using FLEX-WRAP: WRAP;-->
     <div class="bottom-logos" id="bottom-logos">
@@ -169,7 +219,7 @@
     </div>
 
 
-
+<!-- REPLACE THIS -->
 <!-- Bottom Info -->
     <footer>
       <a id="footer-font" href="#site-policy" >SITE POLICY</a>

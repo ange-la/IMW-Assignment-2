@@ -7,15 +7,6 @@ html {
 }
 
 
-/* COVID NOTICE in red */
-#notice {
-  font-size: 16px;
-  font-family: Lucida, sans-serif;
-  color: red;
-  text-decoration: none;
-}
-
-
 
 /* Center the links @ https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook/Center_an_element */
 /* using display:flex; so text doesn't get distorted when screen shrunk */
@@ -35,20 +26,6 @@ html {
   flex-wrap: wrap;
   align-items: center;
 }
-
-.ufotable-dining-logo {
-  padding: 10px;
-}
-
-.ufotable-cafe-logo {
-  padding: 10px;
-}
-
-.ufotable-cinema-logo {
-  padding: 10px;
-}
-
-
 
 
 
@@ -100,7 +77,7 @@ img {
 /* object-fit: cover; to crop images to same size @ https://www.w3schools.com/css/css3_object-fit.asp */
 #crop {
   max-width: 100%;
-  height: 395px;
+  height: 400px;
   object-fit: cover;
 }
 
@@ -149,7 +126,7 @@ iframe {
 /* DEMO 08 - RESPONSIVE WEB DESIGN ON CANVAS */
 /* centering the website and adding auto adjusting margins */
 body {
-  max-width: 1400px; /* SHOULD ADJUST THIS FOR NAV BAR */
+  max-width: 1700px; /* SHOULD ADJUST THIS FOR NAV BAR */
   margin: auto;
   background-color: #000000;
 }
@@ -181,6 +158,101 @@ button {
   flex-wrap: wrap;
 }
 
+/* Dropdown Year for THEATRICAL.HTML @ https://www.w3schools.com/css/css_dropdowns.asp */
+.sort-year {
+  display: inline-block;
+}
+
+.year-dropdown {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 58px;
+  z-index: 1;
+}
+
+.sort-year:hover .year-dropdown {
+  display: flex;
+  flex-direction: column;
+}
+
+#year {
+  background: #000000;
+  border: 1px solid #ffffff;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 16px;
+  font-family: Lucida, sans-serif;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 6px;
+}
+
+/* Dropdown Title for THEATRICAL.HTML @ https://www.w3schools.com/css/css_dropdowns.asp */
+.sort-title {
+  display: inline-block;
+}
+
+.title-dropdown {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 300px;
+  z-index: 1;
+}
+
+.sort-title:hover .title-dropdown {
+  display: flex;
+  flex-direction: column;
+}
+
+#title {
+  background: #000000;
+  border: 1px solid #ffffff;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 16px;
+  font-family: Lucida, sans-serif;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 6px;
+}
+
+/* Show All Button Style*/
+#show-all-btn {
+  background: #000000;
+  border: 1px solid #ffffff;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 16px;
+  font-family: Lucida, sans-serif;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 6px;
+}
+
+/* "FILTER BY:" word style */
+#filterby-theatrical {
+  font-size: 16px;
+  font-family: Lucida, sans-serif;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 6px;
+}
+
+
+
+/* "FILTER BY:" word style */
+#filterby-television {
+  font-size: 16px;
+  font-family: Lucida, sans-serif;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 6px;
+}
+
+
+
 
 
 /* INDEX.HTML PAGE */
@@ -188,6 +260,8 @@ button {
 .main-carousel {
   background: #000000;
   max-width: 1400px;
+  justify-content: center;
+  margin: auto;
 }
 
 .carousel-cell {
@@ -244,7 +318,7 @@ button {
 /* To eliminate the horizontal scroll @ https://www.w3schools.com/cssref/css3_pr_word-wrap.asp */
 /* Line-height @ https://www.w3schools.com/cssref/pr_dim_line-height.asp */
 /* Text placed beside large posters on index.html */
-strong {
+#index-text {
   display: inline-block;
   color: #ffffff;
   text-decoration: none;
@@ -253,8 +327,8 @@ strong {
   text-align: left;
   word-wrap: break-word;
   text-align: left;
-  margin-left: 30px;
-  margin-right: 30px;
+  padding-left: 100px;
+  padding-right: 100px;
   line-height: 1.3;
 }
 
@@ -282,7 +356,6 @@ strong {
 @media screen and (max-width: 1190px) {
   .navbar li:not(:first-child) {display: none;}
   .navbar li.icon {
-    float: right;
     display: block;
     }
 }
@@ -294,9 +367,16 @@ strong {
     right: 0;
     top: 0;
   }
-  .navbar.responsive a {
+  .navbar.responsive li {
     float: none;
     display: block;
+    text-align: left;
+  }
+  .navbar.responsive .dropdown-project {float: none;}
+  .navbar.responsive .dropdown-content {position: relative;}
+  .navbar.responsive .dropdown-project .dropbtn {
+    display: block;
+    width: 100%;
     text-align: left;
   }
 }
@@ -305,9 +385,10 @@ strong {
   display: none;
 }
 
+
 /* Remove large text beside poster to prevent horizontal scroll from appearing */
 @media screen and (max-width: 1400px) {
-  strong {display: none;}
+  #index-text {display: none;}
 }
 
 
@@ -318,26 +399,6 @@ strong {
 /* IMPORTANT: need to put top:0; to get position:sticky; to work */
 /* making a transparent nav background @ https://developer.mozilla.org/en-US/docs/Learn/CSS/Howto/Make_box_transparent */
 /* DEMO from Professor Ali Qadeer */
-
-/* FIX HEADER + #COVID-NOTICE BC IT WON'T STICKY WELL */
-header {
-  background: #ffffff;
-  display: flex;
-  justify-content: center;
-  top: 0;
-  position:-webkit-sticky;
-  position: sticky;
-  z-index: 100;
-  max-width: 100%;
-}
-
-#covid-notice {
-  font-size: 16px;
-  font-family: Lucida, sans-serif;
-  color: red;
-  text-decoration: none;
-  padding: 5px;
-}
 
 * {
   padding: 0;
@@ -422,6 +483,36 @@ nav li {
   flex-direction: column;
 }
 
+/* FIX HEADER + #COVID-NOTICE BC IT WON'T STICKY WELL */
+header {
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  top: 0;
+  position:-webkit-sticky;
+  position: sticky;
+  z-index: 100;
+  max-width: 100%;
+}
+
+/* COVID NOTICE in red */
+#covid-notice {
+  font-size: 14px;
+  font-family: Lucida, sans-serif;
+  color: red;
+  text-decoration: none;
+  padding: 5px;
+  padding-top: 8px;
+}
+
+/* STICKY the header and navbar TOGETHER */
+.top-sticky {
+  top: 0;
+  position:-webkit-sticky;
+  position: sticky;
+  z-index: 100;
+}
+
 
 
 
@@ -438,15 +529,24 @@ nav li {
   text-align: center;
 }
 
+/* h1 for TELEVISION.HTML heading */
+#television-heading {
+  font-size: 20px;
+  font-family: Lucida, sans-serif;
+  color: #ffffff;
+  text-decoration: none;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+}
+
 /* <b> text for the filters */
 #filter {
-  font-size: 50px;
+  font-size: 20px;
   font-family: Lucida, sans-serif;
   color: #ffffff;
   text-decoration: none;
   display: flex;
-  border: 1px solid blue;
-  padding-bottom: 30px;
 }
 
 .filterDiv {
@@ -456,45 +556,43 @@ nav li {
   padding-bottom: 40px;
 }
 
+/* aligning the text on theatrical.html */
 .show {
   display: block;
 }
 
-/* all content without titles or year */
-.theatrical-everything {
+/* all content without titles or year for THEATRICAL.HTML */
+.theatrical-all {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding-top: 100px;
+  padding-top: 60px;
   overflow: hidden;
 }
 
-/* all content for YEAR filter */
-.theatrical-year {
-  display: inline-block;
-  padding-top: 100px;
-  overflow: hidden;
-}
-
-/* all content for TITLE filter */
-.theatrical-title {
-  justify-content: left;
-  padding-top: 100px;
+/* all content without titles or year for TELEVISION.HTML */
+.television-all {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 60px;
   overflow: hidden;
 }
 
 /* putting in different rows according to series or year */
+/* aligning the images in center */
 .filter-box {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 50px;
 }
 
 /* Style the buttons */
 #myBtnContainer {
   display: flex;
-  justify-content: flex-start;
-  padding-left: 80px;
+  justify-content: center;
 }
 
 .btn {
