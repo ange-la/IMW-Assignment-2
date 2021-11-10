@@ -83,40 +83,6 @@ img {
 
 
 
-/* TELEVISION.HTML */
-/* Responsive layout with Flex-wrap: wrap; @ https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap */
-.television-posters {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: right;
-  padding-top: 100px;
-}
-
-.television-images {
-  padding-left: 20px;
-  padding-bottom: 100px;
-}
-
-
-
-
-/* THEATRICAL.HTML */
-/* Responsive layout with Flex-wrap: wrap; @ https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap */
-.theatrical-posters {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: right;
-  padding-top: 100px;
-}
-
-.theatrical-images {
-  padding-left: 20px;
-  padding-bottom: 100px;
-}
-
-
-
-
 /* RESPONSIVE VIDEOS */
 iframe {
   max-width: 100%;
@@ -288,6 +254,13 @@ button {
 .sort-other {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+}
+
+.other-animation-videos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .figure-other {
@@ -587,6 +560,17 @@ header {
   text-align: center;
 }
 
+/* h1 for OTHER-PROJECTS.HTML heading */
+#other-heading {
+  font-size: 20px;
+  font-family: Lucida, sans-serif;
+  color: #ffffff;
+  text-decoration: none;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+}
+
 /* <b> text for the filters */
 #filter {
   font-size: 20px;
@@ -596,6 +580,7 @@ header {
   display: flex;
 }
 
+/* THE PADDING FOR EACH filterDiv image */
 .filterDiv {
   display: none;
   padding-left: 20px;

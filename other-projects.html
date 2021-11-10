@@ -62,16 +62,15 @@
 
 
 
-    <h1>OTHER ANIMATION WORKS</h1>
+    <h1 id="other-heading">OTHER ANIMATION WORKS</h1>
 
 
 <!-- Filter @ https://www.w3schools.com/howto/howto_js_filter_elements.asp -->
     <div id="myBtnContainer">
       <b id="filterby-other">FILTER BY:</b>
-  <!-- Filter by CATEGORY -->
-      <button class="btn" onclick="filterSelection('ova')">OVA</button>
-      <button class="btn" onclick="filterSelection('opening')">OPENING ANIMATION</button>
+      <button class="btn" onclick="filterSelection('opening')">OPENING SEQUENCE</button>
       <button class="btn" onclick="filterSelection('game')">IN-GAME ANIMATION</button>
+      <button class="btn" onclick="filterSelection('ova')">OVA</button>
       <button class="btn" onclick="filterSelection('storyboarding')">STORYBOARDING</button>
       <button class="btn" onclick="filterSelection('comics')">COMICS</button>
       <button class="btn" onclick="filterSelection('background')">BACKGROUND ART</button>
@@ -81,21 +80,57 @@
 
 
     <div class="sort-other">
+<!-- Filter by CATEGORY -->
 <!-- OVA -->
-      <div class="tales-symphonia-integration">
+<!-- TODAY'S MENU FOR THE EMIYA FAMILY -->
+      <div class="filterDiv ova">
+        <img id="crop" src="https://img1.ak.crunchyroll.com/i/spire3/54255df186d579c2dfff7c25db0c49da1516840634_full.jpg"
+        alt="Today's MENU for the EMIYA Family" width="300" height="auto">
+        <a class="poster-link" href="https://everyday-emiyafamily.com/" target="_blank">
+          <figcaption class="figure-television">TODAY'S MENU<br>FOR THE EMIYA FAMILY</figcaption>
+        </a>
       </div>
-      <div class="tales-symphonia-teseara">
+<!-- TALES OF SYMPHONIA THE UNITED WORLD & TETHE'ALLA-->
+      <div class="filterDiv ova">
+        <img id="crop" src="https://www.abyssalchronicles.com/wp-content/uploads/2021/02/f7a8085df45f22fabaf4ec2f1de04cb31614189588_main-683x1024.png"
+        alt="Tales of Symphonia the United World" width="300" height="auto">
+        <a class="poster-link" href="http://ova-tos.com/" target="_blank">
+          <figcaption class="figure-television">TALES OF SYMPHONIA THE UNITED WORLD</figcaption>
+        </a>
       </div>
-      <div class="minori-scramble">
+<!-- MINORI SCRAMBLE! -->
+      <div class="filterDiv ova">
+        <img id="crop" src="https://cdn.myanimelist.net/images/anime/6/31903.jpg"
+        alt="Minori Scramble! Cover" width="300" height="auto">
+        <a class="poster-link" href="https://www.animebunko.com/minori/" target="_blank">
+          <figcaption class="figure-other">MINORI SCRAMBLE!</figcaption>
+        </a>
       </div>
-      <div class="gyo">
+<!-- GYO: TOKYO FISH ATTACK -->
+      <div class="filterDiv ova">
+        <img id="crop" src="https://m.media-amazon.com/images/M/MV5BMDFjZGEzN2MtMjg1OS00ODcxLTkwNzMtMmJjYTg2ZjEyZjdhXkEyXkFqcGdeQXVyNzU1OTYxNzU@._V1_.jpg"
+        alt="Gyo: Tokyo Fish Attack Cover" width="300" height="auto">
+        <a class="poster-link" href="https://www.animebunko.com/gyo/" target="_blank">
+          <figcaption class="figure-other">GYO: TOKYO FISH ATTACK</figcaption>
+        </a>
       </div>
-      <div class="yuri-seijin">
+<!-- YURI SEIJIN NAOKO-SAN -->
+      <div class="filterDiv ova">
+        <img id="crop" src="https://img.betaseries.com/Zpy2LUKAyTR0bf1Pwr15VR9qelI=/600x900/smart/https%3A%2F%2Fpictures.betaseries.com%2Ffonds%2Fposter%2F301205.jpg"
+        alt="Yuri Seijin Naoko-San Cover" width="300" height="auto">
+        <a class="poster-link" href="https://www.animebunko.com/naokosan/" target="_blank">
+          <figcaption class="figure-other">YURI SEIJIN NAOKO-SAN</figcaption>
+        </a>
       </div>
-      <div class="jump-super">
+<!-- Toriko Jump Super Anime Tour Special 2009 -->
+      <div class="filterDiv ova">
+        <img id="crop" src="https://static.wikia.nocookie.net/toriko/images/f/f0/Toriko-OAV_%282%29.jpg/revision/latest?cb=20100830231154"
+        alt="Yuri Seijin Naoko-San Cover" width="300" height="auto">
+        <a class="poster-link">
+          <figcaption class="figure-other">Toriko Jump Super Anime Tour Special 2009</figcaption>
+        </a>
       </div>
-      <div class="tales-symphonia">
-      </div>
+
 <!-- ANIME GUILD OPENING ANIMATION -->
       <div class="filterDiv opening">
         <iframe src="https://player.vimeo.com/video/212666280?h=a32778bda2"
@@ -103,6 +138,7 @@
           picture-in-picture" allowfullscreen>
         </iframe>
       </div>
+
 <!-- IN-GAME ANIMATION -->
 <!-- DEMON SLAYER HIKONAMI CHRONICLES -->
       <div class="filterDiv game">
@@ -136,9 +172,6 @@
           <figcaption class="figure-other">CODE VEIN</figcaption>
         </a>
       </div>
-<!-- GOD EATER RESONANT OPS -->
-      <div class="god-eater-resonant">
-      </div>
 <!-- GOD EATER 3 -->
       <div class="filterDiv game">
         <img id="crop" src="https://cdn-prod.scalefast.com/public/assets/user/122595/image/65df1415f726740e0483e5151ca899e2.jpg"
@@ -147,12 +180,28 @@
           <figcaption class="figure-other">GOD EATER 3</figcaption>
         </a>
       </div>
+<!-- GOD EATER RESONANT OPS -->
+      <div class="filterDiv game">
+        <img id="crop" src="https://static.wikia.nocookie.net/godeater/images/3/3a/God-Eater-Resonant-Ops-696x344.jpg/revision/latest/scale-to-width-down/690?cb=20180405173435"
+        alt="God Eater Resonant Ops Cover" width="300" height="auto">
+        <a class="poster-link">
+          <figcaption class="figure-other">GOD EATER RESONANT OPS</figcaption>
+        </a>
+      </div>
 <!-- DRAGALIA LOST -->
       <div class="filterDiv game">
         <img id="crop" src="https://images.nintendolife.com/7de64a009dd63/dragalia-lost-cover.cover_large.jpg"
         alt="Dragalia Lost Cover" width="300" height="auto">
-        <a class="poster-link" href="https://ge3.godeater.jp/" target="_blank">
+        <a class="poster-link" href="https://dragalialost.com/jp/" target="_blank">
           <figcaption class="figure-other">DRAGALIA LOST</figcaption>
+        </a>
+      </div>
+<!-- TALES OF BERSERIA -->
+      <div class="filterDiv game">
+        <img id="crop" src="https://media.gamestop.com/i/gamestop/10132239/Tales-of-Berseria?$pdp$"
+        alt="Tales of Berseria Cover" width="300" height="auto">
+        <a class="poster-link">
+          <figcaption class="figure-other">TALES OF BERSERIA</figcaption>
         </a>
       </div>
 <!-- GOD EATER 2 RAGE BURST -->
@@ -172,7 +221,12 @@
         </a>
       </div>
 <!-- SUMMON NIGHT 5 -->
-      <div class="summon-night5">
+      <div class="filterDiv game">
+        <img id="crop" src="https://m.media-amazon.com/images/M/MV5BZWNhZTg2ZjgtMDBmMC00MTNmLWJmMTYtMWZlYTkwZjRjMzdiXkEyXkFqcGdeQXVyNDU2MjkyNzA@._V1_FMjpg_UX1000_.jpg"
+        alt="Summon Knight 5 Cover" width="300" height="auto">
+        <a class="poster-link" href="https://www.summonnight.net/sn5/" target="_blank">
+          <figcaption class="figure-other">SUMMON NIGHT 5</figcaption>
+        </a>
       </div>
 <!-- FATE/STAY NIGHT REALTA NUA -->
       <div class="filterDiv game">
@@ -223,10 +277,20 @@
         </a>
       </div>
 <!-- SUMMON NIGHT GRANTHESE -->
-      <div class="summon-night-granthese">
+      <div class="filterDiv game">
+        <img id="crop" src="https://m.media-amazon.com/images/M/MV5BN2Q2OTE2YmQtOTc4Zi00ZTU4LWExZDItYzBkMDg3MTFiNmQ3XkEyXkFqcGdeQXVyNTk5Nzg0MDE@._V1_.jpg"
+        alt="Summon Night Granthese Cover" width="300" height="auto">
+        <a class="poster-link" href="https://www.summonnight.net/snworld/" target="_blank">
+          <figcaption class="figure-other">SUMMON NIGHT GRANTHESE</figcaption>
+        </a>
       </div>
-<!-- NOSTALGIA WIND -->
-      <div class="nostalgia-wind">
+<!-- NOSTALGIA -->
+      <div class="filterDiv game">
+        <img id="crop" src="https://uploads.kidzworld.com/article/32713/nostalgia-comic_article.jpg?1252957247"
+        alt="Nostalgia Cover" width="300" height="auto">
+        <a class="poster-link">
+          <figcaption class="figure-other">NOSTALGIA</figcaption>
+        </a>
       </div>
 <!-- MAKAI SENKI 3 -->
       <div class="filterDiv game">
@@ -236,35 +300,95 @@
           <figcaption class="figure-other">MAKAI SENKI 3</figcaption>
         </a>
       </div>
-      <div class="dragon-shadow">
+<!-- DRAGON SHADOW SPELL -->
+      <div class="filterDiv game">
+        <img id="crop" src="https://m.media-amazon.com/images/I/61rgFS6pnxL._SY445_.jpg"
+        alt="Dragon Shadow Spell Cover" width="300" height="auto">
+        <a class="poster-link">
+          <figcaption class="figure-other">DRAGON SHADOW SPELL</figcaption>
+        </a>
       </div>
-      <div class="disgaea2">
+<!-- DISGAEA 2 -->
+      <div class="filterDiv game">
+        <img id="crop" src="https://www.rpgfan.com/wp-content/uploads/2020/07/Disgaea-2-Dark-Hero-Days-Cover-Art-US.jpg"
+        alt="Disgaea 2 Cover" width="300" height="auto">
+        <a class="poster-link">
+          <figcaption class="figure-other">DISGAEA 2</figcaption>
+        </a>
       </div>
-      <div class="project-hacket">
+<!-- PROJECT HACKER KAKUSEI -->
+      <div class="filterDiv game">
+        <img id="crop" src="file:///Users/angelalam/Documents/OCAD%20U/Fifth%20Fall%202021/Interactive%20Media%20%E2%80%93%20Web/IM-Web%20%E2%80%93%20A2/IMW-Assignment-2/IMW-A2-Images/project-hacker-kakusei.png"
+        alt="Project Hacker Kakusei Cover" width="300" height="auto">
+        <a class="poster-link" href="https://www.nintendo.co.jp/ds/adhj/" target="_blank">
+          <figcaption class="figure-other">PROJECT HACKER KAKUSEI</figcaption>
+        </a>
       </div>
-      <div class="new-entertainment">
+<!-- SUMMON NIGHT EX-THESIS: YOAKE NO TSUBASA -->
+      <div class="filterDiv game">
+        <img id="crop" src="https://static.wikia.nocookie.net/summonnight/images/a/a3/SNEX-24.jpg/revision/latest?cb=20130428145005"
+        alt="Summon Night Ex-Thesis: Yoake No Tsubasa Cover" width="300" height="auto">
+        <a class="poster-link" href="https://www.summonnight.net/snworld/" target="_blank">
+          <figcaption class="figure-other">SUMMON NIGHT EX-THESIS: YOAKE NO TSUBASA</figcaption>
+        </a>
       </div>
-      <div class="summon-night-ex">
-      </div>
+
 <!-- STORYBOARDING -->
-      <div class="ash-archaic">
+<!-- ASH ARCHAIC SEALED HEAT -->
+      <div class="filterDiv storyboarding">
+        <img id="crop" src="https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co2grt.jpg"
+        alt="Ash Archaic Sealed Heat Cover" width="300" height="auto">
+        <a class="poster-link" href="https://www.nintendo.co.jp/ds/yasj/" target="_blank">
+          <figcaption class="figure-other">ASH ARCHAIC SEALED HEAT</figcaption>
+        </a>
       </div>
-      <div class="super-smash-x">
+<!-- SUPER SMASH BROS BRAWL -->
+      <div class="filterDiv storyboarding">
+        <img id="crop" src="https://qph.fs.quoracdn.net/main-qimg-310db067c655af8c511367c30affa53d-pjlq"
+        alt="Super Smash Bros Brawl Cover" width="300" height="auto">
+        <a class="poster-link" href="https://www.smashbros.com/wii/jp/" target="_blank">
+          <figcaption class="figure-other">SUPER SMASH BROS BRAWL</figcaption>
+        </a>
       </div>
-      <div class="blue-dragon">
+<!-- BLUE DRAGON -->
+      <div class="filterDiv storyboarding">
+        <img id="crop" src="https://www.mobygames.com/images/covers/l/456634-blue-dragon-xbox-360-front-cover.jpg"
+        alt="Blue Dragon Cover" width="300" height="auto">
+        <a class="poster-link">
+          <figcaption class="figure-other">BLUE DRAGON</figcaption>
+        </a>
       </div>
-      <div class="demento">
+<!-- HAUNTING GROUND / DEMENTO -->
+      <div class="filterDiv storyboarding">
+        <img id="crop" src="https://www.gamespot.com/a/uploads/scale_medium/mig/0/1/6/6/2210166-box_hground.png"
+        alt="Haunting Ground Cover" width="300" height="auto">
+        <a class="poster-link">
+          <figcaption class="figure-other">HAUNTING GROUND</figcaption>
+        </a>
       </div>
+
 <!-- COMICS -->
-      <div class="pure">
+<!-- GAKUEN UTOPIA MANABI STRAIGHT! -->
+      <div class="filterDiv comics">
+        <img id="crop" src="https://upload.wikimedia.org/wikipedia/en/thumb/3/30/Manabi_Straight%21_manga_volume_1_cover.jpg/220px-Manabi_Straight%21_manga_volume_1_cover.jpg"
+        alt="Gakuen Utopia Manabi Straight! Cover" width="300" height="auto">
+        <a class="poster-link">
+          <figcaption class="figure-other">GAKUEN UTOPIA MANABI STRAIGHT!</figcaption>
+        </a>
       </div>
-      <div class="gakuen-utopia">
+<!-- COYOTE RAGTIME SHOW -->
+      <div class="filterDiv comics">
+        <img id="crop" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1328750150l/2422479.jpg"
+        alt="Coyote Ragtime Show Cover" width="300" height="auto">
+        <a class="poster-link">
+          <figcaption class="figure-other">COYOTE RAGTIME SHOW</figcaption>
+        </a>
       </div>
-      <div class="coyote-ragtime">
-      </div>
+
 <!-- BACKGROUND ART -->
       <div class="soul-cradle">
       </div>
+
 <!-- LOGO -->
       <div class="tokushima-selfdefense">
       </div>
@@ -272,6 +396,7 @@
       </div>
       <div class="coyote-logo">
       </div>
+
 <!-- EVENT PRODUCTION -->
       <div class="machi-asobi">
       </div>
@@ -286,7 +411,6 @@
         width="1366" height="768" frameborder="0" allow="autoplay; fullscreen;
         picture-in-picture" allowfullscreen>
       </iframe>
-
       <!-- Technical Works Moie Tales of Zestiria the X -->
       <iframe src="https://player.vimeo.com/video/212912747?h=299c6ea6ab"
         width="1366" height="768" frameborder="0" allow="autoplay; fullscreen;
@@ -307,30 +431,6 @@
       <!-- God Eater 2 Opening Animation -->
       <iframe width="1366" height="768"
         src="https://www.youtube.com/embed/n6m8PLgRBNo?controls=0&mute=1"
-        frameborder="0" allow="accelerometer; autoplay;
-        clipboard-write; encrypted-media; gyroscope; picture-in-picture">
-      </iframe>
-      <!-- Summon Night 5 Opening Animation -->
-      <iframe width="1366" height="768"
-        src="https://www.youtube.com/embed/jyS94Jmrze4?controls=0&mute=1"
-        frameborder="0" allow="accelerometer; autoplay;
-        clipboard-write; encrypted-media; gyroscope; picture-in-picture">
-      </iframe>
-      <!-- Tales of Xilia 2 Opening Animation -->
-      <iframe width="1366" height="768"
-        src="https://www.youtube.com/embed/MB4bvAK__Ks?controls=0&mute=1"
-        frameborder="0" allow="accelerometer; autoplay;
-        clipboard-write; encrypted-media; gyroscope; picture-in-picture">
-      </iframe>
-      <!-- Fate/Stay Night [Realta Nua] Opening Animation -->
-      <iframe width="1366" height="768"
-        src="https://www.youtube.com/embed/lj0x70Lmk7s?controls=0&mute=1"
-        frameborder="0" allow="accelerometer; autoplay;
-        clipboard-write; encrypted-media; gyroscope; picture-in-picture">
-      </iframe>
-      <!-- Black Rock Shooter [The Game] Opening Animation -->
-      <iframe width="1366" height="768"
-        src="https://www.youtube.com/embed/Se2wVBqLwuo?controls=0&mute=1"
         frameborder="0" allow="accelerometer; autoplay;
         clipboard-write; encrypted-media; gyroscope; picture-in-picture">
       </iframe>
