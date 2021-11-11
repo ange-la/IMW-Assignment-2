@@ -1,4 +1,4 @@
-none/* ALL PAGES */
+/* ALL PAGES */
 /* Smooth Scrolling when clicked @ https://www.w3schools.com/howto/howto_css_smooth_scroll.asp#section2 */
 /* THIS DOESN'T WORK ON GOOGLE CHROME */
 html {
@@ -53,9 +53,10 @@ footer {
   display: flex;
 }
 
+/* Background colour at the footer */
 .bottom {
   padding-top: 20px;
-  background: #1f1f1f;
+  background-color: #000000;
 }
 
 
@@ -100,6 +101,7 @@ img {
 iframe {
   max-width: 100%;
   max-height: 100%;
+  justify-content: center;
 }
 
 /* DEMO 08 - RESPONSIVE WEB DESIGN ON CANVAS */
@@ -110,19 +112,53 @@ body {
   background-color: #000000;
 }
 
+/* Low opacity background image @ https://css-tricks.com/snippets/css/transparent-background-images/ */
+body::after{
+  content: "";
+  background: url(https://pbs.twimg.com/media/FBBkZQjVUAgXVj0?format=jpg&name=4096x4096);
+  opacity: 5%;
+  top: -2000px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  filter: grayscale();
+  z-index: -100;
+}
+
 /* h1 id for INFORMATION on INDEX.HTML */
 #info {
-  font-size: 30px;
+  font-size: 22px;
   letter-spacing: 1px;
   font-family: 'bebas-nueregular', sans-serif;
   color: #ffffff;
   text-decoration: none;
+  line-height: 1.6;
 }
 
+/* Container for #info */
+/* overflow: scroll; @ https://developer.mozilla.org/en-US/docs/Web/CSS/overflow */
+#info-text {
+  overflow: scroll;
+  width: 350px;
+  height: 500px;
+  padding-left: 60px;
+  background-color: #000000;
+}
+
+/* INFORMATION header */
+#info-header {
+  padding-left: 60px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+/* Heading for "INFORMATION" */
 h2 {
   color: #ffffff;
   text-decoration: none;
   font-family: 'bebas-nueregular', sans-serif;
+  font-size: 22px;
 }
 
 p {
@@ -132,7 +168,7 @@ p {
 }
 
 button {
-  background: #000000;
+  background-color: #000000;
   border: none;
   display: flex;
   flex-wrap: wrap;
@@ -157,7 +193,7 @@ button {
 }
 
 #year {
-  background: #000000;
+  background-color: #000000;
   border: none;
   display: flex;
   flex-wrap: wrap;
@@ -193,7 +229,7 @@ button {
 }
 
 #title {
-  background: #000000;
+  background-color: #000000;
   border: none;
   display: flex;
   flex-wrap: wrap;
@@ -212,7 +248,7 @@ button {
 
 /* Show All Button Style*/
 #show-all-btn {
-  background: #000000;
+  background-color: #000000;
   border: none;
   display: flex;
   flex-wrap: wrap;
@@ -304,8 +340,9 @@ button {
 /* INDEX.HTML PAGE */
 /* Promotional carosel on index.html @ https://flickity.metafizzy.co */
 .main-carousel {
-  background: #000000;
-  max-width: 1400px;
+  background-color: #000000;
+  max-width: 1360px;
+  height: 780px;
   justify-content: center;
   margin: auto;
 }
@@ -314,7 +351,7 @@ button {
   width: 100%;
   height: auto;
   margin: auto;
-  background: black;
+  background-color: black;
   border-radius: 5px;
   counter-increment: carousel-cell;
 }
@@ -490,12 +527,12 @@ nav li {
   color: #ffffff;
   text-decoration: none;
   padding: 12px;
-  background: none;
+  background-color: none;
   border: none;
 }
 
 .dropbtn:hover {
-  background: #1f1f1f;
+  background-color: #1f1f1f;
   height: 100%;
   text-decoration: solid underline #ffffff 2px;
 }
@@ -554,7 +591,7 @@ nav li {
 
 /* FIX HEADER + #COVID-NOTICE BC IT WON'T STICKY WELL */
 header {
-  background: #ffffff;
+  background-color: #ffffff;
   display: flex;
   justify-content: center;
   top: 0;
@@ -566,9 +603,9 @@ header {
 
 /* COVID NOTICE in red */
 #covid-notice {
-  font-size: 14px;
-  letter-spacing: 0;
-  font-family: Helvetica, sans-serif;
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-family: 'bebas-nueregular', sans-serif;
   color: red;
   text-decoration: none;
   padding: 5px;
@@ -681,7 +718,7 @@ header {
 }
 
 .btn {
-  background: #000000;
+  background-color: #000000;
   border: none;
   display: flex;
   flex-wrap: wrap;
