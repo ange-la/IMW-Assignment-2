@@ -19,46 +19,66 @@
 
   <body>
 
-
 <!-- REPLACE THIS -->
-<!--Navigation Bar @ https://www.w3schools.com/howto/howto_js_topnav_responsive.asp -->
-<!-- CSS Lists @ https://www.w3schools.com/css/css_list.asp -->
-<nav class="navbar">
-  <ul>
-    <li><a href="index.html">
-      <img id="ufotable-logo" src="file:///Users/angelalam/Documents/OCAD%20U/Fifth%20Fall%202021/Interactive%20Media%20–%20Web/IM-Web%20–%20A2/IMW-Assignment-2/IMW-A2-Logos/ufotable-white-logo.png"
-      alt="White Ufotable Logo" width="180" height="auto">
-    </a><li>
-    <li><a href="index.html">HOME</a><li>
-    <li><a href="#profile">PROFILE</a><li>
-    <li><a href="#news">NEWS</a><li>
-    <ul class="dropdown-project">
-      <button class="dropbtn">PROJECTS
-      </button>
-      <div class="dropdown-content">
-        <li><a href="theatrical.html">THEATRICAL</a></li>
-        <li><a href="television.html">TELEVISION</a></li>
-        <li><a href="other-projects.html">OTHER</a></li>
-      </div>
-    </ul>
-    <li><a href="#recruitment">RECRUITMENT</a><li>
-    <li><a href="#webshop">WEBSHOP</a><li>
-    <li><a href="#community">COMMUNITY</a><li>
-<!-- LINK TO UFOTABLE'S OFFICAL TWITTER PAGE -->
-<!-- OPEN TWITTER ON NEW TAB @ https://css-tricks.com/snippets/html/open-link-in-a-new-window/ -->
-    <li><a id="twitter-logo" href="https://twitter.com/ufotable?lang=en" target="_blank">
-      <img src="file:///Users/angelalam/Documents/OCAD%20U/Fifth%20Fall%202021/Interactive%20Media%20–%20Web/IM-Web%20–%20A2/IMW-Assignment-2/IMW-A2-Logos/twitter-logo-white.svg"
-       alt="White Twitter Logo" width="30" height="auto">
-    </a><li>
-<!-- LINK TO UFOTABLE'S OFFICIAL INSTAGRAM PAGE -->
-<!-- OPEN INSTAGRAM ON NEW TAB @ https://css-tricks.com/snippets/html/open-link-in-a-new-window/ -->
-    <li><a href="https://www.instagram.com/ufotable_inc/" target="_blank">
-      <img src="file:///Users/angelalam/Documents/OCAD%20U/Fifth%20Fall%202021/Interactive%20Media%20–%20Web/IM-Web%20–%20A2/IMW-Assignment-2/IMW-A2-Logos/instagram-logo-white.png"
-      alt="White Instagram Logo" width="30" height="auto">
-    </a><li>
-    <li><a href="#language">ENG</a><li>
-  </ul>
-</nav>
+    <!-- COVID notice in header above navbar -->
+        <div class="top-sticky">
+          <header>
+            <a id="covid-notice" href="http://www.ufotable.com/release/release_covid19_eigyo_jikan_8.html" target="_blank"><b id="notice">NOTICE FROM EACH STORE DUE TO COVID-19</b></a>
+          </header>
+    <!-- NAVIGATION BAR -->
+    <!-- <nav> @ https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav -->
+    <!-- Dropdown Navigation Bar @ https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp -->
+    <!-- CSS Lists @ https://www.w3schools.com/css/css_list.asp -->
+    <!-- put my mixed navbar instead of w3school's as a test with their css code in combination -->
+          <nav class="navbar" id="topnav">
+            <ul>
+              <li><a href="index.html">
+                <img id="ufotable-logo" src="IMW-A2-Logos/ufotable-white-logo.png"
+                alt="White Ufotable Logo" width="180" height="auto">
+              </a><li>
+              <li><a href="index.html">HOME</a><li>
+              <li><a href="#profile">PROFILE</a><li>
+              <li><a href="#news">NEWS</a><li>
+              <ul class="dropdown-project">
+                <button class="dropbtn">PROJECTS
+                </button>
+                <div class="dropdown-content">
+                  <li><a href="theatrical.html">THEATRICAL</a></li>
+                  <li><a href="television.html">TELEVISION</a></li>
+                  <li><a href="other-projects.html">OTHER</a></li>
+                </div>
+              </ul>
+              <li><a href="#recruitment">RECRUITMENT</a><li>
+              <li><a href="#webshop">WEBSHOP</a><li>
+              <li><a href="#community">COMMUNITY</a><li>
+      <!-- LINK TO UFOTABLE'S OFFICAL TWITTER PAGE -->
+      <!-- OPEN TWITTER ON NEW TAB @ https://css-tricks.com/snippets/html/open-link-in-a-new-window/ -->
+              <li><a id="twitter-logo" href="https://twitter.com/ufotable?lang=en" target="_blank">
+                <img src="IMW-A2-Logos/twitter-logo-white.svg"
+                 alt="White Twitter Logo" width="30" height="auto">
+              </a><li>
+      <!-- LINK TO UFOTABLE'S OFFICIAL INSTAGRAM PAGE -->
+      <!-- OPEN INSTAGRAM ON NEW TAB @ https://css-tricks.com/snippets/html/open-link-in-a-new-window/ -->
+              <li><a href="https://www.instagram.com/ufotable_inc/" target="_blank">
+                <img src="IMW-A2-Logos/instagram-logo-white.png"
+                alt="White Instagram Logo" width="30" height="auto">
+              </a><li>
+              <li><a href="#language">ENG</a><li>
+
+
+
+              <!-- CONTINUE > NEED THE RESPONSIVE MENU TO SHOW UP WHEN SHRUNK -->
+    <!-- Responsive navbar https://www.w3schools.com/howto/howto_js_topnav_responsive.asp -->
+              <li><a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+              <!--  <img src="file:///Users/angelalam/Documents/OCAD%20U/Fifth%20Fall%202021/Interactive%20Media%20%E2%80%93%20Web/IM-Web%20%E2%80%93%20A2/IMW-Assignment-2/IMW-A2-Logos/white-menu.svg"
+                alt="Responsive Navigation Menu" width="30" height="auto"> -->
+              </a></li>
+
+
+            </ul>
+          </nav>
+        </div>
 
 
 
@@ -110,7 +130,7 @@
 <!-- SHOW ALL, Year,-->
     <div class="television-all">
 <!-- Demon Slayer Season 2 -->
-      <div class="filterDiv all 2021 demon">
+      <div class="filterDiv show all 2021 demon">
         <img id="crop" src="https://pbs.twimg.com/media/FAI7EuZUcAYM5nC?format=jpg&name=4096x4096"
         alt="Demon Slayer Season 2" width="300" height="auto">
         <a class="poster-link" href="https://demonslayer-anime.com/" target="_blank">
@@ -118,7 +138,7 @@
         </a>
       </div>
 <!-- Demon Slayer Mugen Train TV Edition -->
-      <div class="filterDiv all 2021 demon">
+      <div class="filterDiv show all 2021 demon">
         <img id="crop" src="https://pbs.twimg.com/media/E0TrhPPXEAEihNa?format=jpg&name=4096x4096"
         alt="Demon Slayer Mugen Train TV Edition" width="300" height="auto">
         <a class="poster-link" href="https://demonslayer-anime.com/" target="_blank">
@@ -126,7 +146,7 @@
         </a>
       </div>
 <!-- Demon Slayer Season 1 -->
-      <div class="filterDiv all 2019 demon">
+      <div class="filterDiv show all 2019 demon">
         <img id="crop" src="https://img1.ak.crunchyroll.com/i/spire3/f1fe5c7a43cb2f38f4152a58f89479821554508873_full.jpg"
         alt="Demon Slayer Season 1" width="300" height="auto">
         <a class="poster-link" href="https://demonslayer-anime.com/" target="_blank">
@@ -134,7 +154,7 @@
         </a>
       </div>
 <!-- Katsugeki/Touken Ranbu -->
-      <div class="filterDiv all 2017 katsugeki">
+      <div class="filterDiv show all 2017 katsugeki">
         <img id="crop" src="https://img1.ak.crunchyroll.com/i/spire1/0eceb5e875bf8a87799d16abe43ed1701500429555_full.jpg"
         alt="Katsugeki/Touken Ranbu" width="300" height="auto">
         <a class="poster-link" href="https://katsugeki-toukenusa.com/" target="_blank">
@@ -142,7 +162,7 @@
         </a>
       </div>
 <!-- Fate/Grand Order x Himuro's World -->
-      <div class="filterDiv all 2017 fate">
+      <div class="filterDiv show all 2017 fate">
         <img id="crop" src="https://cdn.myanimelist.net/images/anime/1421/105975.jpg"
         alt="Fate/Grand Order x Himuro's World" width="300" height="auto">
         <a class="poster-link" href="https://fate-go.us/" target="_blank">
@@ -150,7 +170,7 @@
         </a>
       </div>
 <!-- Tales of the Zestiria the X Season 2 -->
-      <div class="filterDiv all 2017 zestiria">
+      <div class="filterDiv show all 2017 zestiria">
         <img id="crop" src="https://i.pinimg.com/474x/d0/c6/b5/d0c6b531ad85a950197f5fbfcc579dc8.jpg"
         alt="Tales of Zestiria the X Season 2" width="300" height="auto">
         <a href="https://toz-thex-anime.tales-ch.jp/en/" target="_blank">
@@ -158,7 +178,7 @@
         </a>
       </div>
 <!-- Tales of Zestiria the X Season 1 -->
-      <div class="filterDiv all 2016 zestiria">
+      <div class="filterDiv show all 2016 zestiria">
         <img id="crop" src="https://i.pinimg.com/474x/23/48/31/2348316be0b97cdd96d92f8595b58b29.jpg"
         alt="Tales of Zestiria the X Season 1" width="300" height="auto">
         <a href="https://toz-thex-anime.tales-ch.jp/en/" target="_blank">
@@ -166,7 +186,7 @@
         </a>
       </div>
 <!-- God Eater -->
-      <div class="filterDiv all 2015 eater">
+      <div class="filterDiv show all 2015 eater">
         <img id="crop" src="https://img1.ak.crunchyroll.com/i/spire4/fd241d37083abbc9adb3ad008167ba9b1438800120_full.jpg"
         alt="God Eater" width="300" height="auto">
         <a href="http://anime.godeater.jp/en/" target="_blank">
@@ -174,7 +194,7 @@
       </a>
       </div>
 <!-- Fate/Stay Night Unlimited Blade Works Season 2 -->
-      <div class="filterDiv all 2015 fate">
+      <div class="filterDiv show all 2015 fate">
         <img id="crop" src="https://img1.ak.crunchyroll.com/i/spire2/fd6f801d77097e20eb5ffb9232de14d01430173031_full.jpg"
         alt="Fate/Stay Night Unlimited Blade Works Season 2" width="300" height="auto">
         <a href="https://www.fatestaynightusa.com/ubw/" target="_blank">
@@ -182,7 +202,7 @@
         </a>
       </div>
 <!-- Fate/Stay Night Unlimited Blade Works Season 1 -->
-      <div class="filterDiv all 2014 fate">
+      <div class="filterDiv show all 2014 fate">
         <img id="crop" src="https://external-preview.redd.it/giG47pvNovDC8ECA-BEuzHpXHHAgANDwl2FT0UrLL2A.jpg?auto=webp&s=230316ff01ef1eef74ddec3a25463f9b41d6eabf"
         alt="Fate/Stay Night Unlimited Blade Works Season 1" width="300" height="auto">
         <a href="https://www.fatestaynightusa.com/ubw/" target="_blank">
@@ -190,7 +210,7 @@
         </a>
       </div>
 <!-- The Garden of Sinners TV Edition -->
-      <div class="filterDiv all 2013 garden">
+      <div class="filterDiv show all 2013 garden">
         <img id="crop" src="https://i.pinimg.com/474x/51/11/1e/51111e31a3bb869aeaf892451349aee3.jpg"
         alt="The Garden of Sinners TV Edition" width="300" height="auto">
         <a href="https://www.karanokyoukai.com/" target="_blank">
@@ -198,7 +218,7 @@
         </a>
       </div>
 <!-- Fate/Zero Season 2 -->
-      <div class="filterDiv all 2012 fate">
+      <div class="filterDiv show all 2012 fate">
         <img id="crop" src="https://i.pinimg.com/474x/35/c9/5b/35c95baf670c47fd3554abdf15a5e0c0.jpg"
         alt="Fate/Zero Season 2" width="300" height="auto">
         <a href="https://www.fate-zero.jp/" target="_blank">
@@ -206,7 +226,7 @@
         </a>
       </div>
 <!-- Fate/Zero Season 1 -->
-      <div class="filterDiv all 2011 fate">
+      <div class="filterDiv show all 2011 fate">
         <img id="crop" src="https://i.pinimg.com/474x/39/26/49/3926495c686d4304f70f790ad23d56c7.jpg"
         alt="Fate/Zero Season 1" width="300" height="auto">
         <a href="https://www.fate-zero.jp/" target="_blank">
@@ -214,7 +234,7 @@
         </a>
       </div>
 <!-- Gakuen Utopia Manabi Straight! -->
-      <div class="filterDiv all 2007 gakuen">
+      <div class="filterDiv show all 2007 gakuen">
         <img id="crop" src="https://pics.filmaffinity.com/Gakuen_Utopia_Manabi_Straight_TV_Series-175679173-large.jpg"
         alt="Gakuen Utopia Manabi Straight!" width="300" height="auto">
         <a>
@@ -222,7 +242,7 @@
         </a>
       </div>
 <!-- Coyote Ragtime Show -->
-      <div class="filterDiv all 2006 coyote">
+      <div class="filterDiv show all 2006 coyote">
         <img id="crop" src="https://static.wikia.nocookie.net/voiceacting/images/e/e5/087C637E-8706-43B5-A68A-FB0B537F9E17.jpeg/revision/latest?cb=20190912234451"
         alt="Coyote Ragtime Show" width="300" height="auto">
         <a>
@@ -230,7 +250,7 @@
         </a>
       </div>
 <!-- Futakoi Alternative -->
-      <div class="filterDiv all 2005 futakoi">
+      <div class="filterDiv show all 2005 futakoi">
         <img id="crop" src="https://upload.wikimedia.org/wikipedia/en/thumb/6/6c/Futakoi_Alt.jpg/220px-Futakoi_Alt.jpg"
         alt="Futakoi Alternative" width="300" height="auto">
         <a>
@@ -240,37 +260,38 @@
     </div>
 
 
-<!-- REPLACE THIS -->
+    <div class="bottom">
+<!-- ADD THESE TO THE OTHER PAGES TOO -->
 <!-- Logos take users to an external link when they click on the logo -->
 <!-- Bottom Page Logos using FLEX-WRAP: WRAP;-->
-    <div class="bottom-logos" id="bottom-logos">
-      <!-- Ufotable Dining LOGO -->
-      <a class="ufotable-dining-logo" href="http://www.ufotable.com/dining/" target="_blank">
-        <img src="http://www.ufotable.com/dining/img/toplogo.png"
-        alt="Ufotable Dining Logo" width="500" height="auto">
-      </a>
-      <!-- Ufotable Cafe LOGO -->
-      <a class="ufotable-cafe-logo" href="http://www.ufotable.com/cafe/index.html" target="_blank">
-        <img src="file:///Users/angelalam/Documents/OCAD%20U/Fifth%20Fall%202021/Interactive%20Media%20–%20Web/IM-Web%20–%20A2/IMW-Assignment-2/IMW-A2-Logos/ufotable-cafe-logo.png"
-        alt="Ufotable Cafe Logo" width="400" height="auto">
-      </a>
-      <!-- Ufotable Cinema LOGO -->
-      <a class="ufotable-cinema-logo" href="http://www.ufotable.com/cinema/" target="_blank">
-        <img src="file:///Users/angelalam/Documents/OCAD%20U/Fifth%20Fall%202021/Interactive%20Media%20–%20Web/IM-Web%20–%20A2/IMW-Assignment-2/IMW-A2-Logos/cinema_logo-invert.png"
-        alt="Ufotable Cinema Logo" width="200" height="auto">
-      </a>
+      <div class="bottom-logos" id="bottom-logos">
+        <!-- Ufotable Dining LOGO -->
+        <a class="ufotable-dining-logo" href="http://www.ufotable.com/dining/" target="_blank">
+          <img src="IMW-A2-Logos/ufotable-dining.png"
+          alt="Ufotable Dining Logo" width="400" height="auto">
+        </a>
+        <!-- Ufotable Cafe LOGO -->
+        <a class="ufotable-cafe-logo" href="http://www.ufotable.com/cafe/index.html" target="_blank">
+          <img src="IMW-A2-Logos/ufotable-cafe-logo.png"
+          alt="Ufotable Cafe Logo" width="300" height="auto">
+        </a>
+        <!-- Ufotable Cinema LOGO -->
+        <a class="ufotable-cinema-logo" href="http://www.ufotable.com/cinema/" target="_blank">
+          <img src="IMW-A2-Logos/cinema_logo-invert.png"
+          alt="Ufotable Cinema Logo" width="100" height="auto">
+        </a>
+      </div>
+
+
+    <!-- ADD THESE TO THE OTHER PAGES TOO -->
+    <!-- Bottom Info -->
+      <footer>
+        <a id="footer-font" href="#site-policy">SITE POLICY</a>
+        <a id="footer-font" href="#about-copyright">ABOUT COPYRIGHT OF THE WORK</a>
+        <a id="footer-font" href="#all-rights">2012-2019 UFOTABLE INC. ALL RIGHTS RESERVED.</a>
+        <a id="footer-font" href="#">RETURN TO THE TOP</a>
+      </footer>
     </div>
-
-
-<!-- REPLACE THIS -->
-<!-- Bottom Info -->
-    <footer>
-      <a id="footer-font" href="#site-policy" >SITE POLICY</a>
-      <a id="footer-font" href="#about-copyright">ABOUT COPYRIGHT OF THE WORK</a>
-      <a id="footer-font" href="#all-rights">2012-2019 UFOTABLE INC. ALL RIGHTS RESERVED.</a>
-      <a id="footer-font" href="#FAQ">FREQUENTLY ASKED QUESTIONS</a>
-      <a id="footer-font" href="#">RETURN TO THE TOP</a>
-    </footer>
 
   </body>
 </html>

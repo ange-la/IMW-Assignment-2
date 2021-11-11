@@ -19,46 +19,66 @@
 
   <body>
 
-
 <!-- REPLACE THIS -->
-<!--Navigation Bar @ https://www.w3schools.com/howto/howto_js_topnav_responsive.asp -->
-<!-- CSS Lists @ https://www.w3schools.com/css/css_list.asp -->
-<nav class="navbar">
-  <ul>
-    <li><a href="index.html">
-      <img id="ufotable-logo" src="file:///Users/angelalam/Documents/OCAD%20U/Fifth%20Fall%202021/Interactive%20Media%20–%20Web/IM-Web%20–%20A2/IMW-Assignment-2/IMW-A2-Logos/ufotable-white-logo.png"
-      alt="White Ufotable Logo" width="180" height="auto">
-    </a><li>
-    <li><a href="index.html">HOME</a><li>
-    <li><a href="#profile">PROFILE</a><li>
-    <li><a href="#news">NEWS</a><li>
-    <ul class="dropdown-project">
-      <button class="dropbtn">PROJECTS
-      </button>
-      <div class="dropdown-content">
-        <li><a href="theatrical.html">THEATRICAL</a></li>
-        <li><a href="television.html">TELEVISION</a></li>
-        <li><a href="other-projects.html">OTHER</a></li>
-      </div>
-    </ul>
-    <li><a href="#recruitment">RECRUITMENT</a><li>
-    <li><a href="#webshop">WEBSHOP</a><li>
-    <li><a href="#community">COMMUNITY</a><li>
-<!-- LINK TO UFOTABLE'S OFFICAL TWITTER PAGE -->
-<!-- OPEN TWITTER ON NEW TAB @ https://css-tricks.com/snippets/html/open-link-in-a-new-window/ -->
-    <li><a id="twitter-logo" href="https://twitter.com/ufotable?lang=en" target="_blank">
-      <img src="file:///Users/angelalam/Documents/OCAD%20U/Fifth%20Fall%202021/Interactive%20Media%20–%20Web/IM-Web%20–%20A2/IMW-Assignment-2/IMW-A2-Logos/twitter-logo-white.svg"
-       alt="White Twitter Logo" width="30" height="auto">
-    </a><li>
-<!-- LINK TO UFOTABLE'S OFFICIAL INSTAGRAM PAGE -->
-<!-- OPEN INSTAGRAM ON NEW TAB @ https://css-tricks.com/snippets/html/open-link-in-a-new-window/ -->
-    <li><a href="https://www.instagram.com/ufotable_inc/" target="_blank">
-      <img src="file:///Users/angelalam/Documents/OCAD%20U/Fifth%20Fall%202021/Interactive%20Media%20–%20Web/IM-Web%20–%20A2/IMW-Assignment-2/IMW-A2-Logos/instagram-logo-white.png"
-      alt="White Instagram Logo" width="30" height="auto">
-    </a><li>
-    <li><a href="#language">ENG</a><li>
-  </ul>
-</nav>
+    <!-- COVID notice in header above navbar -->
+        <div class="top-sticky">
+          <header>
+            <a id="covid-notice" href="http://www.ufotable.com/release/release_covid19_eigyo_jikan_8.html" target="_blank"><b id="notice">NOTICE FROM EACH STORE DUE TO COVID-19</b></a>
+          </header>
+    <!-- NAVIGATION BAR -->
+    <!-- <nav> @ https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav -->
+    <!-- Dropdown Navigation Bar @ https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp -->
+    <!-- CSS Lists @ https://www.w3schools.com/css/css_list.asp -->
+    <!-- put my mixed navbar instead of w3school's as a test with their css code in combination -->
+          <nav class="navbar" id="topnav">
+            <ul>
+              <li><a href="index.html">
+                <img id="ufotable-logo" src="IMW-A2-Logos/ufotable-white-logo.png"
+                alt="White Ufotable Logo" width="180" height="auto">
+              </a><li>
+              <li><a href="index.html">HOME</a><li>
+              <li><a href="#profile">PROFILE</a><li>
+              <li><a href="#news">NEWS</a><li>
+              <ul class="dropdown-project">
+                <button class="dropbtn">PROJECTS
+                </button>
+                <div class="dropdown-content">
+                  <li><a href="theatrical.html">THEATRICAL</a></li>
+                  <li><a href="television.html">TELEVISION</a></li>
+                  <li><a href="other-projects.html">OTHER</a></li>
+                </div>
+              </ul>
+              <li><a href="#recruitment">RECRUITMENT</a><li>
+              <li><a href="#webshop">WEBSHOP</a><li>
+              <li><a href="#community">COMMUNITY</a><li>
+      <!-- LINK TO UFOTABLE'S OFFICAL TWITTER PAGE -->
+      <!-- OPEN TWITTER ON NEW TAB @ https://css-tricks.com/snippets/html/open-link-in-a-new-window/ -->
+              <li><a id="twitter-logo" href="https://twitter.com/ufotable?lang=en" target="_blank">
+                <img src="IMW-A2-Logos/twitter-logo-white.svg"
+                 alt="White Twitter Logo" width="30" height="auto">
+              </a><li>
+      <!-- LINK TO UFOTABLE'S OFFICIAL INSTAGRAM PAGE -->
+      <!-- OPEN INSTAGRAM ON NEW TAB @ https://css-tricks.com/snippets/html/open-link-in-a-new-window/ -->
+              <li><a href="https://www.instagram.com/ufotable_inc/" target="_blank">
+                <img src="IMW-A2-Logos/instagram-logo-white.png"
+                alt="White Instagram Logo" width="30" height="auto">
+              </a><li>
+              <li><a href="#language">ENG</a><li>
+
+
+
+              <!-- CONTINUE > NEED THE RESPONSIVE MENU TO SHOW UP WHEN SHRUNK -->
+    <!-- Responsive navbar https://www.w3schools.com/howto/howto_js_topnav_responsive.asp -->
+              <li><a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+              <!--  <img src="file:///Users/angelalam/Documents/OCAD%20U/Fifth%20Fall%202021/Interactive%20Media%20%E2%80%93%20Web/IM-Web%20%E2%80%93%20A2/IMW-Assignment-2/IMW-A2-Logos/white-menu.svg"
+                alt="Responsive Navigation Menu" width="30" height="auto"> -->
+              </a></li>
+
+
+            </ul>
+          </nav>
+        </div>
 
 
 
@@ -105,7 +125,7 @@
 <!-- Figcaption @ https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figcaption -->
     <div class="theatrical-all">
 <!-- Demon Slayer Mugen Train -->
-      <div class="filterDiv all 2020 demon">
+      <div class="filterDiv show all 2020 demon">
         <img id="crop" src="https://pbs.twimg.com/media/FAI67muXIAEPrLZ?format=jpg&name=4096x4096"
         alt="Demon Slayer Mugen Train" width="280" height="auto">
         <a class="poster-link" href="https://demonslayer-anime.com/" target="_blank">
@@ -113,7 +133,7 @@
         </a>
       </div>
 <!-- Fate/Stay Night [Heaven's Feel] III. Spring Song Movie Poster -->
-      <div class="filterDiv all 2020 fate">
+      <div class="filterDiv show all 2020 fate">
         <img id="crop" src="https://pbs.twimg.com/media/E6hE0N2XIAA1oUu?format=jpg&name=large"
         alt="Fate/Stay Night [Heaven's Feel] III. Spring Song" width="280" height="auto">
         <a href="https://www.fatestaynightusa.com/" target="_blank">
@@ -121,7 +141,7 @@
         </a>
       </div>
 <!-- Fate/Stay Night [Heaven's Feel] II. Lost Butterfly Movie Poster -->
-      <div class="filterDiv all 2019 fate">
+      <div class="filterDiv show all 2019 fate">
         <img id="crop" src="https://pbs.twimg.com/media/E2ll1m1XIAAAEat?format=jpg&name=medium"
         alt="Fate/Stay Night [Heaven's Feel] II. Lost Butterfly" width="280" height="auto">
         <a href="https://www.fatestaynightusa.com/2nd/news/" target="_blank">
@@ -129,7 +149,7 @@
         </a>
       </div>
 <!-- Fate/Stay Night [Heaven's Feel] I. Presage Flower Movie Poster -->
-      <div class="filterDiv all 2017 fate">
+      <div class="filterDiv show all 2017 fate">
         <img id="crop" src="https://pbs.twimg.com/media/E2ll1p1XEAkKGNT?format=jpg&name=4096x4096"
         alt="Fate/Stay Night [Heaven's Feel] I. Presage Flower" width="280" height="auto">
         <a href="https://www.fatestaynightusa.com/1st/" target="_blank">
@@ -137,7 +157,7 @@
         </a>
       </div>
 <!-- Tales of the Zestiria: Dawn of the Shepherd -->
-      <div class="filterDiv all 2014 zestiria">
+      <div class="filterDiv show all 2014 zestiria">
         <img id="crop" src="https://m.media-amazon.com/images/M/MV5BZDQwNmY2MGItNzk4NS00Mzc5LWE1M2ItODIyYzBlZjk1YmM2XkEyXkFqcGdeQXVyNDgyODgxNjE@._V1_.jpg"
         alt="Tales of the Zestiria: Dawn of the Shepherd" width="280" height="auto">
         <a href="https://toz-thex-anime.tales-ch.jp/en/" target="_blank">
@@ -145,7 +165,7 @@
         </a>
       </div>
 <!-- The Garden of Sinners Future Gospel -->
-      <div class="filterDiv all 2013 garden">
+      <div class="filterDiv show all 2013 garden">
         <img id="crop" src="https://i.pinimg.com/474x/b4/03/59/b40359973a611fbb4b0e98efb4815090.jpg"
         alt="The Garden of Sinners Future Gospel" width="280" height="auto">
         <a href="https://www.karanokyoukai.com/" target="_blank">
@@ -153,7 +173,7 @@
         </a>
       </div>
 <!-- The Garden of Sinners Extra Chorus -->
-      <div class="filterDiv all 2011 garden">
+      <div class="filterDiv show all 2011 garden">
         <img id="crop" src="https://i.pinimg.com/474x/d9/dd/78/d9dd789e5bd19e4d513b45fd4279e0f5.jpg"
         alt="The Garden of Sinners Extra Chorus" width="280" height="auto">
         <a href="https://www.karanokyoukai.com/" target="_blank">
@@ -161,7 +181,7 @@
         </a>
       </div>
 <!-- Magical Sisters Yoyo and Nene -->
-      <div class="filterDiv all 2010 magical">
+      <div class="filterDiv show all 2010 magical">
         <img id="crop" src="https://www.themoviedb.org/t/p/original/9w24MqPE0Sp6aQVl3djMCpi1CjH.jpg"
         alt="Magical Sisters Yoyo and Nene" width="280" height="auto">
         <a href="http://king-cr.jp/special/majocco/" target="_blank">
@@ -169,13 +189,13 @@
         </a>
       </div>
 <!-- Sakura No Ondo -->
-      <div class="filterDiv all 2009 sakura">
+      <div class="filterDiv show all 2009 sakura">
         <img id="crop" src="https://cdn.myanimelist.net/images/anime/12/43415l.jpg"
         alt="Sakura No Ondo" width="280" height="auto">
         <figcaption class="figure-theatrical">SAKURA NO ONDO</figcaption>
       </div>
 <!-- The Garden of Sinners Final Chapter -->
-      <div class="filterDiv all 2008 garden">
+      <div class="filterDiv show all 2008 garden">
         <img id="crop" src="https://i.pinimg.com/474x/51/11/1e/51111e31a3bb869aeaf892451349aee3.jpg"
         alt="The Garden of Sinners Final Chapter" width="280" height="auto">
         <a href="https://www.karanokyoukai.com/" target="_blank">
@@ -183,7 +203,7 @@
         </a>
       </div>
 <!-- The Garden of Sinners Chapter 7: A Study in Murder Part 2 -->
-      <div class="filterDiv all 2008 garden">
+      <div class="filterDiv show all 2008 garden">
         <img id="crop" src="https://i.pinimg.com/474x/d0/2a/3b/d02a3bce2d988aea47cac2d4e291ca90.jpg"
         alt="The Garden of Sinners Chapter 7: A Study in Murder Part 2" width="280" height="auto">
         <a href="https://www.karanokyoukai.com/" target="_blank">
@@ -191,7 +211,7 @@
         </a>
       </div>
 <!-- The Garden of Sinners Chapter 6: Oblivion Recording -->
-      <div class="filterDiv all 2008 garden">
+      <div class="filterDiv show all 2008 garden">
         <img id="crop" src="https://i.pinimg.com/474x/79/59/24/7959247b2ec73c507ce7866f0cccdb5b.jpg"
         alt="The Garden of Sinners Chapter 6: Oblivion Recording" width="280" height="auto">
         <a href="https://www.karanokyoukai.com/" target="_blank">
@@ -199,7 +219,7 @@
         </a>
       </div>
 <!-- The Garden of Sinners Chapter 5: Paradox Spiral -->
-      <div class="filterDiv all 2008 garden">
+      <div class="filterDiv show all 2008 garden">
         <img id="crop" src="https://i.pinimg.com/474x/68/09/fe/6809fe09bcba928099df4e38bcc03d79.jpg"
         alt="The Garden of Sinners Chapter 5: Paradox Spiral" width="280" height="auto">
         <a href="https://www.karanokyoukai.com/" target="_blank">
@@ -207,7 +227,7 @@
         </a>
       </div>
 <!-- The Garden of Sinners Chapter 4: The Garden of Sinners -->
-      <div class="filterDiv all 2008 garden">
+      <div class="filterDiv show all 2008 garden">
         <img id="crop" src="https://i.pinimg.com/474x/28/99/d6/2899d6210a2108aa46021016ce32fe63.jpg"
         alt="The Garden of Sinners Chapter 4: The Garden of Sinners" width="280" height="auto">
         <a href="https://www.karanokyoukai.com/" target="_blank">
@@ -215,7 +235,7 @@
         </a>
       </div>
 <!-- The Garden of Sinners Chapter 3: Remaining Sense of Pain -->
-      <div class="filterDiv all 2008 garden">
+      <div class="filterDiv show all 2008 garden">
         <img id="crop" src="https://i.pinimg.com/474x/a9/c4/b7/a9c4b71a7b0f3fc62259f3f6a1d84bfb.jpg"
         alt="The Garden of Sinners Chapter 3: Remaining Sense of Pain" width="280" height="auto">
         <a href="https://www.karanokyoukai.com/" target="_blank">
@@ -223,7 +243,7 @@
         </a>
       </div>
 <!-- The Garden of Sinners Chapter 2: A Study in Murder Part 1 -->
-      <div class="filterDiv all 2007 garden">
+      <div class="filterDiv show all 2007 garden">
         <img id="crop" src="https://i.pinimg.com/474x/b0/57/3a/b0573a12ab958efcc6d6f27c45bde34c.jpg"
         alt="The Garden of Sinners Chapter 2: A Study in Murder Part 1" width="280" height="auto">
         <a href="https://www.karanokyoukai.com/" target="_blank">
@@ -231,7 +251,7 @@
         </a>
       </div>
 <!-- The Garden of Sinners Chapter 1: Overlooking View -->
-      <div class="filterDiv all 2007 garden">
+      <div class="filterDiv show all 2007 garden">
         <img id="crop" src="https://i.pinimg.com/474x/1c/d0/2a/1cd02a427f4cc5ea67627085133a15bd.jpg"
         alt="The Garden of Sinners Chapter 1: Overlooking View" width="280" height="auto">
         <a href="https://www.karanokyoukai.com/" target="_blank">
@@ -241,37 +261,38 @@
     </div>
 
 
-<!-- REPLACE THIS -->
+    <div class="bottom">
+<!-- ADD THESE TO THE OTHER PAGES TOO -->
 <!-- Logos take users to an external link when they click on the logo -->
 <!-- Bottom Page Logos using FLEX-WRAP: WRAP;-->
-    <div class="bottom-logos" id="bottom-logos">
-      <!-- Ufotable Dining LOGO -->
-      <a class="ufotable-dining-logo" href="http://www.ufotable.com/dining/" target="_blank">
-        <img src="http://www.ufotable.com/dining/img/toplogo.png"
-        alt="Ufotable Dining Logo" width="500" height="auto">
-      </a>
-      <!-- Ufotable Cafe LOGO -->
-      <a class="ufotable-cafe-logo" href="http://www.ufotable.com/cafe/index.html" target="_blank">
-        <img src="file:///Users/angelalam/Documents/OCAD%20U/Fifth%20Fall%202021/Interactive%20Media%20–%20Web/IM-Web%20–%20A2/IMW-Assignment-2/IMW-A2-Logos/ufotable-cafe-logo.png"
-        alt="Ufotable Cafe Logo" width="400" height="auto">
-      </a>
-      <!-- Ufotable Cinema LOGO -->
-      <a class="ufotable-cinema-logo" href="http://www.ufotable.com/cinema/" target="_blank">
-        <img src="file:///Users/angelalam/Documents/OCAD%20U/Fifth%20Fall%202021/Interactive%20Media%20–%20Web/IM-Web%20–%20A2/IMW-Assignment-2/IMW-A2-Logos/cinema_logo-invert.png"
-        alt="Ufotable Cinema Logo" width="200" height="auto">
-      </a>
+      <div class="bottom-logos" id="bottom-logos">
+        <!-- Ufotable Dining LOGO -->
+        <a class="ufotable-dining-logo" href="http://www.ufotable.com/dining/" target="_blank">
+          <img src="IMW-A2-Logos/ufotable-dining.png"
+          alt="Ufotable Dining Logo" width="400" height="auto">
+        </a>
+        <!-- Ufotable Cafe LOGO -->
+        <a class="ufotable-cafe-logo" href="http://www.ufotable.com/cafe/index.html" target="_blank">
+          <img src="IMW-A2-Logos/ufotable-cafe-logo.png"
+          alt="Ufotable Cafe Logo" width="300" height="auto">
+        </a>
+        <!-- Ufotable Cinema LOGO -->
+        <a class="ufotable-cinema-logo" href="http://www.ufotable.com/cinema/" target="_blank">
+          <img src="IMW-A2-Logos/cinema_logo-invert.png"
+          alt="Ufotable Cinema Logo" width="100" height="auto">
+        </a>
+      </div>
+
+
+    <!-- ADD THESE TO THE OTHER PAGES TOO -->
+    <!-- Bottom Info -->
+      <footer>
+        <a id="footer-font" href="#site-policy">SITE POLICY</a>
+        <a id="footer-font" href="#about-copyright">ABOUT COPYRIGHT OF THE WORK</a>
+        <a id="footer-font" href="#all-rights">2012-2019 UFOTABLE INC. ALL RIGHTS RESERVED.</a>
+        <a id="footer-font" href="#">RETURN TO THE TOP</a>
+      </footer>
     </div>
-
-
-<!-- REPLACE THIS -->
-<!-- Bottom Info -->
-    <footer>
-      <a id="footer-font" href="#site-policy" >SITE POLICY</a>
-      <a id="footer-font" href="#about-copyright">ABOUT COPYRIGHT OF THE WORK</a>
-      <a id="footer-font" href="#all-rights">2012-2019 UFOTABLE INC. ALL RIGHTS RESERVED.</a>
-      <a id="footer-font" href="#FAQ">FREQUENTLY ASKED QUESTIONS</a>
-      <a id="footer-font" href="#">RETURN TO THE TOP</a>
-    </footer>
 
   </body>
 </html>
