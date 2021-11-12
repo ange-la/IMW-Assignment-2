@@ -132,7 +132,7 @@ body::after{
   letter-spacing: 1px;
   font-family: 'bebas-nueregular', sans-serif;
   color: #ffffff;
-  text-decoration: none;
+  text-decoration: 2px underline #ffffff;
   line-height: 1.6;
 }
 
@@ -142,13 +142,16 @@ body::after{
   overflow: scroll;
   width: 350px;
   height: 500px;
-  padding-left: 60px;
+  padding-left: 30px;
+  margin-left: 60px;
+  margin-bottom: 60px;
   background-color: #000000;
+  border: 1px solid white;
 }
 
 /* INFORMATION header */
 #info-header {
-  padding-left: 60px;
+  padding-left: 90px;
   padding-bottom: 20px;
   padding-top: 20px;
 }
@@ -158,13 +161,16 @@ h2 {
   color: #ffffff;
   text-decoration: none;
   font-family: 'bebas-nueregular', sans-serif;
-  font-size: 22px;
+  font-size: 30px;
 }
 
+/* the information description */
 p {
   color: #ffffff;
   text-decoration: none;
   font-family: 'bebas-nueregular', sans-serif;
+  font-size: 22px;
+  letter-spacing: 1px;
 }
 
 button {
@@ -459,9 +465,15 @@ button {
 /* ADD A BREAK POINT */
 /* Responsive navbar @ https://www.w3schools.com/howto/howto_js_responsive_navbar_dropdown.asp */
 @media screen and (max-width: 1190px) {
-  .navbar li:not(:first-child) {display: none;}
-  .navbar li.icon {
-    display: block;
+  .navbar li:not(:first-child) {
+    display: none;
+  }
+  .navbar a:not(:first-child) {
+    display: none;
+  }
+  .navbar a.icon {
+    display: flex;
+    justify-content: flex-end;
     }
 }
 
@@ -472,16 +484,9 @@ button {
     right: 0;
     top: 0;
   }
-  .navbar.responsive li {
+  .topnav.responsive a li {
     float: none;
     display: block;
-    text-align: left;
-  }
-  .navbar.responsive .dropdown-project {float: none;}
-  .navbar.responsive .dropdown-content {position: relative;}
-  .navbar.responsive .dropdown-project .dropbtn {
-    display: block;
-    width: 100%;
     text-align: left;
   }
 }
@@ -512,7 +517,7 @@ button {
 }
 
 /* MUST use display:flex; to center logos, icons, and text */
-nav li {
+.navbar li {
   float: left;
   list-style-type: none;
   height: 50px;
@@ -546,7 +551,7 @@ nav li {
   position: sticky;
   z-index: 100;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center; /* was SPACE-EVENTLY;
 }
 
 /* Links inside the navbar */

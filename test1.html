@@ -1,4 +1,4 @@
-<!-- works but need to make it collapsable, etc -->
+<!-- NOT THIS ONE -->
 
 <!DOCTYPE html>
 <html>
@@ -21,7 +21,7 @@
   position: sticky;
   z-index: 100;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 .navbar a {
@@ -51,6 +51,10 @@
   .navbar a.icon {
     float: right;
     display: block;
+  }
+
+  .navbar.show {
+    display: flex;
   }
 }
 
@@ -135,9 +139,9 @@ a {
 <body>
 
 <nav class="navbar" id="topnav">
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+  <button class="icon" id="icon">
     <i class="fa fa-bars"></i>
-  </a>
+  </button>
   <ul>
     <li><a href="#home" class="active">
       <img id="ufotable-logo" src="IMW-A2-Logos/ufotable-white-logo.png"
@@ -179,6 +183,13 @@ function myFunction() {
   } else {
     x.className = "navbar";
   }
+}
+
+const hamburger = document.getElementById('');
+const navbar = document.getElementById('navbar')
+
+hamburger.addEventListener('click', () => {
+  navbar.classList.toggle('show');
 }
 </script>
 
