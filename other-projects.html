@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Ufotable Other Projects</title>
+    <title>Ufotable Other Animation</title>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- CSS -->
     <link rel="stylesheet" href="ufotable-style.css">
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+<!-- Hamburger Menu CSS @ https://www.w3schools.com/howto/howto_js_mobile_navbar.asp -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <!-- JavaScript -->
 <!-- Easier carousel recommended by Professor Ali Qadeer @ https://flickity.metafizzy.co -->
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
@@ -14,128 +17,119 @@
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
     crossorigin="anonymous">
     </script>
+    <script src="https://player.vimeo.com/api/player.js"></script>
+<!-- My JavaScript -->
     <script src="interaction.js"></script>
+<!-- Adding a favicon @ https://www.w3schools.com/html/html_favicon.asp -->
+    <link rel="favicon" type="image/x-icon" href="IMW-A2-Logos/favicon.ico">
   </head>
 
   <body>
 
-<!-- REPLACE THIS -->
-    <!-- COVID notice in header above navbar -->
-        <div class="top-sticky">
-          <header>
-            <a id="covid-notice" href="http://www.ufotable.com/release/release_covid19_eigyo_jikan_8.html" target="_blank"><b id="notice">NOTICE FROM EACH STORE DUE TO COVID-19</b></a>
-          </header>
-    <!-- NAVIGATION BAR -->
-    <!-- <nav> @ https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav -->
-    <!-- Dropdown Navigation Bar @ https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp -->
-    <!-- CSS Lists @ https://www.w3schools.com/css/css_list.asp -->
-    <!-- put my mixed navbar instead of w3school's as a test with their css code in combination -->
-          <nav class="navbar" id="topnav">
-            <ul>
-              <li><a href="index.html">
-                <img id="ufotable-logo" src="IMW-A2-Logos/ufotable-white-logo.png"
-                alt="White Ufotable Logo" width="180" height="auto">
-              </a><li>
-              <li><a href="index.html">HOME</a><li>
-              <li><a href="#profile">PROFILE</a><li>
-              <li><a href="#news">NEWS</a><li>
-              <ul class="dropdown-project">
-                <button class="dropbtn">PROJECTS
-                </button>
-                <div class="dropdown-content">
-                  <li><a href="theatrical.html">THEATRICAL</a></li>
-                  <li><a href="television.html">TELEVISION</a></li>
-                  <li><a href="other-projects.html">OTHER</a></li>
-                </div>
-              </ul>
-              <li><a href="#recruitment">RECRUITMENT</a><li>
-              <li><a href="#webshop">WEBSHOP</a><li>
-              <li><a href="#community">COMMUNITY</a><li>
-      <!-- LINK TO UFOTABLE'S OFFICAL TWITTER PAGE -->
-      <!-- OPEN TWITTER ON NEW TAB @ https://css-tricks.com/snippets/html/open-link-in-a-new-window/ -->
-              <li><a id="twitter-logo" href="https://twitter.com/ufotable?lang=en" target="_blank">
-                <img src="IMW-A2-Logos/twitter-logo-white.svg"
-                 alt="White Twitter Logo" width="30" height="auto">
-              </a><li>
-      <!-- LINK TO UFOTABLE'S OFFICIAL INSTAGRAM PAGE -->
-      <!-- OPEN INSTAGRAM ON NEW TAB @ https://css-tricks.com/snippets/html/open-link-in-a-new-window/ -->
-              <li><a href="https://www.instagram.com/ufotable_inc/" target="_blank">
-                <img src="IMW-A2-Logos/instagram-logo-white.png"
-                alt="White Instagram Logo" width="30" height="auto">
-              </a><li>
-              <li><a href="#language">ENG</a><li>
 
 
-
-              <!-- CONTINUE > NEED THE RESPONSIVE MENU TO SHOW UP WHEN SHRUNK -->
-    <!-- Responsive navbar https://www.w3schools.com/howto/howto_js_topnav_responsive.asp -->
-              <li><a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                <i class="fa fa-bars"></i>
-              <!--  <img src="file:///Users/angelalam/Documents/OCAD%20U/Fifth%20Fall%202021/Interactive%20Media%20%E2%80%93%20Web/IM-Web%20%E2%80%93%20A2/IMW-Assignment-2/IMW-A2-Logos/white-menu.svg"
-                alt="Responsive Navigation Menu" width="30" height="auto"> -->
-              </a></li>
-
-
-            </ul>
-          </nav>
-        </div>
+<!-- COVID notice in header above navbar -->
+    <div class="top-sticky">
+      <header>
+        <a id="covid-notice" href="http://www.ufotable.com/release/release_covid19_eigyo_jikan_8.html" target="_blank"><b id="notice">NOTICE FROM EACH STORE DUE TO COVID-19</b></a>
+      </header>
+<!-- NAVIGATION BAR -->
+<!-- <nav> @ https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav -->
+<!-- Dropdown Navigation Bar @ https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp -->
+<!-- CSS Lists @ https://www.w3schools.com/css/css_list.asp -->
+<!-- put my mixed navbar instead of w3school's as a test with their css code in combination -->
+      <nav class="navbar" id="topnav">
+<!-- Responsive navbar https://www.w3schools.com/howto/howto_js_topnav_responsive.asp -->
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+        <ul>
+          <li><a href="index.html">
+            <img id="ufotable-logo" src="IMW-A2-Logos/ufotable-white-logo.png"
+            alt="White Ufotable Logo" width="180" height="auto">
+          </a><li>
+          <li><a href="index.html">HOME</a><li>
+          <li><a href="#profile">PROFILE</a><li>
+          <li><a href="#news">NEWS</a><li>
+          <ul class="dropdown-project">
+            <button class="dropbtn">PROJECTS
+            </button>
+            <div class="dropdown-content">
+              <li><a href="theatrical.html">THEATRICAL</a></li>
+              <li><a href="television.html">TELEVISION</a></li>
+              <li><a href="other-projects.html">OTHER</a></li>
+            </div>
+          </ul>
+          <li><a href="#recruitment">RECRUITMENT</a><li>
+          <li><a href="#webshop">WEBSHOP</a><li>
+          <li><a href="#community">COMMUNITY</a><li>
+<!-- LINK TO UFOTABLE'S OFFICAL TWITTER PAGE -->
+<!-- OPEN TWITTER ON NEW TAB @ https://css-tricks.com/snippets/html/open-link-in-a-new-window/ -->
+          <li><a id="twitter-logo" href="https://twitter.com/ufotable?lang=en" target="_blank">
+            <img src="IMW-A2-Logos/twitter-logo-white.svg"
+             alt="White Twitter Logo" width="30" height="auto">
+          </a><li>
+<!-- LINK TO UFOTABLE'S OFFICIAL INSTAGRAM PAGE -->
+<!-- OPEN INSTAGRAM ON NEW TAB @ https://css-tricks.com/snippets/html/open-link-in-a-new-window/ -->
+          <li><a href="https://www.instagram.com/ufotable_inc/" target="_blank">
+            <img src="IMW-A2-Logos/instagram-logo-white.png"
+            alt="White Instagram Logo" width="30" height="auto">
+          </a><li>
+          <li><a href="#language">ENG</a><li>
+        </ul>
+      </nav>
+    </div>
 
 
 
     <h1 id="other-heading">OTHER ANIMATION WORKS</h1>
 
 
+
 <!-- Filter @ https://www.w3schools.com/howto/howto_js_filter_elements.asp -->
+<!-- fa fa-filter icon @ https://www.w3schools.com/icons/fontawesome_icons_webapp.asp -->
     <div id="myBtnContainer">
+      <i style="font-size:24px" class="fa">&#xf0b0;</i>
       <b id="filterby-other">FILTER BY:</b>
       <button class="btn" onclick="filterSelection('opening')">OPENING SEQUENCE</button>
       <button class="btn" onclick="filterSelection('game')">IN-GAME ANIMATION</button>
       <button class="btn" onclick="filterSelection('ova')">OVA</button>
       <button class="btn" onclick="filterSelection('storyboarding')">STORYBOARDING</button>
       <button class="btn" onclick="filterSelection('manga')">MANGA</button>
-      <button class="btn" onclick="filterSelection('event')">EVENT PRODUCTION</button>
     </div>
 
 
     <div class="sort-other">
 <!-- Filter by CATEGORY -->
-<!-- Videos on the page as it's loaded???? -->
-<!-- Ufotable Studio Reel 2017 -->
-      <div class="filterDiv show"
-        <iframe src="https://player.vimeo.com/video/594054739?h=8a2a4adc1d"
-          width="1366" height="768" frameborder="0" allow="autoplay; fullscreen;
-          picture-in-picture" allowfullscreen>
-        </iframe>
-      </div>
-<!-- Technical Works Movie Tales of Zestiria the X -->
-      <div class="filterDiv show">
-        <iframe src="https://player.vimeo.com/video/212912747?h=299c6ea6ab"
-          width="1366" height="768" frameborder="0" allow="autoplay; fullscreen;
-          picture-in-picture" allowfullscreen>
-        </iframe>
-      </div>
-
 <!-- OVA -->
 <!-- TODAY'S MENU FOR THE EMIYA FAMILY -->
       <div class="filterDiv ova">
         <img id="crop" src="https://img1.ak.crunchyroll.com/i/spire3/54255df186d579c2dfff7c25db0c49da1516840634_full.jpg"
-        alt="Today's MENU for the EMIYA Family" width="300" height="auto">
+        alt="Today's MENU for the EMIYA Family" width="280" height="auto">
         <a class="poster-link" href="https://everyday-emiyafamily.com/" target="_blank">
-          <figcaption class="figure-television">TODAY'S MENU<br>FOR THE EMIYA FAMILY</figcaption>
+          <figcaption class="figure-other">TODAY'S MENU<br>FOR THE EMIYA FAMILY</figcaption>
+        </a>
+      </div>
+<!-- Fate/Grand Order x Himuro's World -->
+      <div class="filterDiv ova">
+        <img id="crop" src="https://cdn.myanimelist.net/images/anime/1421/105975.jpg"
+        alt="Fate/Grand Order x Himuro's World" width="280" height="auto">
+        <a class="poster-link" href="https://fate-go.us/" target="_blank">
+          <figcaption class="figure-other">FATE/GRAND ORDER x HIMURO'S WORLD</figcaption>
         </a>
       </div>
 <!-- TALES OF SYMPHONIA THE UNITED WORLD & TETHE'ALLA-->
       <div class="filterDiv ova">
         <img id="crop" src="https://www.abyssalchronicles.com/wp-content/uploads/2021/02/f7a8085df45f22fabaf4ec2f1de04cb31614189588_main-683x1024.png"
-        alt="Tales of Symphonia the United World" width="300" height="auto">
+        alt="Tales of Symphonia the United World" width="280" height="auto">
         <a class="poster-link" href="http://ova-tos.com/" target="_blank">
-          <figcaption class="figure-television">TALES OF SYMPHONIA THE UNITED WORLD</figcaption>
+          <figcaption class="figure-other">TALES OF SYMPHONIA THE UNITED WORLD</figcaption>
         </a>
       </div>
 <!-- MINORI SCRAMBLE! -->
       <div class="filterDiv ova">
         <img id="crop" src="https://cdn.myanimelist.net/images/anime/6/31903.jpg"
-        alt="Minori Scramble! Cover" width="300" height="auto">
+        alt="Minori Scramble! Cover" width="280" height="auto">
         <a class="poster-link" href="https://www.animebunko.com/minori/" target="_blank">
           <figcaption class="figure-other">MINORI SCRAMBLE!</figcaption>
         </a>
@@ -143,7 +137,7 @@
 <!-- GYO: TOKYO FISH ATTACK -->
       <div class="filterDiv ova">
         <img id="crop" src="https://m.media-amazon.com/images/M/MV5BMDFjZGEzN2MtMjg1OS00ODcxLTkwNzMtMmJjYTg2ZjEyZjdhXkEyXkFqcGdeQXVyNzU1OTYxNzU@._V1_.jpg"
-        alt="Gyo: Tokyo Fish Attack Cover" width="300" height="auto">
+        alt="Gyo: Tokyo Fish Attack Cover" width="280" height="auto">
         <a class="poster-link" href="https://www.animebunko.com/gyo/" target="_blank">
           <figcaption class="figure-other">GYO: TOKYO FISH ATTACK</figcaption>
         </a>
@@ -151,7 +145,7 @@
 <!-- YURI SEIJIN NAOKO-SAN -->
       <div class="filterDiv ova">
         <img id="crop" src="https://img.betaseries.com/Zpy2LUKAyTR0bf1Pwr15VR9qelI=/600x900/smart/https%3A%2F%2Fpictures.betaseries.com%2Ffonds%2Fposter%2F301205.jpg"
-        alt="Yuri Seijin Naoko-San Cover" width="300" height="auto">
+        alt="Yuri Seijin Naoko-San Cover" width="280" height="auto">
         <a class="poster-link" href="https://www.animebunko.com/naokosan/" target="_blank">
           <figcaption class="figure-other">YURI SEIJIN NAOKO-SAN</figcaption>
         </a>
@@ -159,15 +153,15 @@
 <!-- Toriko Jump Super Anime Tour Special 2009 -->
       <div class="filterDiv ova">
         <img id="crop" src="https://static.wikia.nocookie.net/toriko/images/f/f0/Toriko-OAV_%282%29.jpg/revision/latest?cb=20100830231154"
-        alt="Yuri Seijin Naoko-San Cover" width="300" height="auto">
+        alt="Yuri Seijin Naoko-San Cover" width="280" height="auto">
         <a class="poster-link">
           <figcaption class="figure-other">Toriko Jump Super Anime Tour Special 2009</figcaption>
         </a>
       </div>
 
 <!-- ANIME GUILD OPENING ANIMATION -->
-      <div class="filterDiv show opening">
-        <iframe src="https://player.vimeo.com/video/212666280?h=a32778bda2?loop=1&autoplay=1&autopause=0"
+      <div class="filterDiv opening show">
+        <iframe src="https://player.vimeo.com/video/212666280?h=a32778bda2?loop=1&autoplay=1&autopause=0&mute=0"
           width="1366" height="768" frameborder="0" allow="autoplay; fullscreen;
           picture-in-picture" allowfullscreen>
         </iframe>
@@ -177,7 +171,7 @@
 <!-- DEMON SLAYER HIKONAMI CHRONICLES -->
       <div class="filterDiv game">
         <img id="crop" src="https://www.gematsu.com/wp-content/uploads/2021/06/Demon-Slayer-Kimetsu-no-Yaiba-The-Hinokami-Chronicles_2021_06-20-21_001.jpg"
-        alt="Demon Slayer Hikonami Chronicles Cover" width="300" height="auto">
+        alt="Demon Slayer Hikonami Chronicles Cover" width="280" height="auto">
         <a class="poster-link" href="https://demonslayer-hinokami.sega.com/" target="_blank">
           <figcaption class="figure-other">DEMON SLAYER HIKONAMI CHRONICLES</figcaption>
         </a>
@@ -185,7 +179,7 @@
 <!-- TALES OF ARISE -->
       <div class="filterDiv game">
         <img id="crop" src="https://m.media-amazon.com/images/M/MV5BMzMzMWU0YjAtYTdlMi00ZGE3LTlmZTEtYTkyYjBiYTA4MzVlXkEyXkFqcGdeQXVyMTEzMTI1Mjk3._V1_.jpg"
-        alt="Tales of Arise Cover" width="300" height="auto">
+        alt="Tales of Arise Cover" width="280" height="auto">
         <a class="poster-link" href="https://www.bandainamcoent.com/games/tales-of-arise" target="_blank">
           <figcaption class="figure-other">TALES OF ARISE</figcaption>
         </a>
@@ -193,7 +187,7 @@
 <!-- TSUKIHIME: A PIECE OF GLASS MOON -->
       <div class="filterDiv game">
         <img id="crop" src="https://m.media-amazon.com/images/M/MV5BM2I4YTUzMTktZWZhNS00M2QzLTgzMTctMDI5YWEzMTNiYmJhXkEyXkFqcGdeQXVyODMyNTM0MjM@._V1_.jpg"
-        alt="Tsukihime: A Piece of Glass Moon Cover" width="300" height="auto">
+        alt="Tsukihime: A Piece of Glass Moon Cover" width="280" height="auto">
         <a class="poster-link" href="http://typemoon.com/products/tsukihime/" target="_blank">
           <figcaption class="figure-other">TSUKIHIME: A PIECE OF GLASS MOON</figcaption>
         </a>
@@ -201,7 +195,7 @@
 <!-- CODE VEIN -->
       <div class="filterDiv game">
         <img id="crop" src="https://cdn-cms.bnea.io/sites/default/files/editions/images/196580507459125.jpg"
-        alt="Code Vein Cover" width="300" height="auto">
+        alt="Code Vein Cover" width="280" height="auto">
         <a class="poster-link" href="https://www.code-vein.com/" target="_blank">
           <figcaption class="figure-other">CODE VEIN</figcaption>
         </a>
@@ -209,15 +203,15 @@
 <!-- GOD EATER 3 -->
       <div class="filterDiv game">
         <img id="crop" src="https://cdn-prod.scalefast.com/public/assets/user/122595/image/65df1415f726740e0483e5151ca899e2.jpg"
-        alt="God Eater 3 Cover" width="300" height="auto">
+        alt="God Eater 3 Cover" width="280" height="auto">
         <a class="poster-link" href="https://ge3.godeater.jp/" target="_blank">
           <figcaption class="figure-other">GOD EATER 3</figcaption>
         </a>
       </div>
 <!-- GOD EATER RESONANT OPS -->
       <div class="filterDiv game">
-        <img id="crop" src="https://static.wikia.nocookie.net/godeater/images/3/3a/God-Eater-Resonant-Ops-696x344.jpg/revision/latest/scale-to-width-down/690?cb=20180405173435"
-        alt="God Eater Resonant Ops Cover" width="300" height="auto">
+        <img id="crop" src="https://i.pinimg.com/originals/9d/14/8d/9d148dff94f4835f9d4fbbcee9ccfd59.jpg"
+        alt="God Eater Resonant Ops Cover" width="280" height="auto">
         <a class="poster-link">
           <figcaption class="figure-other">GOD EATER RESONANT OPS</figcaption>
         </a>
@@ -225,7 +219,7 @@
 <!-- DRAGALIA LOST -->
       <div class="filterDiv game">
         <img id="crop" src="https://images.nintendolife.com/7de64a009dd63/dragalia-lost-cover.cover_large.jpg"
-        alt="Dragalia Lost Cover" width="300" height="auto">
+        alt="Dragalia Lost Cover" width="280" height="auto">
         <a class="poster-link" href="https://dragalialost.com/jp/" target="_blank">
           <figcaption class="figure-other">DRAGALIA LOST</figcaption>
         </a>
@@ -233,7 +227,7 @@
 <!-- TALES OF BERSERIA -->
       <div class="filterDiv game">
         <img id="crop" src="https://media.gamestop.com/i/gamestop/10132239/Tales-of-Berseria?$pdp$"
-        alt="Tales of Berseria Cover" width="300" height="auto">
+        alt="Tales of Berseria Cover" width="280" height="auto">
         <a class="poster-link">
           <figcaption class="figure-other">TALES OF BERSERIA</figcaption>
         </a>
@@ -241,7 +235,7 @@
 <!-- GOD EATER 2 RAGE BURST -->
       <div class="filterDiv game">
         <img id="crop" src="https://cdn.wikimg.net/en/strategywiki/images/2/25/God_Eater_2-_Rage_Burst_cover.jpg"
-        alt="God Eater 2 Rage Burst Cover" width="300" height="auto">
+        alt="God Eater 2 Rage Burst Cover" width="280" height="auto">
         <a class="poster-link" href="https://www.godeater.jp/" target="_blank">
           <figcaption class="figure-other">GOD EATER 2 RAGE BURST</figcaption>
         </a>
@@ -249,7 +243,7 @@
 <!-- GOD EATER 2 -->
       <div class="filterDiv game">
         <img id="crop" src="https://static.wikia.nocookie.net/godeater/images/6/69/1005657_215593318594553_941946805_n.jpg/revision/latest?cb=20130720171957"
-        alt="God Eater 2 Cover" width="300" height="auto">
+        alt="God Eater 2 Cover" width="280" height="auto">
         <a class="poster-link" href="https://www.godeater.jp/" target="_blank">
           <figcaption class="figure-other">GOD EATER 2</figcaption>
         </a>
@@ -257,7 +251,7 @@
 <!-- SUMMON NIGHT 5 -->
       <div class="filterDiv game">
         <img id="crop" src="https://m.media-amazon.com/images/M/MV5BZWNhZTg2ZjgtMDBmMC00MTNmLWJmMTYtMWZlYTkwZjRjMzdiXkEyXkFqcGdeQXVyNDU2MjkyNzA@._V1_FMjpg_UX1000_.jpg"
-        alt="Summon Knight 5 Cover" width="300" height="auto">
+        alt="Summon Knight 5 Cover" width="280" height="auto">
         <a class="poster-link" href="https://www.summonnight.net/sn5/" target="_blank">
           <figcaption class="figure-other">SUMMON NIGHT 5</figcaption>
         </a>
@@ -265,7 +259,7 @@
 <!-- FATE/STAY NIGHT REALTA NUA -->
       <div class="filterDiv game">
         <img id="crop" src="https://m.media-amazon.com/images/M/MV5BZjdjNWRlZTQtYzlkYy00ZmUxLTgyZTctZjQwYmE0Zjg5NWY5XkEyXkFqcGdeQXVyNjQ0OTE1MTU@._V1_.jpg"
-        alt="Fate/Stay Night Realta Nua Cover" width="300" height="auto">
+        alt="Fate/Stay Night Realta Nua Cover" width="280" height="auto">
         <a class="poster-link" href="https://www.kadokawa.co.jp/" target="_blank">
           <figcaption class="figure-other">FATE/STAY NIGHT REALTA NUA</figcaption>
         </a>
@@ -273,7 +267,7 @@
 <!-- TALES OF XILLIA 2 -->
       <div class="filterDiv game">
         <img id="crop" src="https://upload.wikimedia.org/wikipedia/en/6/66/Tales_of_Xillia_2.png"
-        alt="Tales of Xillia 2 Cover" width="300" height="auto">
+        alt="Tales of Xillia 2 Cover" width="280" height="auto">
         <a class="poster-link" href="http://tox.namco-ch.net/" target="_blank">
           <figcaption class="figure-other">TALES OF XILLIA 2</figcaption>
         </a>
@@ -281,7 +275,7 @@
 <!-- TALES OF XILLIA 1 -->
       <div class="filterDiv game">
         <img id="crop" src="https://cdn.thegamesdb.net/images/original/boxart/front/68068-1.jpg"
-        alt="Tales of Xillia Cover" width="300" height="auto">
+        alt="Tales of Xillia Cover" width="280" height="auto">
         <a class="poster-link" href="http://tox.namco-ch.net/" target="_blank">
           <figcaption class="figure-other">TALES OF XILLIA</figcaption>
         </a>
@@ -289,7 +283,7 @@
 <!-- BLACK ROCK SHOOTER -->
       <div class="filterDiv game">
         <img id="crop" src="https://cdromance.com/wp-content/uploads/2013/04/Black_Rock_Shooter_The_Game_USA_PSP-Coverart.jpg"
-        alt="Black Rock Shooter The Game Cover" width="300" height="auto">
+        alt="Black Rock Shooter The Game Cover" width="280" height="auto">
         <a class="poster-link" href="https://www.godeater.jp/" target="_blank">
           <figcaption class="figure-other">BLACK ROCK SHOOTER: THE GAME</figcaption>
         </a>
@@ -297,15 +291,15 @@
 <!-- GOD EATER -->
       <div class="filterDiv game">
         <img id="crop" src="https://static.wikia.nocookie.net/godeater/images/b/b0/Cover-JP.jpg/revision/latest?cb=20100206191419"
-        alt="God Eater Cover" width="300" height="auto">
+        alt="God Eater Cover" width="280" height="auto">
         <a class="poster-link" href="https://www.godeater.jp/" target="_blank">
           <figcaption class="figure-other">GOD EATER</figcaption>
         </a>
       </div>
 <!-- GOD EATER BURST -->
       <div class="filterDiv game">
-        <img id="crop" src="https://static.wikia.nocookie.net/godeater/images/7/73/168966_front.jpg/revision/latest?cb=20160120042003"
-        alt="God Eater Burst Cover" width="300" height="auto">
+        <img id="crop" src="https://cdn-www.gamerevolution.com/assets/uploads/2010/10/god-eater-burst.jpg"
+        alt="God Eater Burst Cover" width="280" height="auto">
         <a class="poster-link" href="https://www.godeater.jp/" target="_blank">
           <figcaption class="figure-other">GOD EATER BURST</figcaption>
         </a>
@@ -313,7 +307,7 @@
 <!-- SUMMON NIGHT GRANTHESE -->
       <div class="filterDiv game">
         <img id="crop" src="https://m.media-amazon.com/images/M/MV5BN2Q2OTE2YmQtOTc4Zi00ZTU4LWExZDItYzBkMDg3MTFiNmQ3XkEyXkFqcGdeQXVyNTk5Nzg0MDE@._V1_.jpg"
-        alt="Summon Night Granthese Cover" width="300" height="auto">
+        alt="Summon Night Granthese Cover" width="280" height="auto">
         <a class="poster-link" href="https://www.summonnight.net/snworld/" target="_blank">
           <figcaption class="figure-other">SUMMON NIGHT GRANTHESE</figcaption>
         </a>
@@ -321,7 +315,7 @@
 <!-- NOSTALGIA -->
       <div class="filterDiv game">
         <img id="crop" src="https://uploads.kidzworld.com/article/32713/nostalgia-comic_article.jpg?1252957247"
-        alt="Nostalgia Cover" width="300" height="auto">
+        alt="Nostalgia Cover" width="280" height="auto">
         <a class="poster-link">
           <figcaption class="figure-other">NOSTALGIA</figcaption>
         </a>
@@ -329,7 +323,7 @@
 <!-- MAKAI SENKI 3 -->
       <div class="filterDiv game">
         <img id="crop" src="https://www.retroplace.com/pics/ps3/packshots/112258--makai-senki-disgaea-3.png"
-        alt="Makai Senki Cover" width="300" height="auto">
+        alt="Makai Senki Cover" width="280" height="auto">
         <a class="poster-link" href="https://www.godeater.jp/" target="_blank">
           <figcaption class="figure-other">MAKAI SENKI 3</figcaption>
         </a>
@@ -337,7 +331,7 @@
 <!-- DRAGON SHADOW SPELL -->
       <div class="filterDiv game">
         <img id="crop" src="https://m.media-amazon.com/images/I/61rgFS6pnxL._SY445_.jpg"
-        alt="Dragon Shadow Spell Cover" width="300" height="auto">
+        alt="Dragon Shadow Spell Cover" width="280" height="auto">
         <a class="poster-link">
           <figcaption class="figure-other">DRAGON SHADOW SPELL</figcaption>
         </a>
@@ -345,7 +339,7 @@
 <!-- DISGAEA 2 -->
       <div class="filterDiv game">
         <img id="crop" src="https://www.rpgfan.com/wp-content/uploads/2020/07/Disgaea-2-Dark-Hero-Days-Cover-Art-US.jpg"
-        alt="Disgaea 2 Cover" width="300" height="auto">
+        alt="Disgaea 2 Cover" width="280" height="auto">
         <a class="poster-link">
           <figcaption class="figure-other">DISGAEA 2</figcaption>
         </a>
@@ -353,7 +347,7 @@
 <!-- PROJECT HACKER KAKUSEI -->
       <div class="filterDiv game">
         <img id="crop" src="file:///Users/angelalam/Documents/OCAD%20U/Fifth%20Fall%202021/Interactive%20Media%20%E2%80%93%20Web/IM-Web%20%E2%80%93%20A2/IMW-Assignment-2/IMW-A2-Images/project-hacker-kakusei.png"
-        alt="Project Hacker Kakusei Cover" width="300" height="auto">
+        alt="Project Hacker Kakusei Cover" width="280" height="auto">
         <a class="poster-link" href="https://www.nintendo.co.jp/ds/adhj/" target="_blank">
           <figcaption class="figure-other">PROJECT HACKER KAKUSEI</figcaption>
         </a>
@@ -361,7 +355,7 @@
 <!-- SUMMON NIGHT EX-THESIS: YOAKE NO TSUBASA -->
       <div class="filterDiv game">
         <img id="crop" src="https://static.wikia.nocookie.net/summonnight/images/a/a3/SNEX-24.jpg/revision/latest?cb=20130428145005"
-        alt="Summon Night Ex-Thesis: Yoake No Tsubasa Cover" width="300" height="auto">
+        alt="Summon Night Ex-Thesis: Yoake No Tsubasa Cover" width="280" height="auto">
         <a class="poster-link" href="https://www.summonnight.net/snworld/" target="_blank">
           <figcaption class="figure-other">SUMMON NIGHT EX-THESIS: YOAKE NO TSUBASA</figcaption>
         </a>
@@ -371,7 +365,7 @@
 <!-- ASH ARCHAIC SEALED HEAT -->
       <div class="filterDiv storyboarding">
         <img id="crop" src="https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co2grt.jpg"
-        alt="Ash Archaic Sealed Heat Cover" width="300" height="auto">
+        alt="Ash Archaic Sealed Heat Cover" width="280" height="auto">
         <a class="poster-link" href="https://www.nintendo.co.jp/ds/yasj/" target="_blank">
           <figcaption class="figure-other">ASH ARCHAIC SEALED HEAT</figcaption>
         </a>
@@ -379,7 +373,7 @@
 <!-- SUPER SMASH BROS BRAWL -->
       <div class="filterDiv storyboarding">
         <img id="crop" src="https://qph.fs.quoracdn.net/main-qimg-310db067c655af8c511367c30affa53d-pjlq"
-        alt="Super Smash Bros Brawl Cover" width="300" height="auto">
+        alt="Super Smash Bros Brawl Cover" width="280" height="auto">
         <a class="poster-link" href="https://www.smashbros.com/wii/jp/" target="_blank">
           <figcaption class="figure-other">SUPER SMASH BROS BRAWL</figcaption>
         </a>
@@ -387,7 +381,7 @@
 <!-- BLUE DRAGON -->
       <div class="filterDiv storyboarding">
         <img id="crop" src="https://www.mobygames.com/images/covers/l/456634-blue-dragon-xbox-360-front-cover.jpg"
-        alt="Blue Dragon Cover" width="300" height="auto">
+        alt="Blue Dragon Cover" width="280" height="auto">
         <a class="poster-link">
           <figcaption class="figure-other">BLUE DRAGON</figcaption>
         </a>
@@ -395,7 +389,7 @@
 <!-- HAUNTING GROUND / DEMENTO -->
       <div class="filterDiv storyboarding">
         <img id="crop" src="https://www.gamespot.com/a/uploads/scale_medium/mig/0/1/6/6/2210166-box_hground.png"
-        alt="Haunting Ground Cover" width="300" height="auto">
+        alt="Haunting Ground Cover" width="280" height="auto">
         <a class="poster-link">
           <figcaption class="figure-other">HAUNTING GROUND</figcaption>
         </a>
@@ -405,7 +399,7 @@
 <!-- GAKUEN UTOPIA MANABI STRAIGHT! -->
       <div class="filterDiv manga">
         <img id="crop" src="https://upload.wikimedia.org/wikipedia/en/thumb/3/30/Manabi_Straight%21_manga_volume_1_cover.jpg/220px-Manabi_Straight%21_manga_volume_1_cover.jpg"
-        alt="Gakuen Utopia Manabi Straight! Cover" width="300" height="auto">
+        alt="Gakuen Utopia Manabi Straight! Cover" width="280" height="auto">
         <a class="poster-link">
           <figcaption class="figure-other">GAKUEN UTOPIA MANABI STRAIGHT!</figcaption>
         </a>
@@ -413,22 +407,18 @@
 <!-- COYOTE RAGTIME SHOW -->
       <div class="filterDiv manga">
         <img id="crop" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1328750150l/2422479.jpg"
-        alt="Coyote Ragtime Show Cover" width="300" height="auto">
+        alt="Coyote Ragtime Show Cover" width="280" height="auto">
         <a class="poster-link">
           <figcaption class="figure-other">COYOTE RAGTIME SHOW</figcaption>
         </a>
       </div>
-
-<!-- EVENT PRODUCTION -->
-      <div class="machi-asobi">
-      </div>
     </div>
 
 
-    <div class="bottom">
-<!-- ADD THESE TO THE OTHER PAGES TOO -->
+
 <!-- Logos take users to an external link when they click on the logo -->
 <!-- Bottom Page Logos using FLEX-WRAP: WRAP;-->
+    <div class="bottom">
       <div class="bottom-logos" id="bottom-logos">
         <!-- Ufotable Dining LOGO -->
         <a class="ufotable-dining-logo" href="http://www.ufotable.com/dining/" target="_blank">
@@ -438,23 +428,28 @@
         <!-- Ufotable Cafe LOGO -->
         <a class="ufotable-cafe-logo" href="http://www.ufotable.com/cafe/index.html" target="_blank">
           <img src="IMW-A2-Logos/ufotable-cafe-logo.png"
-          alt="Ufotable Cafe Logo" width="300" height="auto">
+          alt="Ufotable Cafe Logo" width="280" height="auto">
         </a>
         <!-- Ufotable Cinema LOGO -->
         <a class="ufotable-cinema-logo" href="http://www.ufotable.com/cinema/" target="_blank">
           <img src="IMW-A2-Logos/cinema_logo-invert.png"
-          alt="Ufotable Cinema Logo" width="140" height="auto">
+          alt="Ufotable Cinema Logo" width="160" height="auto">
+        </a>
+        <!-- Machi Asobi -->
+        <a class="machi-asobi-logo" href="http://www.machiasobi.com/machiasobicafe/index.html" target="_blank">
+          <img src="IMW-A2-Logos/MachiAsobi_white.png"
+          alt="Machi Asobi Logo" width="260" height="auto">
         </a>
       </div>
 
 
-    <!-- ADD THESE TO THE OTHER PAGES TOO -->
-    <!-- Bottom Info -->
+
+<!-- Bottom Info -->
       <footer>
-        <a id="footer-font" href="#site-policy">SITE POLICY</a>
-        <a id="footer-font" href="#about-copyright">ABOUT COPYRIGHT OF THE WORK</a>
-        <a id="footer-font" href="#all-rights">2012-2019 UFOTABLE INC. ALL RIGHTS RESERVED.</a>
-        <a id="footer-font" href="#">RETURN TO THE TOP</a>
+        <a id="footer-font-left" href="#site-policy">SITE POLICY</a>
+        <a id="footer-font-left" href="#about-copyright">ABOUT COPYRIGHT OF THE WORK</a>
+        <a id="footer-font-right" href="#">RETURN TO THE TOP</a>
+        <a id="footer-font-right" href="#all-rights">2012-2019 UFOTABLE INC. ALL RIGHTS RESERVED.</a>
       </footer>
     </div>
 

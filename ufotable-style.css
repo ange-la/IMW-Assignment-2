@@ -20,9 +20,10 @@ html {
 /* Center the links @ https://developer.mozill .org/en-US/docs/Web/CSS/Layout_cookbook/Center_an_element */
 /* using display:flex; so text doesn't get distorted when screen shrunk */
 #promotional-links {
-  padding: 50px;
+  padding-top: 50px;
+  padding-bottom: 80px;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   font-family: 'bebas-nueregular', sans-serif;
   font-size: 22px;
 }
@@ -38,19 +39,41 @@ html {
   align-items: center;
 }
 
+.ufotable-dining-logo:hover {
+  border-bottom: 2px solid #ffffff;
+}
+
+.ufotable-cafe-logo:hover {
+  border-bottom: 2px solid #ffffff;
+}
+
+.ufotable-cinema-logo:hover {
+  border-bottom: 2px solid #ffffff;
+}
+
+.machi-asobi-logo:hover {
+  border-bottom: 2px solid #ffffff;
+}
 
 
 /* Center the links @ https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook/Center_an_element */
 footer {
-  display: flex;
-  justify-content: center;
-  padding: 10px;
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-bottom: 60px;
+  padding-top: 10px;
 }
 
-#footer-font {
+#footer-font-left {
   font-size: 16px;
   letter-spacing: 1px;
-  display: flex;
+  float: left;
+}
+
+#footer-font-right {
+  font-size: 16px;
+  letter-spacing: 1px;
+  float: right;
 }
 
 /* Background colour at the footer */
@@ -140,7 +163,7 @@ body::after{
 /* overflow: scroll; @ https://developer.mozilla.org/en-US/docs/Web/CSS/overflow */
 #info-text {
   overflow: scroll;
-  width: 350px;
+  width: 640px;
   height: 500px;
   padding-left: 30px;
   margin-left: 60px;
@@ -154,6 +177,16 @@ body::after{
   padding-left: 90px;
   padding-bottom: 20px;
   padding-top: 20px;
+  margin-top: -70px;
+  margin-right: -190px;
+}
+
+#information {
+  margin-top: -100px;
+  padding-bottom: 180px;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 60px;
 }
 
 /* Heading for "INFORMATION" */
@@ -271,6 +304,11 @@ button {
   background-color: #1f1f1f;
 }
 
+/* fa fa-filter icon @ https://www.w3schools.com/icons/fontawesome_icons_webapp.asp */
+.fa {
+  color: #ffffff;
+}
+
 /* "FILTER BY:" word style */
 #filterby-theatrical {
   font-size: 22px;
@@ -322,13 +360,15 @@ button {
   padding-top: 10px;
   text-align: center;
   line-height: 1.3;
-  max-width: 300px;
+  max-width: 280px;
 }
 
+/* increase space between content and footer */
 .sort-other {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  padding-bottom: 200px;
 }
 
 .figure-other {
@@ -340,8 +380,10 @@ button {
   padding-top: 10px;
   text-align: center;
   line-height: 1.3;
-  max-width: 300px;
+  max-width: 280px;
 }
+
+
 
 /* INDEX.HTML PAGE */
 /* Promotional carosel on index.html @ https://flickity.metafizzy.co */
@@ -355,12 +397,29 @@ button {
 
 .carousel-cell {
   width: 100%;
-  height: auto;
+  max-height: 780px;
   margin: auto;
   background-color: black;
   border-radius: 5px;
   counter-increment: carousel-cell;
 }
+
+#mugen-bluray-height {
+  max-width: 1360px;
+  object-fit: cover;
+}
+
+/* styling CAROUSEL FLICKITY buttons @ https://flickity.metafizzy.co/style.html */
+/* small white circles for CAROUSEL */
+.flickity-page-dots .dot {
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+  background: transparent;
+  border: 2px solid white;
+}
+
+
 
 /* Large posters on INDEX.HTML */
 /* Top padding for all 3 posters grouped together */
@@ -420,8 +479,48 @@ button {
   padding-left: 60px;
   padding-right: 60px;
   line-height: 1.3;
+  text-align: left;
 }
 
+#index-text-right {
+  display: flex;
+  color: #ffffff;
+  text-decoration: none;
+  font-family: 'bebas-nueregular', sans-serif;
+  font-size: 70px;
+  letter-spacing: 1px;
+  text-align: left;
+  word-wrap: break-word;
+  text-align: left;
+  line-height: 1.3;
+  text-align: right;
+  max-width: 440px;
+  position: relative;
+  left: 160px;
+}
+
+/* YEAR 2021 or 2020 on INDEX.HTML */
+#index-year {
+  font-family: 'bebas-nueregular', sans-serif;
+  font-size: 160px;
+  color: #ffffff;
+  padding-left: 60px;
+  text-align: left;
+}
+
+#index-year-right {
+  font-family: 'bebas-nueregular', sans-serif;
+  font-size: 160px;
+  color: #ffffff;
+  text-align: right;
+  position: relative;
+  left: 305px;
+}
+
+.mugen-text {
+  position: relative;
+  left: -220px;
+}
 
 
 /* BLURRED Posters @ https://www.w3schools.com/howto/howto_css_blurred_background.asp */
@@ -497,8 +596,19 @@ button {
 
 
 /* Remove large text beside poster to prevent horizontal scroll from appearing */
-@media screen and (max-width: 1400px) {
-  #index-text {display: none;}
+@media screen and (max-width: 1480px) {
+  #index-text {
+    display: none;
+  }
+  #index-text-right {
+    display: none;
+  }
+  #index-year {
+    display: none;
+  }
+  #index-year-right {
+    display: none;
+  }
 }
 
 
@@ -551,7 +661,7 @@ button {
   position: sticky;
   z-index: 100;
   display: flex;
-  justify-content: center; /* was SPACE-EVENTLY;
+  justify-content: space-evenly;
 }
 
 /* Links inside the navbar */
@@ -681,7 +791,7 @@ header {
   display: none;
   padding-left: 20px;
   padding-right: 20px;
-  padding-bottom: 40px;
+  padding-bottom: 140px;
 }
 
 /* aligning the text on theatrical.html */
@@ -690,19 +800,23 @@ header {
 }
 
 /* all content without titles or year for THEATRICAL.HTML */
+/* increase space between content and footer */
 .theatrical-all {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   overflow: hidden;
+  padding-bottom: 200px;
 }
 
 /* all content without titles or year for TELEVISION.HTML */
+/* increase space between content and footer */
 .television-all {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   overflow: hidden;
+  padding-bottom: 200px;
 }
 
 /* putting in different rows according to series or year */
@@ -720,6 +834,7 @@ header {
   display: flex;
   justify-content: center;
   padding-bottom: 60px;
+  align-items: center;
 }
 
 .btn {

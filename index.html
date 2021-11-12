@@ -1,5 +1,4 @@
 <!-- note to self: things might break in css bc interfering with flickity css -->
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -77,13 +76,6 @@
             alt="White Instagram Logo" width="30" height="auto">
           </a><li>
           <li><a href="#language">ENG</a><li>
-
-
-
-          <!-- CONTINUE > NEED THE RESPONSIVE MENU TO SHOW UP WHEN SHRUNK -->
-
-
-
         </ul>
       </nav>
     </div>
@@ -124,8 +116,8 @@
       </div>
 <!-- Demon Slayer Mugen Train Limited Edition Blu-ray -->
       <div class="carousel-cell">
-        <img src="https://pbs.twimg.com/media/FCpbMG2XEBInXSw?format=jpg&name=4096x4096"
-        alt="Demon Slayer Mugen Train Limited Edition Blu-ray" max-height="700">
+        <img id="mugen-bluray-height" src="https://pbs.twimg.com/media/FCpbMG2XEBInXSw?format=jpg&name=4096x4096"
+        alt="Demon Slayer Mugen Train Limited Edition Blu-ray">
       </div>
 <!-- Fate Heaven's Feel III. Spring Song TRAILER 1 from YOUTUBE -->
       <div class="carousel-cell">
@@ -169,11 +161,17 @@
       <div class="large-demon-season2-poster">
         <img src="https://pbs.twimg.com/media/FAI7EuZUcAYM5nC?format=jpg&name=4096x4096"
         id="ds-season2" alt="Demon Slayer Season 2: Entertainment Arc" width="980" height="auto">
-        <div class="ds2-text"><strong id="index-text">2021<br><br>DEMON SLAYER<br>SEASON 2: ENTERTAINMENT<br>DISTRICT ARC</strong></div>
+        <div class="ds2-text">
+          <strong id="index-year">2021</strong>
+          <strong id="index-text">DEMON SLAYER<br>SEASON 2: ENTERTAINMENT<br>DISTRICT ARC</strong>
+        </div>
       </div>
 <!-- Demon Slayer Mugen Train LARGE POSTER -->
       <div class="large-mugen-poster">
-        <div class="mugen-text"><strong id="index-text">2020<br><br>DEMON SLAYER<br>MUGEN TRAIN ARC</strong></div>
+        <div class="mugen-text">
+          <strong id="index-year-right">2020</strong>
+          <strong id="index-text-right">DEMON SLAYER<br>MUGEN TRAIN ARC</strong>
+        </div class="mugen-text">
         <img src="https://pbs.twimg.com/media/FAI67muXIAEPrLZ?format=jpg&name=4096x4096"
         id="mugen-train" alt="Demon Slayer Mugen Train Movie Poster" width="980" height="auto">
       </div>
@@ -181,28 +179,12 @@
       <div class="large-fate-poster">
         <img src="https://pbs.twimg.com/media/E6hE0N2XIAA1oUu?format=jpg&name=large"
         id="fate-hf" alt="Fate/Stay Night [Heaven's Feel] III. Spring Song Movie Poster" width="980" height="auto">
-        <div class="fate-text"><strong id="index-text">2020<br><br>FATE/STAY NIGHT [HEAVEN'S FEEL]<br>III. SPRING SONG</strong></div>
+        <div class="fate-text">
+          <strong id="index-year">2020</strong>
+          <strong id="index-text">FATE/STAY NIGHT [HEAVEN'S FEEL]<br>III. SPRING SONG</strong>
+        </div>
       </div>
     </div>
-
-
-
-<!-- ADDING GIFS??? -->
-    <div class="gifs">
-      <div class="ds-water-gif">
-        <img src="https://static.wikia.nocookie.net/demon-fall/images/d/de/Tanjiro.gif/revision/latest?cb=20210804013023"
-        alt="Demon Slayer Tanjiro Water Breathing Gif" width="900" height="auto">
-      </div>
-      <div class="ds-fire-gif">
-        <img src="https://static.wikia.nocookie.net/kimetsu-no-yaiba-fanon/images/a/a9/39714E85-B667-4AAA-9D21-0C169CD17183.gif/revision/latest?cb=20200809145956"
-        alt="Demon Slayer Tanjiro vs. Rui Fire Breathing Gif" width="900" height="auto">
-      </div>
-      <div class="saber-gif">
-        <img src="https://64.media.tumblr.com/7ffd9be865a1685b33089609b2bcf7b6/83b81043c8ded7c7-08/s640x960/11f11525e0cf3320680797d02f033ce5a61e37f5.gifv"
-        alt="Fate/Stay Night [Heaven's Feel] Saber Alter Gif" width="900" height="auto">
-      </div>
-    </div>
-
 
 
 
@@ -293,7 +275,6 @@
 
 
 
-<!-- ADD THESE TO THE OTHER PAGES TOO -->
 <!-- Logos take users to an external link when they click on the logo -->
 <!-- Bottom Page Logos using FLEX-WRAP: WRAP;-->
     <div class="bottom">
@@ -311,19 +292,23 @@
         <!-- Ufotable Cinema LOGO -->
         <a class="ufotable-cinema-logo" href="http://www.ufotable.com/cinema/" target="_blank">
           <img src="IMW-A2-Logos/cinema_logo-invert.png"
-          alt="Ufotable Cinema Logo" width="140" height="auto">
+          alt="Ufotable Cinema Logo" width="160" height="auto">
+        </a>
+        <!-- Machi Asobi -->
+        <a class="machi-asobi-logo" href="http://www.machiasobi.com/machiasobicafe/index.html" target="_blank">
+          <img src="IMW-A2-Logos/MachiAsobi_white.png"
+          alt="Machi Asobi Logo" width="260" height="auto">
         </a>
       </div>
 
 
 
-<!-- ADD THESE TO THE OTHER PAGES TOO -->
 <!-- Bottom Info -->
       <footer>
-        <a id="footer-font" href="#site-policy">SITE POLICY</a>
-        <a id="footer-font" href="#about-copyright">ABOUT COPYRIGHT OF THE WORK</a>
-        <a id="footer-font" href="#all-rights">2012-2019 UFOTABLE INC. ALL RIGHTS RESERVED.</a>
-        <a id="footer-font" href="#">RETURN TO THE TOP</a>
+        <a id="footer-font-left" href="#site-policy">SITE POLICY</a>
+        <a id="footer-font-left" href="#about-copyright">ABOUT COPYRIGHT OF THE WORK</a>
+        <a id="footer-font-right" href="#">RETURN TO THE TOP</a>
+        <a id="footer-font-right" href="#all-rights">2012-2019 UFOTABLE INC. ALL RIGHTS RESERVED.</a>
       </footer>
     </div>
 

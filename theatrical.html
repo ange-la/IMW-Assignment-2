@@ -3,9 +3,12 @@
   <head>
     <title>Ufotable Theatrical Animation</title>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- CSS -->
     <link rel="stylesheet" href="ufotable-style.css">
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+<!-- Hamburger Menu CSS @ https://www.w3schools.com/howto/howto_js_mobile_navbar.asp -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <!-- JavaScript -->
 <!-- Easier carousel recommended by Professor Ali Qadeer @ https://flickity.metafizzy.co -->
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
@@ -14,71 +17,67 @@
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
     crossorigin="anonymous">
     </script>
+<!-- My JavaScript -->
     <script src="interaction.js"></script>
+<!-- Adding a favicon @ https://www.w3schools.com/html/html_favicon.asp -->
+    <link rel="favicon" type="image/x-icon" href="IMW-A2-Logos/favicon.ico">
   </head>
 
   <body>
 
-<!-- REPLACE THIS -->
-    <!-- COVID notice in header above navbar -->
-        <div class="top-sticky">
-          <header>
-            <a id="covid-notice" href="http://www.ufotable.com/release/release_covid19_eigyo_jikan_8.html" target="_blank"><b id="notice">NOTICE FROM EACH STORE DUE TO COVID-19</b></a>
-          </header>
-    <!-- NAVIGATION BAR -->
-    <!-- <nav> @ https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav -->
-    <!-- Dropdown Navigation Bar @ https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp -->
-    <!-- CSS Lists @ https://www.w3schools.com/css/css_list.asp -->
-    <!-- put my mixed navbar instead of w3school's as a test with their css code in combination -->
-          <nav class="navbar" id="topnav">
-            <ul>
-              <li><a href="index.html">
-                <img id="ufotable-logo" src="IMW-A2-Logos/ufotable-white-logo.png"
-                alt="White Ufotable Logo" width="180" height="auto">
-              </a><li>
-              <li><a href="index.html">HOME</a><li>
-              <li><a href="#profile">PROFILE</a><li>
-              <li><a href="#news">NEWS</a><li>
-              <ul class="dropdown-project">
-                <button class="dropbtn">PROJECTS
-                </button>
-                <div class="dropdown-content">
-                  <li><a href="theatrical.html">THEATRICAL</a></li>
-                  <li><a href="television.html">TELEVISION</a></li>
-                  <li><a href="other-projects.html">OTHER</a></li>
-                </div>
-              </ul>
-              <li><a href="#recruitment">RECRUITMENT</a><li>
-              <li><a href="#webshop">WEBSHOP</a><li>
-              <li><a href="#community">COMMUNITY</a><li>
-      <!-- LINK TO UFOTABLE'S OFFICAL TWITTER PAGE -->
-      <!-- OPEN TWITTER ON NEW TAB @ https://css-tricks.com/snippets/html/open-link-in-a-new-window/ -->
-              <li><a id="twitter-logo" href="https://twitter.com/ufotable?lang=en" target="_blank">
-                <img src="IMW-A2-Logos/twitter-logo-white.svg"
-                 alt="White Twitter Logo" width="30" height="auto">
-              </a><li>
-      <!-- LINK TO UFOTABLE'S OFFICIAL INSTAGRAM PAGE -->
-      <!-- OPEN INSTAGRAM ON NEW TAB @ https://css-tricks.com/snippets/html/open-link-in-a-new-window/ -->
-              <li><a href="https://www.instagram.com/ufotable_inc/" target="_blank">
-                <img src="IMW-A2-Logos/instagram-logo-white.png"
-                alt="White Instagram Logo" width="30" height="auto">
-              </a><li>
-              <li><a href="#language">ENG</a><li>
 
 
-
-              <!-- CONTINUE > NEED THE RESPONSIVE MENU TO SHOW UP WHEN SHRUNK -->
-    <!-- Responsive navbar https://www.w3schools.com/howto/howto_js_topnav_responsive.asp -->
-              <li><a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                <i class="fa fa-bars"></i>
-              <!--  <img src="file:///Users/angelalam/Documents/OCAD%20U/Fifth%20Fall%202021/Interactive%20Media%20%E2%80%93%20Web/IM-Web%20%E2%80%93%20A2/IMW-Assignment-2/IMW-A2-Logos/white-menu.svg"
-                alt="Responsive Navigation Menu" width="30" height="auto"> -->
-              </a></li>
-
-
-            </ul>
-          </nav>
-        </div>
+<!-- COVID notice in header above navbar -->
+    <div class="top-sticky">
+      <header>
+        <a id="covid-notice" href="http://www.ufotable.com/release/release_covid19_eigyo_jikan_8.html" target="_blank"><b id="notice">NOTICE FROM EACH STORE DUE TO COVID-19</b></a>
+      </header>
+<!-- NAVIGATION BAR -->
+<!-- <nav> @ https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav -->
+<!-- Dropdown Navigation Bar @ https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp -->
+<!-- CSS Lists @ https://www.w3schools.com/css/css_list.asp -->
+<!-- put my mixed navbar instead of w3school's as a test with their css code in combination -->
+      <nav class="navbar" id="topnav">
+<!-- Responsive navbar https://www.w3schools.com/howto/howto_js_topnav_responsive.asp -->
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+        <ul>
+          <li><a href="index.html">
+            <img id="ufotable-logo" src="IMW-A2-Logos/ufotable-white-logo.png"
+            alt="White Ufotable Logo" width="180" height="auto">
+          </a><li>
+          <li><a href="index.html">HOME</a><li>
+          <li><a href="#profile">PROFILE</a><li>
+          <li><a href="#news">NEWS</a><li>
+          <ul class="dropdown-project">
+            <button class="dropbtn">PROJECTS
+            </button>
+            <div class="dropdown-content">
+              <li><a href="theatrical.html">THEATRICAL</a></li>
+              <li><a href="television.html">TELEVISION</a></li>
+              <li><a href="other-projects.html">OTHER</a></li>
+            </div>
+          </ul>
+          <li><a href="#recruitment">RECRUITMENT</a><li>
+          <li><a href="#webshop">WEBSHOP</a><li>
+          <li><a href="#community">COMMUNITY</a><li>
+<!-- LINK TO UFOTABLE'S OFFICAL TWITTER PAGE -->
+<!-- OPEN TWITTER ON NEW TAB @ https://css-tricks.com/snippets/html/open-link-in-a-new-window/ -->
+          <li><a id="twitter-logo" href="https://twitter.com/ufotable?lang=en" target="_blank">
+            <img src="IMW-A2-Logos/twitter-logo-white.svg"
+             alt="White Twitter Logo" width="30" height="auto">
+          </a><li>
+<!-- LINK TO UFOTABLE'S OFFICIAL INSTAGRAM PAGE -->
+<!-- OPEN INSTAGRAM ON NEW TAB @ https://css-tricks.com/snippets/html/open-link-in-a-new-window/ -->
+          <li><a href="https://www.instagram.com/ufotable_inc/" target="_blank">
+            <img src="IMW-A2-Logos/instagram-logo-white.png"
+            alt="White Instagram Logo" width="30" height="auto">
+          </a><li>
+          <li><a href="#language">ENG</a><li>
+        </ul>
+      </nav>
+    </div>
 
 
 
@@ -87,7 +86,9 @@
 
 
 <!-- Filter @ https://www.w3schools.com/howto/howto_js_filter_elements.asp -->
+<!-- fa fa-filter icon @ https://www.w3schools.com/icons/fontawesome_icons_webapp.asp -->
     <div id="myBtnContainer">
+      <i style="font-size:24px" class="fa">&#xf0b0;</i>
       <b id="filterby-theatrical">FILTER BY:</b>
       <button class="btn active" id="show-all-btn" onclick="filterSelection('all')">SHOW ALL</button>
 
@@ -261,10 +262,10 @@
     </div>
 
 
-    <div class="bottom">
-<!-- ADD THESE TO THE OTHER PAGES TOO -->
+
 <!-- Logos take users to an external link when they click on the logo -->
 <!-- Bottom Page Logos using FLEX-WRAP: WRAP;-->
+    <div class="bottom">
       <div class="bottom-logos" id="bottom-logos">
         <!-- Ufotable Dining LOGO -->
         <a class="ufotable-dining-logo" href="http://www.ufotable.com/dining/" target="_blank">
@@ -279,18 +280,23 @@
         <!-- Ufotable Cinema LOGO -->
         <a class="ufotable-cinema-logo" href="http://www.ufotable.com/cinema/" target="_blank">
           <img src="IMW-A2-Logos/cinema_logo-invert.png"
-          alt="Ufotable Cinema Logo" width="100" height="auto">
+          alt="Ufotable Cinema Logo" width="160" height="auto">
+        </a>
+        <!-- Machi Asobi -->
+        <a class="machi-asobi-logo" href="http://www.machiasobi.com/machiasobicafe/index.html" target="_blank">
+          <img src="IMW-A2-Logos/MachiAsobi_white.png"
+          alt="Machi Asobi Logo" width="260" height="auto">
         </a>
       </div>
 
 
-    <!-- ADD THESE TO THE OTHER PAGES TOO -->
-    <!-- Bottom Info -->
+
+<!-- Bottom Info -->
       <footer>
-        <a id="footer-font" href="#site-policy">SITE POLICY</a>
-        <a id="footer-font" href="#about-copyright">ABOUT COPYRIGHT OF THE WORK</a>
-        <a id="footer-font" href="#all-rights">2012-2019 UFOTABLE INC. ALL RIGHTS RESERVED.</a>
-        <a id="footer-font" href="#">RETURN TO THE TOP</a>
+        <a id="footer-font-left" href="#site-policy">SITE POLICY</a>
+        <a id="footer-font-left" href="#about-copyright">ABOUT COPYRIGHT OF THE WORK</a>
+        <a id="footer-font-right" href="#">RETURN TO THE TOP</a>
+        <a id="footer-font-right" href="#all-rights">2012-2019 UFOTABLE INC. ALL RIGHTS RESERVED.</a>
       </footer>
     </div>
 
