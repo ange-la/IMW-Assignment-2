@@ -38,44 +38,44 @@
 <!-- Dropdown Navigation Bar @ https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp -->
 <!-- CSS Lists @ https://www.w3schools.com/css/css_list.asp -->
 <!-- put my mixed navbar instead of w3school's as a test with their css code in combination -->
-      <nav class="navbar" id="topnav">
 <!-- Responsive navbar https://www.w3schools.com/howto/howto_js_topnav_responsive.asp -->
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+<!-- Professor Ali Qadeer's problem-solving to get hamburger menu to work -->
+      <nav class="navbar" id="topnav">
+        <a href="#" class="icon" id="iconlink">
           <i class="fa fa-bars"></i>
         </a>
         <ul>
-          <li><a href="index.html">
+          <a href="index.html">
             <img id="ufotable-logo" src="IMW-A2-Logos/ufotable-white-logo.png"
             alt="White Ufotable Logo" width="180" height="auto">
-          </a><li>
-          <li><a href="index.html">HOME</a><li>
-          <li><a href="#profile">PROFILE</a><li>
-          <li><a href="#news">NEWS</a><li>
+          </a>
+          <li class="main-link"><a href="index.html">HOME</a></li>
+          <li class="main-link"><a href="#profile">PROFILE</a></li>
+          <li class="main-link"><a href="#news">NEWS</a></li>
           <ul class="dropdown-project">
-            <button class="dropbtn">PROJECTS
-            </button>
+            <li class="main-link"><a class="dropbtn">PROJECTS</a></li>
             <div class="dropdown-content">
-              <li><a href="theatrical.html">THEATRICAL</a></li>
-              <li><a href="television.html">TELEVISION</a></li>
-              <li><a href="other-projects.html">OTHER</a></li>
+              <li class="main-link"><a href="theatrical.html">THEATRICAL</a></li>
+              <li class="main-link"><a href="television.html">TELEVISION</a></li>
+              <li class="main-link"><a href="other-projects.html">OTHER</a></li>
             </div>
           </ul>
-          <li><a href="#recruitment">RECRUITMENT</a><li>
-          <li><a href="#webshop">WEBSHOP</a><li>
-          <li><a href="#community">COMMUNITY</a><li>
+          <li class="main-link"><a href="#recruitment">RECRUITMENT</a></li>
+          <li class="main-link"><a href="#webshop">WEBSHOP</a></li>
+          <li class="main-link"><a href="#community">COMMUNITY</a></li>
 <!-- LINK TO UFOTABLE'S OFFICAL TWITTER PAGE -->
 <!-- OPEN TWITTER ON NEW TAB @ https://css-tricks.com/snippets/html/open-link-in-a-new-window/ -->
-          <li><a id="twitter-logo" href="https://twitter.com/ufotable?lang=en" target="_blank">
+          <li class="main-link" id="twitter-logo"><a href="https://twitter.com/ufotable?lang=en" target="_blank">
             <img src="IMW-A2-Logos/twitter-logo-white.svg"
              alt="White Twitter Logo" width="30" height="auto">
-          </a><li>
+          </a></li>
 <!-- LINK TO UFOTABLE'S OFFICIAL INSTAGRAM PAGE -->
 <!-- OPEN INSTAGRAM ON NEW TAB @ https://css-tricks.com/snippets/html/open-link-in-a-new-window/ -->
-          <li><a href="https://www.instagram.com/ufotable_inc/" target="_blank">
+          <li class="main-link"><a href="https://www.instagram.com/ufotable_inc/" target="_blank">
             <img src="IMW-A2-Logos/instagram-logo-white.png"
             alt="White Instagram Logo" width="30" height="auto">
-          </a><li>
-          <li><a href="#language">ENG</a><li>
+          </a></li>
+          <li class="main-link"><a href="#language">ENG</a></li>
         </ul>
       </nav>
     </div>
@@ -453,5 +453,14 @@
       </footer>
     </div>
 
+
+
+<!-- Have to keep this script in html instead of js for hamburger menu to work -->
+<!-- working Hamburger Menu script by Professor Ali Qadeer -->
+    <script>
+    $("#iconlink").click(function(){
+      $("#topnav").toggleClass("activated");
+    })
+    </script>
   </body>
 </html>
