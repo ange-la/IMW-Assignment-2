@@ -7,15 +7,11 @@ $('.main-carousel').flickity({
 
 
 
-/* Responsive navbar @ https://www.w3schools.com/howto/howto_js_responsive_navbar_dropdown.asp */
-function myFunction() {
-  var x = document.getElementById("topnav");
-  if (x.className === "navbar") {
-    x.className += " responsive";
-  } else {
-    x.className = "navbar";
-  }
-}
+/* Responsive navbar @ Professor Ali Qadeer */
+$("#iconlink").click(function(){
+  $("#topnav").toggleClass("activated");
+})
+
 
 
 

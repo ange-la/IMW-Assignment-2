@@ -1,9 +1,12 @@
-<!-- works but need to make it collapsable, etc -->
+<!-- CHECK THIS AND CHANGE INDEX.HTML -->
 
 <!DOCTYPE html>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="crossorigin="anonymous">
+</script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 
@@ -22,6 +25,7 @@
   z-index: 100;
   display: flex;
   justify-content: center;
+  min-height: 50px;
 }
 
 .navbar a {
@@ -52,16 +56,20 @@
     float: right;
     display: block;
   }
+
+  .navbar .main-link {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 1190px) {
-  .navbar.responsive {position: relative;}
-  .navbar.responsive .icon {
+  .navbar {position: relative;}
+  .navbar .icon {
     position: absolute;
     right: 0;
     top: 0;
   }
-  .navbar.responsive a li {
+  .navbar.activated .main-link {
     float: none;
     display: block;
     text-align: left;
@@ -135,51 +143,45 @@ a {
 <body>
 
 <nav class="navbar" id="topnav">
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+  <a href="#" class="icon" id="iconlink">
     <i class="fa fa-bars"></i>
   </a>
   <ul>
-    <li><a href="#home" class="active">
+    <a href="#home" class="active">
       <img id="ufotable-logo" src="IMW-A2-Logos/ufotable-white-logo.png"
       alt="White Ufotable Logo" width="180" height="auto">
-    </a></li>
-    <li><a href="#news">News</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#about">About</a></li>
+    </a>
+    <li class="main-link"><a href="#news">News</a></li>
+    <li class="main-link"><a href="#contact">Contact</a></li>
+    <li class="main-link"><a href="#about">About</a></li>
     <ul class="dropdown-project">
-      <button class="dropbtn">PROJECTS
-      </button>
+      <li class="main-link"><a class="dropbtn">PROJECTS</a></li>
       <div class="dropdown-content">
-        <li><a href="theatrical.html">THEATRICAL</a></li>
-        <li><a href="television.html">TELEVISION</a></li>
-        <li><a href="other-projects.html">OTHER</a></li>
+        <li class="main-link"><a href="theatrical.html">THEATRICAL</a></li>
+        <li class="main-link"><a href="television.html">TELEVISION</a></li>
+        <li class="main-link"><a href="other-projects.html">OTHER</a></li>
       </div>
     </ul>
-    <li><a href="#recruitment">RECRUITMENT</a><li>
-    <li><a href="#webshop">WEBSHOP</a><li>
-    <li><a href="#community">COMMUNITY</a><li>
-    <li><a id="twitter-logo" href="https://twitter.com/ufotable?lang=en" target="_blank">
+    <li class="main-link"><a href="#recruitment">RECRUITMENT</a></li>
+    <li class="main-link"><a href="#webshop">WEBSHOP</a></li>
+    <li class="main-link"><a href="#community">COMMUNITY</a></li>
+    <li class="main-link"><a id="twitter-logo" href="https://twitter.com/ufotable?lang=en" target="_blank">
       <img src="IMW-A2-Logos/twitter-logo-white.svg"
        alt="White Twitter Logo" width="30" height="auto">
-    </a><li>
-    <li><a href="https://www.instagram.com/ufotable_inc/" target="_blank">
+    </a></li>
+    <li class="main-link"><a href="https://www.instagram.com/ufotable_inc/" target="_blank">
       <img src="IMW-A2-Logos/instagram-logo-white.png"
       alt="White Instagram Logo" width="30" height="auto">
-    </a><li>
-    <li><a href="#language">ENG</a><li>
+    </a></li>
+    <li class="main-link"><a href="#language">ENG</a></li>
   </ul>
 </nav>
 
 
 <script>
-function myFunction() {
-  var x = document.getElementById("topnav");
-  if (x.className === "navbar") {
-    x.className += " responsive";
-  } else {
-    x.className = "navbar";
-  }
-}
+$("#iconlink").click(function(){
+  $("#topnav").toggleClass("activated");
+})
 </script>
 
 </body>
