@@ -90,7 +90,21 @@
     <div id="myBtnContainer">
       <i style="font-size:24px" class="fa">&#xf0b0;</i>
       <b id="filterby-television">FILTER BY:</b>
-      <button class="btn active" id="show-all-btn" onclick="filterSelection('all')">SHOW ALL</button>
+
+<!-- Filter by Title -->
+      <div class="sort-title"><button id="title">TITLE</button>
+        <div class="title-dropdown">
+          <button class="btn" onclick="filterSelection('demon')">DEMON SLAYER: KIMETSU NO YAIBA</button>
+          <button class="btn" onclick="filterSelection('fate')">FATE SERIES</button>
+          <button class="btn" onclick="filterSelection('katsugeki')">KATSUGEKI/TOUKEN RANBU</button>
+          <button class="btn" onclick="filterSelection('zestiria')">TALES OF ZESTIRIA THE X</button>
+          <button class="btn" onclick="filterSelection('eater')">GOD EATER</button>
+          <button class="btn" onclick="filterSelection('garden')">THE GARDEN OF SINNERS</button>
+          <button class="btn" onclick="filterSelection('gakuen')">GAKUEN UTOPIA MANABI STRAIGHT!</button>
+          <button class="btn" onclick="filterSelection('coyote')">COYOTE RAGTIME SHOW</button>
+          <button class="btn" onclick="filterSelection('futakoi')">FUTAKOI ALTERNATIVE</button>
+        </div>
+      </div>
 
 <!-- Filter by YEAR -->
       <div class="sort-year"><button id="year">YEAR</button>
@@ -109,20 +123,9 @@
           <button class="btn" onclick="filterSelection('2005')">2005</button>
         </div>
       </div>
-<!-- Filter by Title -->
-      <div class="sort-title"><button id="title">TITLE</button>
-        <div class="title-dropdown">
-          <button class="btn" onclick="filterSelection('demon')">DEMON SLAYER: KIMETSU NO YAIBA</button>
-          <button class="btn" onclick="filterSelection('fate')">FATE SERIES</button>
-          <button class="btn" onclick="filterSelection('katsugeki')">KATSUGEKI/TOUKEN RANBU</button>
-          <button class="btn" onclick="filterSelection('zestiria')">TALES OF ZESTIRIA THE X</button>
-          <button class="btn" onclick="filterSelection('eater')">GOD EATER</button>
-          <button class="btn" onclick="filterSelection('garden')">THE GARDEN OF SINNERS</button>
-          <button class="btn" onclick="filterSelection('gakuen')">GAKUEN UTOPIA MANABI STRAIGHT!</button>
-          <button class="btn" onclick="filterSelection('coyote')">COYOTE RAGTIME SHOW</button>
-          <button class="btn" onclick="filterSelection('futakoi')">FUTAKOI ALTERNATIVE</button>
-        </div>
-      </div>
+
+<!-- Show All -->
+      <button class="btn active" id="show-all-btn" onclick="filterSelection('all')">SHOW ALL</button>
     </div>
 
 

@@ -103,7 +103,26 @@ a {
   font-family: 'bebas-nueregular', sans-serif;
   color: #ffffff;
   text-decoration: none;
-  padding: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.responsive {
+  background-color: green;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+#ufotable-logo {
+  background-color: red;
+  padding-top: 10px;
+  overflow: hidden;
+}
+
+.navbar-logo {
+  background-color: purple;
+  padding-top: 15px;
+  padding-bottom: 9.5px;
 }
 
 /* CHANGE COLOUR ON HOVER @ https://www.w3schools.com/howto/howto_js_navbar_sticky.asp */
@@ -497,7 +516,6 @@ button {
 }
 
 #mugen-train {
-  padding-top: 100px;
   padding-bottom: 200px;
 }
 
@@ -507,14 +525,12 @@ button {
 }
 
 #mugen-train-alternate {
-  padding-top: 100px;
   padding-bottom: 200px;
   margin-left: -560px;
   z-index: -100;
 }
 
 #fate-hf {
-  padding-top: 100px;
   padding-bottom: 200px;
 }
 
@@ -524,7 +540,6 @@ button {
 }
 
 #fate-hf-alternate {
-  padding-top: 100px;
   padding-bottom: 200px;
   margin-left: -560px;
   z-index: -100;
@@ -570,6 +585,11 @@ button {
 .mugen-text {
   position: relative;
   left: -220px;
+  margin-top: -100px;
+}
+
+.fate-text {
+  margin-top: -100px;
 }
 
 
@@ -627,14 +647,12 @@ button {
   }
   .navbar .main-link {
     display: none;
-    background-color: red; /* to check */
   }
 /* Adjusting the width of hamburger icon */
   .navbar .icon {
     position: absolute;
     right: 0;
     top: 4px;
-    background-color: green;
     width: 60px;
   }
   .navbar.activated .main-link {
@@ -643,11 +661,10 @@ button {
   }
 /* Adjusting the layout of navbar in hamburger dropdown */
   .navbar a {
-    background-color: blue; /* to check */
-    align-items: center;
     width: 200px;
     z-index: -10px;
-    display: inline-block;
+    display: block;
+    border: 1px solid blue;
   }
 /* a class for navbar */
   .responsive {
@@ -660,7 +677,7 @@ button {
 }
 
 /* Remove large text beside poster to prevent horizontal scroll from appearing */
-@media screen and (max-width: 1480px) {
+@media screen and (max-width: 960px) {
   #index-text {
     display: none;
   }
@@ -690,7 +707,6 @@ button {
   box-sizing: border-box;
 }
 
-
 .dropbtn {
   font-size: 22px;
   letter-spacing: 1px;
@@ -700,6 +716,12 @@ button {
   padding: 12px;
   background-color: none;
   border: none;
+  padding-top: 15px;
+  height: 55.5px;
+}
+
+.logo {
+  height: 10px;
 }
 
 /* Positioning the hover button to match alignment with navbar links */
@@ -720,8 +742,16 @@ button {
   position: sticky;
   z-index: 100;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   min-height: 50px;
+  background-color: blue;
+}
+
+.navbar ul li {
+  align-items: center;
+  justify-content: center;
+  background-color: green;
 }
 
 /* MUST use display:flex; to center logos, icons, and text */
@@ -733,17 +763,16 @@ button {
   letter-spacing: 1px;
   color: white;
   list-style-type: none;
-  align-items: center;
-  height: 62px;
+  /*height: 62px;*/
   display: flex;
 }
 
 /* Position of UFOTABLE LOGO in navbar & link padding */
 .navbar a {
   float: left;
-  padding: 14px 16px;
   text-align: center;
   text-decoration: none;
+  align-content: center;
 }
 
 /* Add a red background color to navbar links on hover */
@@ -773,7 +802,6 @@ button {
 .dropdown-project:hover .dropdown-content {
   display: flex;
   flex-direction: column;
-  margin-top: 62px;
 }
 
 /* FIX HEADER + #COVID-NOTICE BC IT WON'T STICKY WELL */
@@ -798,6 +826,7 @@ header {
   padding: 5px;
   padding-top: 8px;
 }
+
 
 /* STICKY the header and navbar TOGETHER */
 .top-sticky {
