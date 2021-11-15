@@ -462,35 +462,72 @@ button {
 /* Align Demon Slayer Season 2 poster + text to left */
 .large-demon-season2-poster {
   display: flex;
-  justify-content: left;
+  justify-content: center;
 }
 
 /* Align Demon Slayer Mugen poster + text to right */
 .large-mugen-poster {
   display: flex;
-  justify-content: right;
+  justify-content: center;
 }
 
 /* Align Fate/Stay Night [Heaven's Feel] III. poster + text to left */
 .large-fate-poster {
   display: flex;
-  justify-content: left;
+  justify-content: center;
 }
 
 /* Padding to ONLY the POSTERS (not the text beside it) */
 #ds-season2 {
-  padding-top: 200px;
+  padding-top: 100px;
   padding-bottom: 200px;
+}
+
+/* Hide to show hidden alternate poster */
+#ds-season2:hover {
+  opacity: 0%;
+}
+
+/* Alternate poster to #ds-season2 */
+#ds-season2-alternate {
+  padding-top: 100px;
+  padding-bottom: 200px;
+  margin-left: -560px;
+  z-index: -100;
 }
 
 #mugen-train {
-  padding-top: 200px;
+  padding-top: 100px;
   padding-bottom: 200px;
 }
 
-#fate-hf {
-  padding-top: 200px;
+/* Hide to show hidden alternate poster */
+#mugen-train:hover {
+  opacity: 0%;
+}
+
+#mugen-train-alternate {
+  padding-top: 100px;
   padding-bottom: 200px;
+  margin-left: -560px;
+  z-index: -100;
+}
+
+#fate-hf {
+  padding-top: 100px;
+  padding-bottom: 200px;
+}
+
+/* Hide to show hidden alternate poster */
+#fate-hf:hover {
+  opacity: 0%
+}
+
+#fate-hf-alternate {
+  padding-top: 100px;
+  padding-bottom: 200px;
+  margin-left: -560px;
+  z-index: -100;
 }
 
 /* To eliminate the horizontal scroll @ https://www.w3schools.com/cssref/css3_pr_word-wrap.asp */
@@ -498,10 +535,11 @@ button {
 /* Text placed beside large posters on index.html */
 #index-text {
   display: inline-block;
+  justify-content: center;
   color: #ffffff;
   text-decoration: none;
   font-family: 'bebas-nueregular', sans-serif;
-  font-size: 70px;
+  font-size: 50px;
   letter-spacing: 1px;
   text-align: left;
   word-wrap: break-word;
@@ -517,7 +555,7 @@ button {
   color: #ffffff;
   text-decoration: none;
   font-family: 'bebas-nueregular', sans-serif;
-  font-size: 70px;
+  font-size: 50px;
   letter-spacing: 1px;
   text-align: left;
   word-wrap: break-word;
@@ -527,24 +565,6 @@ button {
   max-width: 440px;
   position: relative;
   left: 160px;
-}
-
-/* YEAR 2021 or 2020 on INDEX.HTML */
-#index-year {
-  font-family: 'bebas-nueregular', sans-serif;
-  font-size: 160px;
-  color: #ffffff;
-  padding-left: 60px;
-  text-align: left;
-}
-
-#index-year-right {
-  font-family: 'bebas-nueregular', sans-serif;
-  font-size: 160px;
-  color: #ffffff;
-  text-align: right;
-  position: relative;
-  left: 305px;
 }
 
 .mugen-text {
@@ -593,36 +613,51 @@ button {
 /* CONTINUE WORKING ON IT > NEED RESPONSIVE MENU TO SHOW UP WHEN SHRUNK */
 /* ADD A BREAK POINT */
 /* Responsive navbar @ https://www.w3schools.com/howto/howto_js_responsive_navbar_dropdown.asp */
+
+/* hide hamburger icon when breakpoint not reached */
 .navbar .icon {
   display: none;
 }
 
+/* responsive navbar at breakpoint */
 @media screen and (max-width: 1190px) {
-  .navbar li:not(:first-child) {display: none;}
   .navbar a.icon {
     float: right;
     display: block;
   }
-
   .navbar .main-link {
     display: none;
+    background-color: red; /* to check */
   }
-}
-
-@media screen and (max-width: 1190px) {
-  .navbar {position: relative;}
+/* Adjusting the width of hamburger icon */
   .navbar .icon {
     position: absolute;
     right: 0;
-    top: 0;
+    top: 4px;
+    background-color: green;
+    width: 60px;
   }
   .navbar.activated .main-link {
     float: none;
     display: block;
-    text-align: left;
+  }
+/* Adjusting the layout of navbar in hamburger dropdown */
+  .navbar a {
+    background-color: blue; /* to check */
+    align-items: center;
+    width: 200px;
+    z-index: -10px;
+    display: inline-block;
+  }
+/* a class for navbar */
+  .responsive {
+    display: flex;
+  }
+/* a class for PROJECTS button */
+  .dropbtn {
+    display: flex;
   }
 }
-
 
 /* Remove large text beside poster to prevent horizontal scroll from appearing */
 @media screen and (max-width: 1480px) {
