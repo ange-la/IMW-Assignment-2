@@ -20,14 +20,20 @@ html {
 /* Center the links @ https://developer.mozill .org/en-US/docs/Web/CSS/Layout_cookbook/Center_an_element */
 /* using display:flex; so text doesn't get distorted when screen shrunk */
 #promotional-links {
-  padding-top: 50px;
+  padding-top: 60px;
   padding-bottom: 80px;
   display: flex;
   justify-content: space-evenly;
   font-family: 'bebas-nueregular', sans-serif;
   font-size: 22px;
+  flex-wrap: wrap;
 }
 
+/* Prevent promotional links from breaking @ https://developer.mozilla.org/en-US/docs/Web/CSS/white-space */
+.promotional {
+  white-space: nowrap;
+  padding-top: 20px;
+}
 
 /* Bottom LOGOS */
 /* Center the images @ https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook/Center_an_element */
@@ -61,19 +67,21 @@ footer {
   padding-left: 60px;
   padding-right: 60px;
   padding-bottom: 60px;
-  padding-top: 10px;
+  padding-top: 60px;
 }
 
 #footer-font-left {
   font-size: 16px;
   letter-spacing: 1px;
   float: left;
+  padding-bottom: 20px;
 }
 
 #footer-font-right {
   font-size: 16px;
   letter-spacing: 1px;
   float: right;
+  padding-bottom: 20px;
 }
 
 /* Background colour at the footer */
@@ -81,20 +89,6 @@ footer {
   padding-top: 20px;
   background-color: #000000;
 }
-
-/* Point Cards */
-.point-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  padding-right: 50px;
-}
-
-.point-card-text {
-  width: 180px;
-  text-align: center;
-}
-
 
 /* link style */
 a {
@@ -108,19 +102,16 @@ a {
 }
 
 .responsive {
-  background-color: green;
   padding-top: 15px;
   padding-bottom: 15px;
 }
 
 #ufotable-logo {
-  background-color: red;
   padding-top: 10px;
   overflow: hidden;
 }
 
 .navbar-logo {
-  background-color: purple;
   padding-top: 15px;
   padding-bottom: 9.5px;
 }
@@ -208,16 +199,18 @@ body::after{
 #info-capital {
   margin-top: -55px;
   margin-left: 30px;
+  display: flex;
 }
 
 /* fa fa-info icon */
 #fa-fa-info {
   font-size: 26px;
   padding-right: 10px;
+  padding-top: 4px;
 }
 
-#info-header {
-  margin-right: -30px;
+.info-header {
+  display: inline-block;
 }
 
 #information {
@@ -226,6 +219,7 @@ body::after{
   display: flex;
   justify-content: flex-end;
   padding-right: 60px;
+  padding-left: 30px;
 }
 
 /* Heading for "INFORMATION" */
@@ -300,7 +294,7 @@ button {
   display: none;
   position: absolute;
   background-color: #000000;
-  min-width: 300px;
+  min-width: 298px;
   z-index: 1;
 }
 
@@ -385,6 +379,8 @@ button {
   color: #ffffff;
   text-decoration: none;
   padding: 6px;
+/* Prevent word-break @ https://developer.mozilla.org/en-US/docs/Web/CSS/white-space */
+  white-space: nowrap;
 }
 
 /* Figcaption @ https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figcaption */
@@ -565,6 +561,10 @@ button {
   text-align: left;
 }
 
+#index-text:hover {
+  text-decoration: 2px solid underline #ffffff;
+}
+
 #index-text-right {
   display: flex;
   color: #ffffff;
@@ -637,10 +637,11 @@ button {
 /* hide hamburger icon when breakpoint not reached */
 .navbar .icon {
   display: none;
+  padding-top: 8px;
 }
 
 /* responsive navbar at breakpoint */
-@media screen and (max-width: 1190px) {
+@media screen and (max-width: 1110px) {
   .navbar a.icon {
     float: right;
     display: block;
@@ -661,14 +662,21 @@ button {
   }
 /* Adjusting the layout of navbar in hamburger dropdown */
   .navbar a {
-    width: 200px;
+    width: 300px;
     z-index: -10px;
     display: block;
-    border: 1px solid blue;
+  }
+/* Hover states */
+  .responsive:hover, .dropbtn:hover, .nav-logo:hover {
+    background-color: #1f1f1f;
   }
 /* a class for navbar */
   .responsive {
     display: flex;
+  }
+  #nav-underline {
+    border-bottom: 2px solid #1f1f1f;
+    overflow: hidden;
   }
 /* a class for PROJECTS button */
   .dropbtn {
@@ -677,7 +685,7 @@ button {
 }
 
 /* Remove large text beside poster to prevent horizontal scroll from appearing */
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1005px) {
   #index-text {
     display: none;
   }
@@ -746,14 +754,6 @@ button {
   height: 10px;
 }
 
-/* Positioning the hover button to match alignment with navbar links */
-/*.dropbtn:hover {
-  background-color: #1f1f1f;
-  height: 100%;
-  color: #ffffff;
-  margin-top: 9px;
-}*/
-
 /* Navbar container */
 /* justify-content @ https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content */
 /* Need min-height for hamburger menu */
@@ -767,13 +767,11 @@ button {
   flex-wrap: wrap;
   justify-content: space-evenly;
   min-height: 50px;
-  background-color: blue;
 }
 
 .navbar ul li {
   align-items: center;
   justify-content: center;
-  background-color: green;
 }
 
 /* MUST use display:flex; to center logos, icons, and text */
@@ -785,11 +783,10 @@ button {
   letter-spacing: 1px;
   color: white;
   list-style-type: none;
-  /*height: 62px;*/
   display: flex;
 }
 
-/* Position of UFOTABLE LOGO in navbar & link padding */
+/* Position of UFOTABLE LOGO in navbar & link padding & hamburger menu */
 .navbar a {
   float: left;
   text-align: center;
@@ -797,33 +794,41 @@ button {
   align-content: center;
 }
 
-/* Add a red background color to navbar links on hover */
+/* Add a grey background color and underline to navbar links on hover */
 .navbar li:hover, .dropdown:hover .dropbtn {
   background-color: #1f1f1f;
-  text-decoration: solid underline #ffffff 2px;
+  text-decoration: 2px underline #ffffff;
+  position: relative;
 }
 
 /* Dropdown content (hidden by default) */
 .dropdown-content {
   display: none;
-  position: absolute;
+  top: 55.5px;
   background-color: #000000;
   color: #ffffff;
   min-width: 90px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
+  margin: 0;
+}
+
+#fa-fa-sort {
+  font-size: 20px;
+  margin-top: -30px;
 }
 
 .dropdown-project {
   float: left;
-  overflow: hidden;
   padding: 0;
+  position: relative;
 }
 
 /* adjusting the position of theatrical, television, and other dropdowns */
 .dropdown-project:hover .dropdown-content {
   display: flex;
   flex-direction: column;
+  position: absolute;
 }
 
 /* FIX HEADER + #COVID-NOTICE BC IT WON'T STICKY WELL */
@@ -955,6 +960,8 @@ header {
 /* Style the buttons */
 #myBtnContainer {
   display: flex;
+/* flex-wrap: wrap; to prevent horizontal scroll bar showing when shrunk */
+  flex-wrap: wrap;
   justify-content: center;
   padding-bottom: 60px;
   align-items: center;
@@ -975,6 +982,8 @@ header {
   padding-right: 20px;
   padding-top: 10px;
   padding-bottom: 10px;
+/* Prevent word-break @ https://developer.mozilla.org/en-US/docs/Web/CSS/white-space */
+  white-space: nowrap;
 }
 
 .btn:hover {

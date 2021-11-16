@@ -3,7 +3,7 @@ $('.main-carousel').flickity({
   // options
   cellAlign: 'left',
   contain: true
-})
+});
 
 
 
@@ -12,6 +12,13 @@ $("#iconlink").click(function(){
   $("#topnav").toggleClass("activated");
 })
 
+
+
+/* Change "hamburger" to "close" icon @ https://www.w3schools.com/howto/howto_js_toggle_like.asp */
+/* Icons @ https://www.w3schools.com/icons/fontawesome_icons_webapp.asp */
+function myFunction(x) {
+  x.classList.toggle("fa-times-rectangle");
+}
 
 
 

@@ -39,42 +39,46 @@
 <!-- put my mixed navbar instead of w3school's as a test with their css code in combination -->
 <!-- Responsive navbar https://www.w3schools.com/howto/howto_js_topnav_responsive.asp -->
 <!-- Professor Ali Qadeer's problem-solving to get hamburger menu to work -->
+<!-- fa fa-sort @ https://www.w3schools.com/icons/fontawesome_icons_webapp.asp -->
       <nav class="navbar" id="topnav">
         <a href="#" class="icon" id="iconlink">
-          <i class="fa fa-bars"></i>
+          <i onclick="myFunction(this)" class="fa fa-bars" id="fa-fa-bars"></i>
         </a>
         <ul>
           <a href="index.html">
             <img id="ufotable-logo" src="IMW-A2-Logos/ufotable-white-logo.png"
             alt="White Ufotable Logo" width="180" height="auto">
           </a>
-          <li class="main-link"><a href="index.html">HOME</a></li>
-          <li class="main-link"><a href="#profile">PROFILE</a></li>
-          <li class="main-link"><a href="#news">NEWS</a></li>
+          <li class="main-link"><a id="nav-underline" class="responsive" href="index.html">HOME</a></li>
+          <li class="main-link"><a id="nav-underline" class="responsive" href="#profile">PROFILE</a></li>
+          <li class="main-link"><a id="nav-underline" class="responsive" href="#news">NEWS</a></li>
           <ul class="dropdown-project">
-            <li class="main-link"><a class="dropbtn">PROJECTS</a></li>
+            <li class="main-link">
+              <a id="nav-underline" class="dropbtn">PROJECTS
+                <i class="fa fa-sort-down" id="fa-fa-sort"></i>
+              </a></li>
             <div class="dropdown-content">
-              <li class="main-link"><a href="theatrical.html">THEATRICAL</a></li>
-              <li class="main-link"><a href="television.html">TELEVISION</a></li>
-              <li class="main-link"><a href="other-projects.html">OTHER</a></li>
+              <li class="main-link"><a id="nav-underline" class="responsive" href="theatrical.html">THEATRICAL</a></li>
+              <li class="main-link"><a id="nav-underline" class="responsive" href="television.html">TELEVISION</a></li>
+              <li class="main-link"><a id="nav-underline"class="responsive" href="other-projects.html">OTHER</a></li>
             </div>
           </ul>
-          <li class="main-link"><a href="#recruitment">RECRUITMENT</a></li>
-          <li class="main-link"><a href="#webshop">WEBSHOP</a></li>
-          <li class="main-link"><a href="#community">COMMUNITY</a></li>
+          <li class="main-link"><a id="nav-underline" class="responsive" href="#recruitment">RECRUITMENT</a></li>
+          <li class="main-link"><a id="nav-underline" class="responsive" href="https://ufotablewebshop.shop-pro.jp/" target="_blank">WEBSHOP</a></li>
+          <li class="main-link"><a id="nav-underline" class="responsive" href="#community">COMMUNITY</a></li>
 <!-- LINK TO UFOTABLE'S OFFICAL TWITTER PAGE -->
 <!-- OPEN TWITTER ON NEW TAB @ https://css-tricks.com/snippets/html/open-link-in-a-new-window/ -->
-          <li class="main-link" id="twitter-logo"><a href="https://twitter.com/ufotable?lang=en" target="_blank">
-            <img src="IMW-A2-Logos/twitter-logo-white.svg"
-             alt="White Twitter Logo" width="27" height="auto">
+          <li class="main-link"><a id="nav-underline" class="nav-logo" href="https://twitter.com/ufotable?lang=en" target="_blank">
+            <img class="navbar-logo" src="IMW-A2-Logos/twitter-logo-white.svg"
+             alt="White Twitter Logo" width="31.5" height="auto">
           </a></li>
 <!-- LINK TO UFOTABLE'S OFFICIAL INSTAGRAM PAGE -->
 <!-- OPEN INSTAGRAM ON NEW TAB @ https://css-tricks.com/snippets/html/open-link-in-a-new-window/ -->
-          <li class="main-link"><a href="https://www.instagram.com/ufotable_inc/" target="_blank">
-            <img src="IMW-A2-Logos/instagram-logo-white.png"
-            alt="White Instagram Logo" width="27" height="auto">
+          <li class="main-link"><a id="nav-underline" class="nav-logo" href="https://www.instagram.com/ufotable_inc/" target="_blank">
+            <img class="navbar-logo" src="IMW-A2-Logos/instagram-logo-white.png"
+            alt="White Instagram Logo" width="26" height="auto">
           </a></li>
-          <li class="main-link"><a href="#language">ENG</a></li>
+          <li class="main-link"><a class="responsive" href="#language">ENG</a></li>
         </ul>
       </nav>
     </div>
@@ -94,13 +98,13 @@
 <!-- Filter by Title -->
       <div class="sort-title"><button id="title">TITLE</button>
         <div class="title-dropdown">
-          <button class="btn" onclick="filterSelection('demon')">DEMON SLAYER: KIMETSU NO YAIBA</button>
+          <button class="btn" onclick="filterSelection('demon')">DEMON SLAYER</button>
           <button class="btn" onclick="filterSelection('fate')">FATE SERIES</button>
           <button class="btn" onclick="filterSelection('katsugeki')">KATSUGEKI/TOUKEN RANBU</button>
           <button class="btn" onclick="filterSelection('zestiria')">TALES OF ZESTIRIA THE X</button>
           <button class="btn" onclick="filterSelection('eater')">GOD EATER</button>
           <button class="btn" onclick="filterSelection('garden')">THE GARDEN OF SINNERS</button>
-          <button class="btn" onclick="filterSelection('gakuen')">GAKUEN UTOPIA MANABI STRAIGHT!</button>
+          <button class="btn" onclick="filterSelection('gakuen')">GAKUEN UTOPIA MANABI STRAIGHT</button>
           <button class="btn" onclick="filterSelection('coyote')">COYOTE RAGTIME SHOW</button>
           <button class="btn" onclick="filterSelection('futakoi')">FUTAKOI ALTERNATIVE</button>
         </div>

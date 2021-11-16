@@ -39,38 +39,42 @@
 <!-- put my mixed navbar instead of w3school's as a test with their css code in combination -->
 <!-- Responsive navbar https://www.w3schools.com/howto/howto_js_topnav_responsive.asp -->
 <!-- Professor Ali Qadeer's problem-solving to get hamburger menu to work -->
+<!-- fa fa-sort @ https://www.w3schools.com/icons/fontawesome_icons_webapp.asp -->
       <nav class="navbar" id="topnav">
         <a href="#" class="icon" id="iconlink">
-          <i class="fa fa-bars" id="fa-fa-bars"></i>
+          <i onclick="myFunction(this)" class="fa fa-bars" id="fa-fa-bars"></i>
         </a>
         <ul>
           <a href="index.html">
             <img id="ufotable-logo" src="IMW-A2-Logos/ufotable-white-logo.png"
             alt="White Ufotable Logo" width="180" height="auto">
           </a>
-          <li class="main-link"><a class="responsive" href="index.html">HOME</a></li>
-          <li class="main-link"><a class="responsive" href="#profile">PROFILE</a></li>
-          <li class="main-link"><a class="responsive" href="#news">NEWS</a></li>
+          <li class="main-link"><a id="nav-underline" class="responsive" href="index.html">HOME</a></li>
+          <li class="main-link"><a id="nav-underline" class="responsive" href="#profile">PROFILE</a></li>
+          <li class="main-link"><a id="nav-underline" class="responsive" href="#news">NEWS</a></li>
           <ul class="dropdown-project">
-            <li class="main-link"><a class="dropbtn">PROJECTS</a></li>
+            <li class="main-link">
+              <a id="nav-underline" class="dropbtn">PROJECTS
+                <i class="fa fa-sort-down" id="fa-fa-sort"></i>
+              </a></li>
             <div class="dropdown-content">
-              <li class="main-link"><a class="responsive" href="theatrical.html">THEATRICAL</a></li>
-              <li class="main-link"><a class="responsive" href="television.html">TELEVISION</a></li>
-              <li class="main-link"><a class="responsive" href="other-projects.html">OTHER</a></li>
+              <li class="main-link"><a id="nav-underline" class="responsive" href="theatrical.html">THEATRICAL</a></li>
+              <li class="main-link"><a id="nav-underline" class="responsive" href="television.html">TELEVISION</a></li>
+              <li class="main-link"><a id="nav-underline"class="responsive" href="other-projects.html">OTHER</a></li>
             </div>
           </ul>
-          <li class="main-link"><a class="responsive" href="#recruitment">RECRUITMENT</a></li>
-          <li class="main-link"><a class="responsive" href="#webshop">WEBSHOP</a></li>
-          <li class="main-link"><a class="responsive" href="#community">COMMUNITY</a></li>
+          <li class="main-link"><a id="nav-underline" class="responsive" href="#recruitment">RECRUITMENT</a></li>
+          <li class="main-link"><a id="nav-underline" class="responsive" href="https://ufotablewebshop.shop-pro.jp/" target="_blank">WEBSHOP</a></li>
+          <li class="main-link"><a id="nav-underline" class="responsive" href="#community">COMMUNITY</a></li>
 <!-- LINK TO UFOTABLE'S OFFICAL TWITTER PAGE -->
 <!-- OPEN TWITTER ON NEW TAB @ https://css-tricks.com/snippets/html/open-link-in-a-new-window/ -->
-          <li class="main-link"><a href="https://twitter.com/ufotable?lang=en" target="_blank">
+          <li class="main-link"><a id="nav-underline" class="nav-logo" href="https://twitter.com/ufotable?lang=en" target="_blank">
             <img class="navbar-logo" src="IMW-A2-Logos/twitter-logo-white.svg"
              alt="White Twitter Logo" width="31.5" height="auto">
           </a></li>
 <!-- LINK TO UFOTABLE'S OFFICIAL INSTAGRAM PAGE -->
 <!-- OPEN INSTAGRAM ON NEW TAB @ https://css-tricks.com/snippets/html/open-link-in-a-new-window/ -->
-          <li class="main-link"><a href="https://www.instagram.com/ufotable_inc/" target="_blank">
+          <li class="main-link"><a id="nav-underline" class="nav-logo" href="https://www.instagram.com/ufotable_inc/" target="_blank">
             <img class="navbar-logo" src="IMW-A2-Logos/instagram-logo-white.png"
             alt="White Instagram Logo" width="26" height="auto">
           </a></li>
@@ -164,13 +168,17 @@
         <img src="https://pbs.twimg.com/media/EuME5qwXcAoudIu?format=jpg&name=medium"
         id="ds-season2-alternate" alt="Demon Slayer Season 2: Entertainment Arc Alternate POSTER" height="auto" width="560">
         <div class="ds2-text">
-          <strong id="index-text">2021<br>DEMON SLAYER<br>SEASON 2:<br>ENTERTAINMENT<br>DISTRICT ARC</strong>
+          <a href="https://demonslayer-anime.com/" target="_blank">
+            <strong id="index-text">2021<br>DEMON SLAYER<br>SEASON 2:<br>ENTERTAINMENT<br>DISTRICT ARC</strong>
+          </a>
         </div>
       </div>
 <!-- Demon Slayer Mugen Train LARGE POSTER -->
       <div class="large-mugen-poster">
         <div class="mugen-text">
-          <strong id="index-text-right">2020<br>DEMON SLAYER<br>MUGEN TRAIN ARC<br>MOVIE EDITION</strong>
+          <a href="https://demonslayer-anime.com/" target="_blank">
+            <strong id="index-text-right">2020<br>DEMON SLAYER<br>MUGEN TRAIN ARC<br>MOVIE EDITION</strong>
+          </a>
         </div class="mugen-text">
         <img src="https://pbs.twimg.com/media/FAI67muXIAEPrLZ?format=jpg&name=4096x4096"
         id="mugen-train" alt="Demon Slayer Mugen Train Movie Poster" height="auto" width="560">
@@ -186,7 +194,9 @@
         <img src="https://pbs.twimg.com/media/EBO3YMEWsAATtic?format=jpg&name=medium"
         id="fate-hf-alternate" alt="Fate/Stay Night [Heaven's Feel] III. Spring Song Movie Alternate Poster" height="auto" width="560">
         <div class="fate-text">
-          <strong id="index-text">2020<br>FATE/STAY NIGHT<br>[HEAVEN'S FEEL]<br>III. SPRING SONG</strong>
+          <a href="https://www.fatestaynightusa.com/" target="_blank">
+            <strong id="index-text">2020<br>FATE/STAY NIGHT<br>[HEAVEN'S FEEL]<br>III. SPRING SONG</strong>
+          </a>
         </div>
       </div>
     </div>
@@ -282,30 +292,7 @@
 
 
 
-<!-- Ufotable Point Cards -->
-    <div class="point-cards">
-      <div class="ufotable-point">
-        <img src="http://www.ufotable.com/perimg/pickupimg/point.jpg"
-        id="ufotable-point" alt="Ufotable Points Card" width="180" height="auto">
-        <a href="http://www.ufotable.com/perimg/pickupimg/sncafe.jpg" target="_blank">
-          <figcaption class="point-card-text">UFOTABLE POINTS CARD</figcaption>
-        </a>
-      </div>
-      <div class="fatezero-point">
-        <img src="http://www.ufotable.com/perimg/pickupimg/zerocafe.jpg"
-        id="fatezero-point" alt="Fate/Zero Cafe" width="180" height="auto">
-        <a href="http://www.ufotable.com/f_zerocafe/index.html" target="_blank">
-          <figcaption class="point-card-text">FATE/ZERO CAFE</figcaption>
-        </a>
-      </div>
-      <div class="fatestay-point">
-        <img src="http://www.ufotable.com/perimg/pickupimg/sncafe.jpg"
-        id="fatestay-point" alt="Fate/Stay Night Cafe" width="180" height="auto">
-        <a href="http://www.ufotable.com/f_staynightcafe/index.html" target="_blank">
-          <figcaption class="point-card-text">FATE/STAY NIGHT CAFE</figcaption>
-        </a>
-      </div>
-    </div>
+
 
 
 
