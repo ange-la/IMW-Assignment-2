@@ -692,6 +692,28 @@ button {
   }
 }
 
+/* Remove hover images on INDEX.HTML */
+@media screen and (max-width: 600px) {
+  #ds-season2-alternate {
+    display: none;
+  }
+  #ds-season2:hover {
+    opacity: 100%;
+  }
+  #mugen-train-alternate {
+    display: none;
+  }
+  #mugen-train:hover {
+    opacity: 100%;
+  }
+  #fate-hf-alternate {
+    display: none;
+  }
+  #fate-hf:hover {
+    opacity: 100%;
+  }
+}
+
 
 
 /* NAVIGATION BAR */
